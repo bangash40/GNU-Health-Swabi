@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<!--
+SPDX-FileCopyrightText: 2008-2023 Luis Falcón <falcon@gnuhealth.org>
+SPDX-FileCopyrightText: 2011-2023 GNU Solidario <health@gnusolidario.org>
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<tree editable="1">
+    <field name="transfer_date" widget="date"/>
+    <field name="transfer_date" widget="time"/>
+    <field name="bed_from" expand="1"/>
+    <field name="bed_to" expand="1"/>
+    <field name="reason" expand="1"/>
+</tree>

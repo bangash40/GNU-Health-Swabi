@@ -1,0 +1,89 @@
+#
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-02-06 07:37+0000\n"
+"Last-Translator: MHD Tareq Shaheen <shaheen.mhd.tareq@gmail.com>\n"
+"Language-Team: Arabic <https://hosted.weblate.org/projects/gnu-health/"
+"health_crypto_lab/ar/>\n"
+"Language: ar\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Weblate 4.16-dev\n"
+
+msgctxt "field:gnuhealth.lab,digest_current:"
+msgid "Current Hash"
+msgstr "الخليط الحالي"
+
+msgctxt "field:gnuhealth.lab,digest_status:"
+msgid "Altered"
+msgstr "معدل"
+
+msgctxt "field:gnuhealth.lab,digital_signature:"
+msgid "Digital Signature"
+msgstr "توقيع رقمي"
+
+msgctxt "field:gnuhealth.lab,document_digest:"
+msgid "Digest"
+msgstr "هضم"
+
+msgctxt "field:gnuhealth.lab,done_by:"
+msgid "Done by"
+msgstr "انتهى بواسطة"
+
+msgctxt "field:gnuhealth.lab,done_date:"
+msgid "Finished on"
+msgstr "انتهى في"
+
+msgctxt "field:gnuhealth.lab,serializer:"
+msgid "Doc String"
+msgstr "نص المستند"
+
+msgctxt "field:gnuhealth.lab,serializer_current:"
+msgid "Current Doc"
+msgstr "المستند الحالي"
+
+msgctxt "field:gnuhealth.lab,state:"
+msgid "State"
+msgstr "الحالة"
+
+msgctxt "field:gnuhealth.lab,validated_by:"
+msgid "Validated by"
+msgstr "تحقق من قبل"
+
+msgctxt "field:gnuhealth.lab,validation_date:"
+msgid "Validated on"
+msgstr "تحقق من قبل"
+
+msgctxt "help:gnuhealth.lab,digest_status:"
+msgid ""
+"This field will be set whenever parts of the main original document has been"
+" changed. Please note that the verification is done only on selected fields."
+msgstr ""
+"سيتم تعيين هذا الحقل كلما تم تغيير أجزاء من المستند الأصلي الرئيسي. يرجى "
+"ملاحظة أن التحقق يتم فقط في الحقول المحددة."
+
+msgctxt "help:gnuhealth.lab,document_digest:"
+msgid "Original Document Digest"
+msgstr "ملخص المستند الاصلي"
+
+msgctxt "help:gnuhealth.lab,done_by:"
+msgid "Professional who processes this lab test"
+msgstr "المختص الذي عالج هذا التحليل"
+
+msgctxt "help:gnuhealth.lab,validated_by:"
+msgid "Professional who validates this lab test"
+msgstr "المختص الذي صادق على نتيجة التحليل"
+
+msgctxt "selection:gnuhealth.lab,state:"
+msgid "Done"
+msgstr "انتهى"
+
+msgctxt "selection:gnuhealth.lab,state:"
+msgid "Draft"
+msgstr "مسودة"
+
+msgctxt "selection:gnuhealth.lab,state:"
+msgid "Validated"
+msgstr "مصادق"

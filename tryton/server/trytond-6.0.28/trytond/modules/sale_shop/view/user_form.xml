@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!-- This file is part of the sale_shop module for Tryton. The COPYRIGHT file
+at the top level of this repository contains the full copyright notices and
+license terms. -->
+<data>
+    <xpath
+        expr="/form/notebook/page[@id=&quot;preferences&quot;]/field[@name=&quot;language&quot;]"
+        position="after">
+        <label name="shop"/>
+        <field name="shop" widget="selection"/>
+    </xpath>
+    <xpath
+        expr="/form/notebook/page[@id=&quot;preferences&quot;]"
+        position="after">
+        <page string="Shops" col="2" id="shops">
+            <field name="shops" view_ids="sale_shop.sale_shop_user_view_tree"/>
+        </page>
+    </xpath>
+</data>

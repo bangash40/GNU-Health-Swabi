@@ -1,0 +1,2 @@
+[trytond.modules]
+purchase = trytond.modules.purchase

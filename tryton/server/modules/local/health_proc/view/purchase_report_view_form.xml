@@ -1,0 +1,14 @@
+<?xml version="1.0"?> 
+<form> 
+    <label name="date_from"/>
+    <field name="date_from"/> 
+
+    <label name="date_to"/> 
+    <field name="date_to"/>
+
+    <label name="supplier"/> 
+    <field name="supplier"/> 
+
+    <label name="product"/>
+    <field name="product"/> 
+ </form>

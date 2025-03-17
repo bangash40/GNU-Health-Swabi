@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<!--
+SPDX-FileCopyrightText: 2008-2023 Luis Falcón <falcon@gnuhealth.org>
+SPDX-FileCopyrightText: 2011-2023 GNU Solidario <health@gnusolidario.org>
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<data>
+    <xpath expr="/form/group[@id=&quot;group_related_evaluations&quot;]" position="before">
+        <group string="Laboratory" colspan="4" id="group_lab_info">
+            <label name="lab_confirmed"/>
+            <field name="lab_confirmed"/>
+            <label name="lab_test"/>
+            <field name="lab_test"/>
+        </group>
+    </xpath>
+</data>

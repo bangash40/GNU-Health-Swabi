@@ -1,0 +1,202 @@
+<?xml version="1.0"?>
+<!-- This file is part sale_pos module for Tryton.
+The COPYRIGHT file at the top level of this repository contains the full copyright notices and license terms. -->
+<tryton>
+    <data>
+        <!-- Reports -->
+        <record model="ir.action.report" id="report_sale_ticket">
+            <field name="name">Sale Ticket</field>
+            <field name="model">sale.sale</field>
+            <field name="report_name">sale_pos.sale_ticket</field>
+            <field name="report">sale_pos/sale_pos_ticket.fodt</field>
+        </record>
+        <record model="ir.action.keyword" id="report_sale_ticket_keyword">
+            <field name="keyword">form_print</field>
+            <field name="model">sale.sale,-1</field>
+            <field name="action" ref="report_sale_ticket"/>
+        </record>
+
+        <record model="ir.action.report" id="report_sales_summary">
+            <field name="name">Sales Summary</field>
+            <field name="model">sale.sale</field>
+            <field name="report_name">sale_pos.sales_summary</field>
+            <field name="report">sale_pos/sale_pos_summary.fodt</field>
+        </record>
+        <record model="ir.action.keyword" id="report_sales_summary_keyword">
+            <field name="keyword">form_print</field>
+            <field name="model">sale.sale,-1</field>
+            <field name="action" ref="report_sales_summary"/>
+        </record>
+
+        <!-- Wizards -->
+        <record model="ir.action.wizard" id="wizard_add_product">
+            <field name="name">Add Products</field>
+            <field name="wiz_name">sale_pos.add_product</field>
+        </record>
+        <record model="ir.ui.view" id="add_product_view_form">
+            <field name="model">sale_pos.add_product_form</field>
+            <field name="type">form</field>
+            <field name="priority">20</field>
+            <field name="name">add_product_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="sale_payment_view_form">
+            <field name="model">sale.payment.form</field>
+            <field name="inherit"
+                ref="sale_payment.sale_payment_view_form"/>
+            <field name="name">sale_payment_form</field>
+        </record>
+
+        <!-- Views -->
+        <record model="ir.ui.view" id="sale_line_view_tree">
+            <field name="model">sale.line</field>
+            <field name="type">tree</field>
+            <field name="priority">20</field>
+            <field name="name">sale_line_tree</field>
+        </record>
+        <record model="ir.ui.view" id="sale_line_view_form">
+            <field name="model">sale.line</field>
+            <field name="inherit" ref="sale.sale_line_view_form"/>
+            <field name="name">sale_line_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="sale_pos_view_tree">
+            <field name="model">sale.sale</field>
+            <field name="type">tree</field>
+            <field name="priority">20</field>
+            <field name="name">sale_pos_tree</field>
+        </record>
+        <record model="ir.ui.view" id="sale_pos_view_form">
+            <field name="model">sale.sale</field>
+            <field name="type">form</field>
+            <field name="priority">20</field>
+            <field name="name">sale_pos_form</field>
+        </record>
+        <record model="ir.ui.view" id="sale_view_form">
+            <field name="model">sale.sale</field>
+            <field name="inherit" ref="sale.sale_view_form"/>
+            <field name="name">sale_form</field>
+        </record>
+
+        <!-- Actions -->
+        <record model="ir.action.act_window" id="act_sale_form">
+            <field name="name">POS Sales</field>
+            <field name="res_model">sale.sale</field>
+            <field name="search_value"
+                eval="[('shop', 'ilike',  Eval('context', {}).get('shop.rec_name', '%'))]"
+                pyson="1"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_sale_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="sale_pos_view_form"/>
+            <field name="act_window" ref="act_sale_form"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_sale_view_tree">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="sale_pos_view_tree"/>
+            <field name="act_window" ref="act_sale_form"/>
+        </record>
+
+        <record model="ir.action.act_window.domain" id="act_sale_form_domain_draft">
+            <field name="name">Draft</field>
+            <field name="sequence" eval="10"/>
+            <field name="domain"
+                eval="[('state', '=', 'draft')]"
+                pyson="1"/>
+            <field name="act_window" ref="act_sale_form"/>
+        </record>
+        <record model="ir.action.act_window.domain" id="act_sale_form_domain_quotation">
+            <field name="name">Quotation</field>
+            <field name="sequence" eval="20"/>
+            <field name="domain"
+                eval="[('state', '=', 'quotation')]"
+                pyson="1"/>
+            <field name="act_window" ref="act_sale_form"/>
+        </record>
+        <record model="ir.action.act_window.domain" id="act_sale_form_domain_confirmed">
+            <field name="name">Confirmed</field>
+            <field name="sequence" eval="30"/>
+            <field name="domain"
+                eval="[('state', '=', 'confirmed')]"
+                pyson="1"/>
+            <field name="act_window" ref="act_sale_form"/>
+        </record>
+        <record model="ir.action.act_window.domain" id="act_sale_form_domain_processing">
+            <field name="name">Processing</field>
+            <field name="sequence" eval="40"/>
+            <field name="domain"
+                eval="[('state', '=', 'processing')]"
+                pyson="1"/>
+            <field name="act_window" ref="act_sale_form"/>
+        </record>
+        <record model="ir.action.act_window.domain" id="act_sale_form_domain_all">
+            <field name="name">All</field>
+            <field name="sequence" eval="9999"/>
+            <field name="domain"></field>
+            <field name="act_window" ref="act_sale_form"/>
+        </record>
+
+        <menuitem name="POS Sales" parent="sale.menu_sale" id="menu_sale"
+            sequence="1" icon="tryton-list" action="act_sale_form"/>
+
+        <!-- buttons -->
+        <record model="ir.model.button" id="wizard_add_product_button">
+            <field name="name">wizard_add_product</field>
+            <field name="string">Add Products</field>
+            <field name="model" search="[('model', '=', 'sale.sale')]"/>
+        </record>
+        <record model="ir.model.button" id="add_sum_button">
+            <field name="name">add_sum</field>
+            <field name="string">Add Sum</field>
+            <field name="model" search="[('model', '=', 'sale.sale')]"/>
+        </record>
+        <record model="ir.model.button" id="print_ticket_button">
+            <field name="name">print_ticket</field>
+            <field name="string">Ticket</field>
+            <field name="model" search="[('model', '=', 'sale.sale')]"/>
+        </record>
+
+        <!-- Icons -->
+        <record model="ir.ui.icon" id="go_jump_icon">
+            <field name="name">tryton-go-jump</field>
+            <field name="path">icons/tryton-go-jump.svg</field>
+        </record>
+    </data>
+    <data depends="sale_shipment_cost">
+        <record model="ir.ui.view" id="sale_line_shipment_cost_view_tree">
+            <field name="model">sale.line</field>
+            <field name="inherit" ref="sale.sale_line_view_tree"/>
+            <field name="name">sale_shipment_cost_line_tree</field>
+        </record>
+    </data>
+    <data depends="sale_margin">
+        <record model="ir.ui.view" id="sale_line_margin_view_tree">
+            <field name="model">sale.line</field>
+            <field name="inherit" ref="sale_pos.sale_line_view_tree"/>
+            <field name="name">sale_line_margin_view</field>
+        </record>
+    </data>
+    <data depends="sale_shipment_cost">
+        <record model="ir.ui.view" id="sale_pos_carrier_view_form">
+            <field name="model">sale.sale</field>
+            <field name="inherit" ref="sale_pos.sale_pos_view_form"/>
+            <field name="name">sale_pos_carrier_form</field>
+        </record>
+    </data>
+    <data depends="sale_payment_type">
+        <record model="ir.ui.view" id="sale_pos_payment_type_view_form">
+            <field name="model">sale.sale</field>
+            <field name="inherit" ref="sale_pos.sale_pos_view_form"/>
+            <field name="name">sale_pos_payment_type_form</field>
+        </record>
+    </data>
+    <data depends="commission">
+        <record model="ir.ui.view" id="sale_pos_commission_view_form">
+            <field name="model">sale.sale</field>
+            <field name="inherit" ref="sale_pos.sale_pos_view_form"/>
+            <field name="name">sale_pos_commission_form</field>
+        </record>
+    </data>
+</tryton>

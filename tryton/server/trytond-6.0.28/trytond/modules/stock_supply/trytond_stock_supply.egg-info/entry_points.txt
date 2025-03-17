@@ -1,0 +1,2 @@
+[trytond.modules]
+stock_supply = trytond.modules.stock_supply

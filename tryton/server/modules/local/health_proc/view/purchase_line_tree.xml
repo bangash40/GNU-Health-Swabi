@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<data>
+    <xpath expr="/tree/field[@name=&quot;product_supplier&quot;]" position="replace">
+        <field name="product_supplier" tree_invisible="1"></field>
+    </xpath>
+    <xpath expr="/tree/field[@name=&quot;summary&quot;]" position="replace">
+        <field name="summary" tree_invisible="1"></field>
+    </xpath>
+    <xpath expr="/tree/field[@name=&quot;type&quot;]" position="replace">
+        <field name="type" tree_invisible="1"></field>
+    </xpath>    
+    <xpath expr="//field[@name=&quot;unit_price&quot;]" position="after">
+            <field name="retail_price"/>      
+    </xpath>
+</data>

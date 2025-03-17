@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<form>
+    	
+	<label name="prouduct_group"/>
+	<field name="prouduct_group"/>
+
+	<label name="product"/>
+	<field name="product"/>
+
+	<label name="list_price"/>
+	<field name="list_price"/>
+
+	<label name="doctor_one"/>
+	<field name="doctor_one"/>
+
+	<label name="doctor_one_share"/>
+	<field name="doctor_one_share"/>
+
+	<label name="doctor_two"/>
+	<field name="doctor_two"/>
+
+	<label name="doctor_two_share"/>
+	<field name="doctor_two_share"/>
+
+</form>

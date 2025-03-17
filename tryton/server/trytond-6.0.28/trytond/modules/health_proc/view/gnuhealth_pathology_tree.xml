@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<data>
+    <xpath expr="//field[@name=&quot;name&quot;]" position="before">
+		<field name="disease_local_name"/>
+    </xpath>
+</data>

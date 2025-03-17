@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<!--
+SPDX-FileCopyrightText: 2008-2023 Luis Falcón <falcon@gnuhealth.org>
+SPDX-FileCopyrightText: 2011-2023 GNU Solidario <health@gnusolidario.org>
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<tree>
+    <field name="patient" expand="1"/>
+    <field name="description" expand="1"/>
+    <field name="date" expand="1"/>
+    <field name="institution" expand="1"/>
+    <field name="ref_phys" expand="1"/>
+    <field name="req_phys" expand="1"/>
+    <field name="link" widget="url"/>
+</tree>

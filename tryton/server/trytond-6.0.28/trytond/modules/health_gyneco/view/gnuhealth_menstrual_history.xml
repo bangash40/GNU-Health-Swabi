@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+
+<!--
+SPDX-FileCopyrightText: 2008-2023 Luis Falcón <falcon@gnuhealth.org>
+SPDX-FileCopyrightText: 2011-2023 GNU Solidario <health@gnusolidario.org>
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<form>
+    <label name="evaluation"/>
+    <field name="evaluation"/>
+    <label name="evaluation_date"/>
+    <field name="evaluation_date"/>
+    <newline/>
+    <label name="lmp"/>
+    <field name="lmp"/>
+    <label name="lmp_length"/>
+    <field name="lmp_length"/>
+    <newline/>
+    <label name="frequency"/>
+    <field name="frequency"/>
+    <label name="volume"/>
+    <field name="volume"/>
+    <newline/>
+    <label name="is_regular"/>
+    <field name="is_regular"/>
+    <label name="dysmenorrhea"/>
+    <field name="dysmenorrhea"/>
+    <newline/>
+    <label name="healthprof"/>
+    <field name="healthprof"/>
+    <label name="institution"/>
+    <field name="institution"/>
+
+</form>

@@ -1,0 +1,6 @@
+python-dateutil
+trytond_account<6.1,>=6.0
+trytond_account_product<6.1,>=6.0
+trytond_product<6.1,>=6.0
+trytond_account_invoice<6.1,>=6.0
+trytond<6.1,>=6.0

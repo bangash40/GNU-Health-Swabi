@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<!--
+SPDX-FileCopyrightText: 2008-2023 Luis Falcón <falcon@gnuhealth.org>
+SPDX-FileCopyrightText: 2011-2023 GNU Solidario <health@gnusolidario.org>
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<tree>
+    <field name="patient"/>
+    <field name="assessment_date"/>
+    <field name="cognitive_function"/>
+    <field name="visual_function"/>
+    <field name="hearing_function"/>
+    <field name="speech_function"/>
+    <field name="hand_function"/>
+    <field name="locomotor_function"/>
+    <field name="uxo"/>
+    <field name="assessment"/>
+    <field name="healthprof"/>
+</tree>

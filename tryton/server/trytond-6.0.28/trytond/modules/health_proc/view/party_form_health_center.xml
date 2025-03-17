@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<data>
+    <xpath expr="//field[@name=&quot;active&quot;]" position="after">
+        <label name="family_relation"/>
+		<field name="family_relation"/>
+	
+		<label name="family_relation_person"/>
+		<field name="family_relation_person"/>
+    </xpath>
+
+    
+</data>

@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<form>
+
+<separator id="patient_details_separator" string="Patient Details"  colspan="4" />
+
+<label name="patient"/>
+        <field name="patient" colspan="3"/>
+        
+       <newline/>
+<label name="new_patient"/>
+        <field name="new_patient" colspan="3"/>
+
+<label name="prefix"/>
+        <field name="prefix"/>
+       
+<label name="name"/>
+        <field name="name"/>
+
+<label name="family_relation"/>
+<field name="family_relation"/>
+
+<label name="family_relation_person"/>
+<field name="family_relation_person"/>
+        
+<label name="gender"/>
+<field name="gender"/>
+
+<label name="est_years"/>
+<field name="est_years"/>
+
+
+
+<label name="dob"/>
+      <field name="dob"/>
+
+<label name="mobile_no"/>
+                    <field name="mobile_no"/>
+
+
+<label name="cnic"/>
+                    <field name="cnic"/>
+                    
+<label name="address"/>
+                    <field name="address"/>
+
+<label name="country"/>
+                    <field name="country"/> 
+                    
+
+<label name="city"/>
+                    <field name="city"/>                    
+                                        
+<separator id="opd_appointment_separator" string="OPD Appointmnet Details"  colspan="4" />
+
+<label name="doctor"/>
+                    <field name="doctor"/>
+                    
+<label name="service"/>
+                    <field name="service"/>
+
+<separator id="payment_mode_separator" string="Payment / Charging Details"  colspan="4" />
+
+<label name="payment_mode"/>
+                    <field name="payment_mode"/>
+                    
+<label name="insurance_company"/>
+                    <field name="insurance_company"/>                    
+                    
+<label name="insurance_plan"/>
+                    <field name="insurance_plan"/>                          
+</form>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<!--
+SPDX-FileCopyrightText: 2008-2023 Luis Falcón <falcon@gnuhealth.org>
+SPDX-FileCopyrightText: 2011-2023 GNU Solidario <health@gnusolidario.org>
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<tree editable="1">
+    <field name="patient"/>
+    <field name="amputation_date"/>
+    <field name="etiology"/>
+    <field name="body_structure"/>
+    <field name="limb"/>
+    <field name="side"/>
+    <field name="amputation_level"/>
+    <field name="healthprof"/>
+    <field name="comments"/>
+</tree>

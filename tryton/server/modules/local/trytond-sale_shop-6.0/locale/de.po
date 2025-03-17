@@ -1,0 +1,187 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:res.user,shop:"
+msgid "Shop"
+msgstr "Filiale"
+
+msgctxt "field:res.user,shops:"
+msgid "Shops"
+msgstr "Filialen"
+
+msgctxt "field:sale.sale,shop:"
+msgid "Shop"
+msgstr "Filiale"
+
+msgctxt "field:sale.sale,shop_address:"
+msgid "Shop Address"
+msgstr "Filialadresse"
+
+msgctxt "field:sale.shop,active:"
+msgid "Active"
+msgstr "Aktiv"
+
+msgctxt "field:sale.shop,address:"
+msgid "Address"
+msgstr "Adresse"
+
+msgctxt "field:sale.shop,company:"
+msgid "Company"
+msgstr "Unternehmen"
+
+msgctxt "field:sale.shop,company_party:"
+msgid "Company Party"
+msgstr "Partei Unternehmen"
+
+msgctxt "field:sale.shop,create_date:"
+msgid "Create Date"
+msgstr "Erstellungsdatum"
+
+msgctxt "field:sale.shop,create_uid:"
+msgid "Create User"
+msgstr "Erstellt durch"
+
+msgctxt "field:sale.shop,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:sale.shop,name:"
+msgid "Shop Name"
+msgstr "Name"
+
+msgctxt "field:sale.shop,payment_term:"
+msgid "Payment Term"
+msgstr "Zahlungsbedingung"
+
+msgctxt "field:sale.shop,price_list:"
+msgid "Price List"
+msgstr "Preisliste"
+
+msgctxt "field:sale.shop,rec_name:"
+msgid "Name"
+msgstr "Name"
+
+msgctxt "field:sale.shop,sale_invoice_method:"
+msgid "Sale Invoice Method"
+msgstr "Rechnungsstellung Verkauf"
+
+msgctxt "field:sale.shop,sale_sequence:"
+msgid "Sale Sequence"
+msgstr "Nummernkreis Verkauf"
+
+msgctxt "field:sale.shop,sale_shipment_method:"
+msgid "Sale Shipment Method"
+msgstr "Liefermethode Verkauf"
+
+msgctxt "field:sale.shop,users:"
+msgid "Users"
+msgstr "Benutzer"
+
+msgctxt "field:sale.shop,warehouse:"
+msgid "Warehouse"
+msgstr "Warenlager"
+
+msgctxt "field:sale.shop,write_date:"
+msgid "Write Date"
+msgstr "Zuletzt geändert"
+
+msgctxt "field:sale.shop,write_uid:"
+msgid "Write User"
+msgstr "Letzte Änderung durch"
+
+msgctxt "field:sale.shop-res.user,create_date:"
+msgid "Create Date"
+msgstr "Erstellungsdatum"
+
+msgctxt "field:sale.shop-res.user,create_uid:"
+msgid "Create User"
+msgstr "Erstellt durch"
+
+msgctxt "field:sale.shop-res.user,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:sale.shop-res.user,rec_name:"
+msgid "Name"
+msgstr "Name"
+
+msgctxt "field:sale.shop-res.user,shop:"
+msgid "Shop"
+msgstr "Filiale"
+
+msgctxt "field:sale.shop-res.user,user:"
+msgid "User"
+msgstr "Benutzer"
+
+msgctxt "field:sale.shop-res.user,write_date:"
+msgid "Write Date"
+msgstr "Zuletzt geändert"
+
+msgctxt "field:sale.shop-res.user,write_uid:"
+msgid "Write User"
+msgstr "Letzte Änderung durch"
+
+msgctxt "field:stock.shipment.out,shop_addresses:"
+msgid "Shop Addresses"
+msgstr "Filialadressen"
+
+msgctxt "field:stock.shipment.out.return,shop_addresses:"
+msgid "Shop Addresses"
+msgstr "Filialadressen"
+
+msgctxt "model:ir.action,name:act_sale_shop_form"
+msgid "Shops"
+msgstr "Filialen"
+
+msgctxt "model:ir.ui.menu,name:menu_sale_shop"
+msgid "Shops"
+msgstr "Filialen"
+
+msgctxt "model:sale.shop,name:"
+msgid "Sale Shop"
+msgstr "Filiale"
+
+msgctxt "model:sale.shop-res.user,name:"
+msgid "Sale Shop - Res User"
+msgstr "Filiale - Benutzer"
+
+msgctxt "selection:sale.shop,sale_invoice_method:"
+msgid "Manual"
+msgstr "Manuell"
+
+msgctxt "selection:sale.shop,sale_invoice_method:"
+msgid "On Order Processed"
+msgstr "Nach Auftragsausführung"
+
+msgctxt "selection:sale.shop,sale_invoice_method:"
+msgid "On Shipment Sent"
+msgstr "Bei Versand"
+
+msgctxt "selection:sale.shop,sale_shipment_method:"
+msgid "Manual"
+msgstr "Manuell"
+
+msgctxt "selection:sale.shop,sale_shipment_method:"
+msgid "On Invoice Paid"
+msgstr "Bei Bezahlung"
+
+msgctxt "selection:sale.shop,sale_shipment_method:"
+msgid "On Order Processed"
+msgstr "Nach Auftragsausführung"
+
+msgctxt "view:res.user:"
+msgid "Shops"
+msgstr "Filialen"
+
+msgctxt "view:sale.shop:"
+msgid "General"
+msgstr "Allgemein"
+
+msgctxt "view:sale.shop:"
+msgid "Shops"
+msgstr "Filialen"
+
+msgctxt "view:sale.shop:"
+msgid "Users"
+msgstr "Benutzer"

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<data>
+	<xpath expr="//field[@name=&quot;warehouse&quot;]" position="after">
+        <label name="store_location"/>
+		<field name="store_location"/>
+    </xpath>
+
+    <xpath expr="/form/notebook/page[@id=&quot;requisition&quot;]" position="after">
+		<page string="Internal Shipments" id="req_internal_shipment_grp">
+			<group colspan="4" id="group_all_internal_shipments">
+				<field name="internal_shipments_list" height="180"/>				
+			</group>
+		</page>
+    </xpath>
+</data>

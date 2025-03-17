@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<!--
+SPDX-FileCopyrightText: 2008-2023 Luis Falcón <falcon@gnuhealth.org>
+SPDX-FileCopyrightText: 2011-2023 GNU Solidario <health@gnusolidario.org>
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<tree>
+    <field name="vaccine" expand="1"/>
+    <field name="quantity" expand="1"/>
+    <field name="lot" expand="1"/>
+    <field name="dose" expand="1"/>
+    <field name="next_dose_date" expand="1"/>
+</tree>

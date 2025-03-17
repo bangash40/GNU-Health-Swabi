@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+<!--
+SPDX-FileCopyrightText: 2008-2023 Luis Falcón <falcon@gnuhealth.org>
+SPDX-FileCopyrightText: 2011-2023 GNU Solidario <health@gnusolidario.org>
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<form>
+    <label name="patient"/>
+    <field name="patient"/>
+    <label name="computed_age"/>
+    <field name="computed_age"/>
+    <label name="number"/>
+    <field name="number"/>
+    <label name="date"/>
+    <field name="date"/>
+    <label name="requested_test"/>
+    <field name="requested_test"/>
+    <label name="request_date"/>
+    <field name="request_date"/>
+    <label name="doctor"/>
+    <field name="doctor"/>
+    <label name="order"/>
+    <field name="order"/>
+    <newline/>
+    <label name="request"/>
+    <field name="request" colspan="3"/>
+    <notebook>
+        <page string="Interpretation / Report" id="interpretation_report_page">
+            <field name="comment" colspan="4"   widget="richtext"/>
+        </page>
+        <page string="Images" id="images_page">
+            <field name="images" colspan="4"/>
+        </page>
+    </notebook>
+</form>

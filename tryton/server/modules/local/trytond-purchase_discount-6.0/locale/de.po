@@ -1,0 +1,15 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:purchase.line,discount:"
+msgid "Discount"
+msgstr "Rabatt"
+
+msgctxt "field:purchase.line,gross_unit_price:"
+msgid "Gross Price"
+msgstr "Preis"
+
+msgctxt "model:ir.action,name:report_purchase"
+msgid "Purchase"
+msgstr "Verkauf"

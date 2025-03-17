@@ -1,0 +1,13 @@
+Version 5.5.0 - 2019-11-14
+Version 5.4.0 - 2019-11-14
+Version 5.3.0 - 2019-05-06
+Version 4.0.0 - 2016-05-03
+Version 3.2.1 - 2014-10-31
+* Remove unnecessary fields from depends and add other required
+* Split sale_pos module into two modules: sale_pos and sale_payment
+* Added extra depend of sale_shipment_cost on views
+
+Version 3.2.0 - 2014-05-22
+
+Version 3.0.0 - 2013-11-07
+* Initial release

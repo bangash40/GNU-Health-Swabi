@@ -1,0 +1,4 @@
+
+    [trytond.modules]
+    commission = trytond.modules.commission
+    

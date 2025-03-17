@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<!--
+SPDX-FileCopyrightText: 2008-2023 Luis Falcón <falcon@gnuhealth.org>
+SPDX-FileCopyrightText: 2011-2023 GNU Solidario <health@gnusolidario.org>
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<data>
+	<xpath expr="//field[@name=&quot;state&quot;]" position="after">
+        <newline/>
+        <group id="group_lab_request_services" colspan="4">
+            <label name="service"/>
+            <field name="service"/>
+            <button name="update_service" help="Update Service document with this lab request ?" string="Update Services" icon="tryton-go-next" confirm="Transfer lab request to services ?"/>
+        </group>
+    </xpath>
+</data>

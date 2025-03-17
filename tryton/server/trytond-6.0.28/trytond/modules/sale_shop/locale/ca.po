@@ -1,0 +1,191 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:res.user,shop:"
+msgid "Shop"
+msgstr "Botiga"
+
+msgctxt "field:res.user,shops:"
+msgid "Shops"
+msgstr "Botigues"
+
+msgctxt "field:sale.sale,shop:"
+msgid "Shop"
+msgstr "Botiga"
+
+msgctxt "field:sale.sale,shop_address:"
+msgid "Shop Address"
+msgstr "Adreça botiga"
+
+msgctxt "field:sale.shop,active:"
+msgid "Active"
+msgstr "Actiu"
+
+msgctxt "field:sale.shop,address:"
+msgid "Address"
+msgstr "Adreça"
+
+msgctxt "field:sale.shop,company:"
+msgid "Company"
+msgstr "Empresa"
+
+msgctxt "field:sale.shop,company_party:"
+msgid "Company Party"
+msgstr "Tercer de l'empresa"
+
+msgctxt "field:sale.shop,create_date:"
+msgid "Create Date"
+msgstr "Data creació"
+
+msgctxt "field:sale.shop,create_uid:"
+msgid "Create User"
+msgstr "Usuari creació"
+
+msgctxt "field:sale.shop,currency:"
+msgid "Currency"
+msgstr "Moneda"
+
+msgctxt "field:sale.shop,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:sale.shop,name:"
+msgid "Shop Name"
+msgstr "Nom botiga"
+
+msgctxt "field:sale.shop,payment_term:"
+msgid "Payment Term"
+msgstr "Termini de pagament"
+
+msgctxt "field:sale.shop,price_list:"
+msgid "Price List"
+msgstr "Tarifa de venta"
+
+msgctxt "field:sale.shop,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:sale.shop,sale_invoice_method:"
+msgid "Sale Invoice Method"
+msgstr "Política de facturació"
+
+msgctxt "field:sale.shop,sale_sequence:"
+msgid "Sale Sequence"
+msgstr "Seqüència de la venta"
+
+msgctxt "field:sale.shop,sale_shipment_method:"
+msgid "Sale Shipment Method"
+msgstr "Política d'enviament"
+
+msgctxt "field:sale.shop,users:"
+msgid "Users"
+msgstr "Usuaris"
+
+msgctxt "field:sale.shop,warehouse:"
+msgid "Warehouse"
+msgstr "Magatzem"
+
+msgctxt "field:sale.shop,write_date:"
+msgid "Write Date"
+msgstr "Data actualització"
+
+msgctxt "field:sale.shop,write_uid:"
+msgid "Write User"
+msgstr "Usuari actualització"
+
+msgctxt "field:sale.shop-res.user,create_date:"
+msgid "Create Date"
+msgstr "Data creació"
+
+msgctxt "field:sale.shop-res.user,create_uid:"
+msgid "Create User"
+msgstr "Usuari creació"
+
+msgctxt "field:sale.shop-res.user,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:sale.shop-res.user,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:sale.shop-res.user,shop:"
+msgid "Shop"
+msgstr "Botiga"
+
+msgctxt "field:sale.shop-res.user,user:"
+msgid "User"
+msgstr "Usuari"
+
+msgctxt "field:sale.shop-res.user,write_date:"
+msgid "Write Date"
+msgstr "Data actualització"
+
+msgctxt "field:sale.shop-res.user,write_uid:"
+msgid "Write User"
+msgstr "Usuari actualització"
+
+msgctxt "field:stock.shipment.out,shop_addresses:"
+msgid "Shop Addresses"
+msgstr "Adreces de la botiga"
+
+msgctxt "field:stock.shipment.out.return,shop_addresses:"
+msgid "Shop Addresses"
+msgstr "Adreces de la botiga"
+
+msgctxt "model:ir.action,name:act_sale_shop_form"
+msgid "Shops"
+msgstr "Botigues"
+
+msgctxt "model:ir.ui.menu,name:menu_sale_shop"
+msgid "Shops"
+msgstr "Botigues"
+
+msgctxt "model:sale.shop,name:"
+msgid "Sale Shop"
+msgstr "Botiga"
+
+msgctxt "model:sale.shop-res.user,name:"
+msgid "Sale Shop - Res User"
+msgstr "Botigues - Usuaris"
+
+msgctxt "selection:sale.shop,sale_invoice_method:"
+msgid "Manual"
+msgstr "Manual"
+
+msgctxt "selection:sale.shop,sale_invoice_method:"
+msgid "On Order Processed"
+msgstr "Al processar la comanda"
+
+msgctxt "selection:sale.shop,sale_invoice_method:"
+msgid "On Shipment Sent"
+msgstr "A l'enviar-ho"
+
+msgctxt "selection:sale.shop,sale_shipment_method:"
+msgid "Manual"
+msgstr "Manual"
+
+msgctxt "selection:sale.shop,sale_shipment_method:"
+msgid "On Invoice Paid"
+msgstr "Al pagar la factura"
+
+msgctxt "selection:sale.shop,sale_shipment_method:"
+msgid "On Order Processed"
+msgstr "Al processar la comanda"
+
+msgctxt "view:res.user:"
+msgid "Shops"
+msgstr "Botigues"
+
+msgctxt "view:sale.shop:"
+msgid "General"
+msgstr "General"
+
+msgctxt "view:sale.shop:"
+msgid "Shops"
+msgstr "Botigues"
+
+msgctxt "view:sale.shop:"
+msgid "Users"
+msgstr "Usuaris"

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<form>
+
+            <label name="numeric_result"/>
+            <field name="numeric_result"/>
+
+            <label name="selected_result_option"/>
+            <field name="selected_result_option"/>
+        <group id="grp_text_results" colspan="4" string="Text Result"> 
+
+            <field name="text_result"/>
+</group>
+        <group id="grp_results_range_00" colspan="4" string="Result Range"> 
+
+	    <field name="result_range"/>
+</group>
+        <group id="grp_desc_range_comments" colspan="4" string="Descriptive Range Comments"> 
+   	    <field name="range_comment"/>
+</group>
+<label name="parent_anal_service_result"/>
+   	    <field name="parent_anal_service_result"/>
+<label name="historic_results"/>
+   	    <field name="historic_results"/>
+
+            <label name="hidden"/>
+   	    <field name="hidden"/>
+             <label name="service"/>
+            <field name="service"/>
+	    <label name="state"/>
+   	    <field name="state"/>  
+</form>

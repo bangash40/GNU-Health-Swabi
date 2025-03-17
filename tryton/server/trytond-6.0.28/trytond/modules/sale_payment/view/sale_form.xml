@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!-- This file is part of the sale_payment module for Tryton.
+The COPYRIGHT file at the top level of this repository contains the full
+copyright notices and license terms. -->
+<data>
+    <xpath expr="/form/group/button[@name='process']" position="after">
+        <button name="wizard_sale_payment" icon="tryton-forward"/>
+    </xpath>
+    <xpath expr="/form/notebook/page[@id='other']" position="after">
+        <page string="Payments" col="4" id="payments">
+            <field name="payments" colspan="4" readonly="1"/>
+            <label name="paid_amount"/>
+            <field name="paid_amount"/>
+            <label name="residual_amount"/>
+            <field name="residual_amount"/>
+        </page>
+    </xpath>
+    <xpath expr="/form/notebook/page[@id='other']/field[@name='shop']" position="after">
+        <label name="sale_device"/>
+        <field name="sale_device"/>
+    </xpath>
+</data>

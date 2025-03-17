@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+SPDX-FileCopyrightText: 2008-2023 Luis Falcón <falcon@gnuhealth.org>
+SPDX-FileCopyrightText: 2011-2023 GNU Solidario <health@gnusolidario.org>
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<!-- This file is part of GNU Health. GPL v3+ -->
+<!-- Luis Falcon . GNU Solidario -->
+<!-- Default template for permission groups -->
+
+<tryton>
+    <data>
+
+<!-- Default access rights to models -->
+
+        <record model="ir.model.access" id="access_health_imaging_test_type">
+            <field name="model" search="[('model', '=', 'gnuhealth.imaging.test.type')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+
+
+        <record model="ir.model.access" id="access_health_imaging_test">
+            <field name="model" search="[('model', '=', 'gnuhealth.imaging.test')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+
+        <record model="ir.model.access" id="access_health_imaging_test_request">
+            <field name="model" search="[('model', '=', 'gnuhealth.imaging.test.request')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+
+        <record model="ir.model.access" id="access_health_imaging_test_result">
+            <field name="model" search="[('model', '=', 'gnuhealth.imaging.test.result')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+
+<!-- END OF DEFAULT ACCESS RIGHTS -->
+
+<!-- Create the Health imaging group -->
+        <record model="res.group" id="group_health_imaging">
+            <field name="name">Health Imaging</field>
+        </record>
+
+<!-- Create the Health imaging Administration group -->
+        <record model="res.group" id="group_health_imaging_admin">
+            <field name="name">Health Imaging Administration</field>
+        </record>
+
+<!-- BEGIN imaging ADMINISTRATION GROUP ACCESS RIGHTS -->
+
+
+<!-- Assign the Group to the "admin" user -->
+
+        <record model="res.user-res.group" id="user_admin_group_health_imaging">
+            <field name="user" ref="res.user_admin"/>
+            <field name="group" ref="group_health_imaging_admin"/>
+        </record>
+
+    <!-- Access to Menus -->
+
+        <record model="ir.ui.menu-res.group" id="menu_health_group_health_imaging_admin">
+            <field name="menu" ref="menu_imaging"/>
+            <field name="group" ref="group_health_imaging_admin"/>
+        </record>
+
+        <record model="ir.ui.menu-res.group" id="menu_health_group_health_imaging_conf_admin">
+            <field name="menu" ref="menu_imaging_test_parent"/>
+            <field name="group" ref="group_health_imaging_admin"/>
+        </record>
+
+
+        <record model="ir.model.access" id="access_health_imaging_test_type_admin">
+            <field name="model" search="[('model', '=', 'gnuhealth.imaging.test.type')]"/>
+            <field name="group" ref="group_health_imaging_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+
+        <record model="ir.model.access" id="access_health_imaging_test_admin">
+            <field name="model" search="[('model', '=', 'gnuhealth.imaging.test')]"/>
+            <field name="group" ref="group_health_imaging_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+        <record model="ir.model.access" id="access_health_imaging_test_request_admin">
+            <field name="model" search="[('model', '=', 'gnuhealth.imaging.test.request')]"/>
+            <field name="group" ref="group_health_imaging_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+        <record model="ir.model.access" id="access_health_imaging_test_result_admin">
+            <field name="model" search="[('model', '=', 'gnuhealth.imaging.test.result')]"/>
+            <field name="group" ref="group_health_imaging_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+
+
+<!-- END imaging ADMINISTRATION GROUP ACCESS RIGHTS -->
+
+<!-- BEGIN imaging USER GROUP ACCESS RIGHTS -->
+
+<!-- Create the demo_imaging user -->
+        <record model="res.user" id="user_demo_imaging">
+            <field name="name">Health Imaging</field>
+            <field name="login">demo_imaging</field>
+            <field name="password">gnusolidario</field>
+            <field name="active" eval="False"></field>
+        </record>
+
+
+<!-- Assign the Admin group to the "demo_imaging" user -->
+
+        <record model="res.user-res.group" id="user_demo_group_health_imaging">
+            <field name="user" ref="user_demo_imaging"/>
+            <field name="group" ref="group_health_imaging_admin"/>
+        </record>
+
+<!-- Access to Menus -->
+
+        <record model="ir.ui.menu-res.group" id="menu_health_group_health_imaging">
+            <field name="menu" ref="health.gnuhealth_menu"/>
+            <field name="group" ref="group_health_imaging"/>
+        </record>
+        <record model="ir.ui.menu-res.group" id="menu_imaging_group_health_imaging">
+            <field name="menu" ref="menu_imaging_test_parent"/>
+            <field name="group" ref="group_health_imaging"/>
+        </record>
+
+
+<!-- DOCTOR -->
+
+        <record model="ir.model.access" id="access_health_imaging_test_request_doctor">
+            <field name="model" search="[('model', '=', 'gnuhealth.imaging.test.request')]"/>
+            <field name="group" ref="health.group_health_doctor"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+        <record model="ir.model.access" id="access_health_imaging_result_doctor">
+            <field name="model" search="[('model', '=', 'gnuhealth.imaging.test.result')]"/>
+            <field name="group" ref="health.group_health_doctor"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+
+        <record model="ir.model.access" id="access_health_imaging_test_doctor">
+            <field name="model" search="[('model', '=', 'gnuhealth.imaging.test')]"/>
+            <field name="group" ref="health.group_health_doctor"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+
+        <record model="ir.model.access" id="access_health_imaging_test_type_doctor">
+            <field name="model" search="[('model', '=', 'gnuhealth.imaging.test.type')]"/>
+            <field name="group" ref="health.group_health_doctor"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+
+<!-- Generic Medical Imaging access -->
+
+        <record model="ir.model.access" id="access_health_imaging_test_request_imaging">
+            <field name="model" search="[('model', '=', 'gnuhealth.imaging.test.request')]"/>
+            <field name="group" ref="group_health_imaging"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+        <record model="ir.model.access" id="access_health_imaging_result_imaging">
+            <field name="model" search="[('model', '=', 'gnuhealth.imaging.test.result')]"/>
+            <field name="group" ref="group_health_imaging"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+
+        <record model="ir.model.access" id="access_health_imaging_test_imaging">
+            <field name="model" search="[('model', '=', 'gnuhealth.imaging.test')]"/>
+            <field name="group" ref="group_health_imaging"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+
+        <record model="ir.model.access" id="access_health_imaging_test_type_imaging">
+            <field name="model" search="[('model', '=', 'gnuhealth.imaging.test.type')]"/>
+            <field name="group" ref="group_health_imaging"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+
+<!-- END OF imaging GROUP ACCESS RIGHTS -->
+
+    </data>
+</tryton>

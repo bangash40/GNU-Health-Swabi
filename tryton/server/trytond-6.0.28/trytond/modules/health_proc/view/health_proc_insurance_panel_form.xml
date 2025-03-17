@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<form>
+    <label name="name"/>
+    <field name="name"/>
+    <newline/>
+    <label name="panel_type"/>
+    <field name="panel_type"/>
+    <newline/>
+    <field name="packages" colspan="4"/>
+    <newline/>
+    <field name="notes" colspan="4"/>
+</form>

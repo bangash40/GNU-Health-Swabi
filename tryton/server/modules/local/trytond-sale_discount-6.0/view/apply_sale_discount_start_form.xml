@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!-- This file is part of the sale_discount module for Tryton.
+The COPYRIGHT file at the top level of this repository contains the full
+copyright notices and license terms. -->
+<form col="4">
+    <image name="tryton-info" xexpand="0" xfill="0"/>
+    <label name="discount" yalign="0.0" xalign="1.0" xexpand="1"/>
+    <field name="discount" factor="100" xexpand="0" xfill="0"/>
+    <label name="discount" string="%" xalign="0.0" xexpand="1" xfill="1"/>
+</form>

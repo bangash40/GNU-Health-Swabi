@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<form>
+	<label name="patient"/>
+	<field name="patient"/>
+
+	<label name="date"/>
+	<field name="date"/>
+	<label name="nature"/>
+	<field name="nature"/>
+	<label name="inpatient_registration_code"/>
+	<field name="inpatient_registration_code"/>
+
+	<label name="department"/>
+	<field name="department"/>
+	<label name="ward"/>
+	<field name="ward"/>
+	<label name="bed"/>
+	<field name="bed"/>	
+	<label name="doctor"/>
+	<field name="doctor"/>
+
+	<label name="payment_mode"/>
+    <field name="payment_mode"/>
+                 
+	<label name="insurance_company"/>
+    <field name="insurance_company"/>                    
+                    
+	<label name="insurance_plan"/>
+    <field name="insurance_plan"/> 
+	
+	<label name="amount"/>
+	<field name="amount"/>	
+
+	<label name="total_bill"/>
+	<field name="total_bill"/>	
+
+
+	<newline/>
+		<field name="general_sale_lines" height="50" width="200" colspan="4"/>
+
+				
+
+</form>

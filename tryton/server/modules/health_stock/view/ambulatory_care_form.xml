@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<!--
+SPDX-FileCopyrightText: 2008-2023 Luis Falcón <falcon@gnuhealth.org>
+SPDX-FileCopyrightText: 2011-2023 GNU Solidario <health@gnusolidario.org>
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<data>
+    <xpath expr="/form/notebook/page[@id=&quot;ambulatory_care_main&quot;]" position="after">
+        <page string="Medication" id="medication">
+            <label name="care_location"/>
+            <field name="care_location"/>
+            <field name="medicaments" colspan="4" view_ids="health_stock.gnuhealth_ambulatory_care_medicament_tree"/>
+            <field name="medical_supplies" colspan="4" view_ids="health_stock.gnuhealth_ambulatory_care_medical_supplies_tree"/>
+        </page>
+        <page string="Stock Moves" id="Stock Moves">
+            <field name="moves" colspan="4"/>
+        </page>
+    </xpath>
+    <xpath expr="//button[@name=&quot;end_session&quot;]" position="replace">
+        <button name="done" string="Done / Create Stock moves" icon="tryton-go-next"/>
+    </xpath>
+    <xpath expr="/form/notebook/page[@id=&quot;ambulatory_care_main&quot;]/field[@name=&quot;session_notes&quot;]" position="replace_attributes">
+        <field name="session_notes" height="50"/>
+    </xpath>
+</data>

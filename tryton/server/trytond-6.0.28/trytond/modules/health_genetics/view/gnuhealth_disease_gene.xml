@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+
+<!--
+SPDX-FileCopyrightText: 2008-2023 Luis Falcón <falcon@gnuhealth.org>
+SPDX-FileCopyrightText: 2011-2023 GNU Solidario <health@gnusolidario.org>
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<form>
+    <label name="name"/>
+    <field name="name"/>
+    <label name="long_name"/>
+    <field name="long_name"/>
+    <newline/>
+    <label name="protein_name"/>
+    <field name="protein_name"/>
+    <label name="protein_uri"/>
+    <field name="protein_uri" widget="url"/>
+    <newline/>
+    <label name="chromosome"/>
+    <field name="chromosome"/>
+    <label name="location"/>
+    <field name="location"/>
+    <label name="gene_id"/>
+    <field name="gene_id"/>
+    <newline/>
+    <field colspan="4" name="variants"/>
+    <newline/>
+    <field colspan="4" name="info"/>
+</form>

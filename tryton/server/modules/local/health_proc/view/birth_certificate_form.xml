@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<data>
+    <xpath expr="//field[@name=&quot;observations&quot;]" position="after">
+		<label name="born_dead_alive"/>		 
+		<field name="born_dead_alive"/>
+
+		<label name="delivered_by_doctor"/>		 
+		<field name="delivered_by_doctor"/>
+
+		<label name="time_of_birth"/>		 
+		<field name="time_of_birth"/>
+
+    </xpath>
+</data>

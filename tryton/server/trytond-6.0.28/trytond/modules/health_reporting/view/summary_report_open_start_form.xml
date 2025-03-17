@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<!--
+SPDX-FileCopyrightText: 2008-2023 Luis Falcón <falcon@gnuhealth.org>
+SPDX-FileCopyrightText: 2011-2023 GNU Solidario <health@gnusolidario.org>
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<form>
+    <group colspan="4" string="Main" id="report_summary_header">
+        <label name="institution"/>
+        <field name="institution"/>
+        <newline/>
+        <label name="start_date"/>
+        <field name="start_date"/>
+        <label name="end_date"/>
+        <field name="end_date"/>
+    </group>
+    <group colspan="4" string="Sections" id="report_summary_sections">
+        <label name="demographics"/>
+        <field name="demographics"/>
+        <label name="patient_evaluations"/>
+        <field name="patient_evaluations"/>
+    </group>
+
+</form>

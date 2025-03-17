@@ -1,0 +1,1203 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+	    <record model="ir.action.act_window" id="act_proc_discount_request_view">
+            <field name="name">Discount Request</field>
+            <field name="res_model">anth.proc.discount.request</field>
+        </record>
+        
+        <record model="ir.ui.view" id="view_proc_discount_request_form">
+            <field name="model">anth.proc.discount.request</field>
+            <field name="type">form</field>
+            <field name="name">anth_proc_sale_discount_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="view_proc_discount_request_tree">
+            <field name="model">anth.proc.discount.request</field>
+            <field name="type">tree</field>
+            <field name="name">anth_proc_sale_discount_tree</field>
+        </record>
+
+	<record model="ir.action.act_window.view" id="act_discount_requests_list_view">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="view_proc_discount_request_tree"/>
+            <field name="act_window" ref="act_proc_discount_request_view"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_discount_requests_form_view">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="view_proc_discount_request_form"/>
+            <field name="act_window" ref="act_proc_discount_request_view"/>
+        </record>
+
+        <record model="ir.ui.view" id="view_proc_discount_request_line_form">
+            <field name="model">anth.proc.discount.request.line</field>
+            <field name="type">form</field>
+            <field name="name">anth_proc_discount_request_line_form</field>
+        </record>
+
+	<record model="ir.ui.view" id="view_proc_discount_request_line_tree">
+            <field name="model">anth.proc.discount.request.line</field>
+            <field name="type">tree</field>
+            <field name="name">anth_proc_discount_request_line_tree</field>
+        </record>
+
+
+	<record model="ir.action.act_window.domain" id="act_discount_requests_requested">
+            <field name="name">Requested</field>
+            <field name="sequence" eval="10"/>
+            <field name="domain" eval="[('state', '=', 'requested')]" pyson="1"/>
+            <field name="act_window" ref="act_proc_discount_request_view"/>
+        </record>
+
+	<record model="ir.action.act_window.domain" id="act_discount_requests_approved">
+            <field name="name">Approved</field>
+            <field name="sequence" eval="20"/>
+            <field name="domain" eval="[('state', '=', 'approved')]" pyson="1"/>
+            <field name="act_window" ref="act_proc_discount_request_view"/>
+        </record>
+
+	<record model="ir.action.act_window.domain" id="act_discount_requests_uitlized">
+            <field name="name">Utilized</field>
+            <field name="sequence" eval="25"/>
+            <field name="domain" eval="[('state', '=', 'utilized')]" pyson="1"/>
+            <field name="act_window" ref="act_proc_discount_request_view"/>
+        </record>
+	<record model="ir.action.act_window.domain" id="act_discount_requests_returned">
+            <field name="name">Retunred</field>
+            <field name="sequence" eval="25"/>
+            <field name="domain" eval="[('state', '=', 'returned')]" pyson="1"/>
+            <field name="act_window" ref="act_proc_discount_request_view"/>
+        </record>
+	<record model="ir.action.act_window.domain" id="act_discount_requests_rejected">
+            <field name="name">Rejected</field>
+            <field name="sequence" eval="30"/>
+            <field name="domain" eval="[('state', '=', 'rejected')]" pyson="1"/>
+            <field name="act_window" ref="act_proc_discount_request_view"/>
+        </record>
+
+	<record model="ir.action.act_window.domain" id="act_discount_requests_all">
+            <field name="name">All</field>
+            <field name="sequence" eval="40"/>
+            <field name="act_window" ref="act_proc_discount_request_view"/>
+        </record>
+
+        <menuitem parent="health.gnuhealth_menu"
+            action="act_proc_discount_request_view" id="menu_proc_discount_request"
+            icon="gnuhealth-list"/>
+
+        <record model="ir.ui.view" id="view_healthprof_form">
+            <field name="model">gnuhealth.healthprofessional</field>
+            <field name="inherit" ref="health.gnuhealth_healthprofessional_view" />
+            <field name="name">gnuhealth_healthprof</field>
+        </record>
+
+<!-- Health Lab form updates -->
+        <record model="ir.ui.view" id="health_lab_test_type_tree_view">
+            <field name="model">gnuhealth.lab.test_type</field>
+            <field name="inherit" ref="health_lab.gnuhealth_lab_test_tree" />
+            <field name="name">health_lab_test_type_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="view_health_lab_services">
+            <field name="model">gnuhealth.lab.test_type</field>
+            <field name="inherit" ref="health_lab.gnuhealth_lab_test_view" />
+            <field name="name">gnuhealth_lab_test_type</field>
+        </record>
+
+        <record model="ir.ui.view" id="view_health_lab_result">
+            <field name="model">gnuhealth.lab</field>
+            <field name="inherit" ref="health_lab.gnuhealth_lab_view" />
+            <field name="name">gnuhealth_lab_result</field>
+        </record>
+        
+        <record model="ir.ui.view" id="view_health_lab_result_tree">
+            <field name="model">gnuhealth.lab</field>
+            <field name="inherit" ref="health_lab.gnuhealth_lab_tree" />
+            <field name="name">gnuhealth_lab_result_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="view_health_lab_request_form_updates">
+            <field name="model">gnuhealth.patient.lab.test</field>
+            <field name="inherit" ref="health_lab.gnuhealth_lab_test_request_form" />
+            <field name="name">gnuhealth_lab_request_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="view_health_lab_start_view_more">
+            <field name="model">gnuhealth.patient.lab.test.request.start</field>
+            <field name="inherit" ref="health_lab.patient_lab_test_request_start_view_form"/>
+            <field name="name">gnuhealth_lab_test_start</field>
+        </record>        
+
+        <record model="ir.action.act_window.domain" id="act_draft_lab_requests">
+            <field name="name">Draft</field>
+            <field name="sequence" eval="10"/>
+            <field name="domain" eval="[('state', '=', 'draft')]" pyson="1"/>
+            <field name="act_window" ref="health_lab.gnuhealth_action_lab_test_request"/>
+        </record>            
+        <record model="ir.action.act_window.domain" id="act_ordered_lab_requests">
+            <field name="name">Ordered</field>
+            <field name="sequence" eval="10"/>
+            <field name="domain" eval="[('state', '=', 'ordered')]" pyson="1"/>
+            <field name="act_window" ref="health_lab.gnuhealth_action_lab_test_request"/>
+        </record>   
+        <record model="ir.action.act_window.domain" id="act_all_lab_requests">
+            <field name="name">All</field>
+            <field name="sequence" eval="10"/>
+            <field name="act_window" ref="health_lab.gnuhealth_action_lab_test_request"/>
+        </record>   
+
+        <record model="ir.action.act_window.domain" id="act_draft_lab_results">
+            <field name="name">Initial</field>
+            <field name="sequence" eval="10"/>
+            <field name="domain" eval="[('state', '=', 'draft')]" pyson="1"/>
+            <field name="act_window" ref="health_lab.gnuhealth_action_tree_lab"/>
+        </record>            
+        <record model="ir.action.act_window.domain" id="act_done_lab_results">
+            <field name="name">Final</field>
+            <field name="sequence" eval="10"/>
+            <field name="domain" eval="[('state', '=', 'done')]" pyson="1"/>
+            <field name="act_window" ref="health_lab.gnuhealth_action_tree_lab"/>
+        </record>            
+        <record model="ir.action.act_window.domain" id="act_final_lab_results">
+            <field name="name">Signed</field>
+            <field name="sequence" eval="10"/>
+            <field name="domain" eval="[('state', '=', 'validated')]" pyson="1"/>
+            <field name="act_window" ref="health_lab.gnuhealth_action_tree_lab"/>
+        </record>            
+        <record model="ir.action.act_window.domain" id="act_all_lab_results">
+            <field name="name">All</field>
+            <field name="sequence" eval="10"/>
+            <field name="act_window" ref="health_lab.gnuhealth_action_tree_lab"/>
+        </record>            
+
+        
+        <!-- Result Options  -->
+        <record model="ir.ui.view" id="anth_proc_result_options_tree">
+            <field name="model">anth.proc.result.options</field>
+            <field name="type">tree</field>
+            <field name="name">anth_proc_result_option_tree</field>
+        </record>
+
+        <!-- By Khurram to add Analysis services results -->
+	    <record model="ir.ui.view" id="view_proc_analysis_service_result_form">
+            <field name="model">anth.proc.analysis.service.result</field>
+            <field name="type">form</field>
+            <field name="name">analysis_service_result_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="view_proc_analysis_service_result_tree">
+            <field name="model">anth.proc.analysis.service.result</field>
+            <field name="type">tree</field>
+            <field name="name">analysis_service_result_tree</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_proc_analysis_service_result_view">
+            <field name="name">Analysis Service Result</field>
+            <field name="res_model">anth.proc.analysis.service.result</field>
+        </record>
+
+
+        <menuitem parent="health_lab.gnuhealth_conf_laboratory"
+            action="act_proc_analysis_service_result_view" id="menu_proc_analysis_service_result"
+            icon="gnuhealth-list"/>
+
+        <!-- Analyst Group -->
+        <record model="res.group" id="lab_analysts_group">
+            <field name="name">Lab Analysts Group</field>
+        </record>
+
+	    <record model="ir.model.button" id="lab_save_results_button">
+            <field name="name">save_results</field>
+            <field name="model" search="[('model', '=', 'gnuhealth.lab')]"/>            
+        </record>
+
+        <record model="ir.model.button-res.group"
+            id="group_lab_analysts_save_results_button">
+            <field name="button" ref="lab_save_results_button"/>
+            <field name="group" ref="lab_analysts_group"/>
+        </record>
+
+        <!-- Pathologist Group -->
+        <record model="res.group" id="lab_pathologist_group">
+            <field name="name">Lab Pathologist Group</field>
+        </record>
+
+	    <record model="ir.model.button" id="lab_verify_results_button">
+            <field name="name">verify_results</field>
+            <field name="model" search="[('model', '=', 'gnuhealth.lab')]"/>            
+        </record>
+	    <record model="ir.model.button" id="lab_edit_results_button">
+            <field name="name">edit_results</field>
+            <field name="model" search="[('model', '=', 'gnuhealth.lab')]"/>            
+        </record>
+
+        <record model="ir.model.button-res.group"
+            id="group_lab_pathologist_verify_results_button">
+            <field name="button" ref="lab_verify_results_button"/>
+            <field name="group" ref="lab_pathologist_group"/>
+        </record>
+        <record model="ir.model.button-res.group"
+            id="group_lab_pathologist_edit_results_button">
+            <field name="button" ref="lab_edit_results_button"/>
+            <field name="group" ref="lab_pathologist_group"/>
+        </record>
+
+        <!-- Publisheer Group -->
+        <record model="res.group" id="lab_publisher_group">
+            <field name="name">Lab Publisher Group</field>
+        </record>
+
+	    <record model="ir.model.button" id="lab_publish_results_button">
+            <field name="name">publish_results</field>
+            <field name="model" search="[('model', '=', 'gnuhealth.lab')]"/>            
+        </record>
+
+        <record model="ir.model.button-res.group"
+            id="group_lab_pathologist_publish_results_button">
+            <field name="button" ref="lab_publish_results_button"/>
+            <field name="group" ref="lab_publisher_group"/>
+        </record>
+
+        <!-- LIMS Group (to view LIMS Result TAb)-->
+        <record model="res.group" id="lab_lims_group">
+            <field name="name">Lab LIMS Group</field>
+        </record>
+	    <record model="ir.model.button" id="lab_preview_results_button">
+            <field name="name">preview_results</field>
+            <field name="model" search="[('model', '=', 'gnuhealth.lab')]"/>            
+        </record>
+
+        <record model="ir.model.button-res.group"
+            id="group_lab_lims_preview_results_button">
+            <field name="button" ref="lab_preview_results_button"/>
+            <field name="group" ref="lab_lims_group"/>
+        </record>
+
+        <!-- LIMS Admin Group (to Recreate & re-Open result)-->
+        <record model="res.group" id="lab_lims_admin_group">
+            <field name="name">LIMS Admin Group</field>
+        </record>
+	    
+        <record model="ir.model.button" id="lab_reopen_results_button">
+            <field name="name">reopen_results</field>
+            <field name="model" search="[('model', '=', 'gnuhealth.lab')]"/>            
+        </record>
+
+        <record model="ir.model.button-res.group"
+            id="group_lab_lims_reopen_results_button">
+            <field name="button" ref="lab_reopen_results_button"/>
+            <field name="group" ref="lab_lims_admin_group"/>
+        </record>
+
+        <!-- Lab Results Link in Relate of Lab Request -->
+        <record model="ir.action.act_window" id="act_results_against_requests">
+            <field name="name">Results</field>
+            <field name="res_model">gnuhealth.lab</field>
+            <field name="domain" eval="[('request', '=', Eval('active_id'))]" pyson="1"/>
+        </record>
+
+        <record model="ir.action.keyword" id="act_anth_proc_survey_keyword">
+            <field name="keyword">form_relate</field>
+            <field name="model">gnuhealth.patient.lab.test,-1</field>
+            <field name="action" ref="act_results_against_requests"/>
+        </record>       
+
+        <!-- Include the mrno field to the Sale -->
+        <record model="ir.ui.view" id="sale_tree_view">
+            <field name="model">sale.sale</field>
+            <field name="inherit" ref="sale.sale_view_tree"/>
+            <field name="name">sale_tree_view</field>
+        </record>
+
+        <!-- Display Bar Codes from Lab Request also-->
+        <record model="ir.action.keyword" id="report_barcode39_labtest_from_request">
+            <field name="keyword">form_print</field>
+            <field name="model">gnuhealth.patient.lab.test,-1</field>
+            <field name="action" ref="health_qrcodes.report_labtest_barcode39"/>
+        </record>
+
+        <!-- Radiology Report PDF -->
+        <record model="ir.action.report" id="report_patient_radiologytest_report_final">
+            <field name="name">Radiology PDF Report</field>
+            <field name="model">gnuhealth.imaging.test.result</field>
+            <field name="report_name">anth.proc.radiology.pdf_report</field>
+            <field name="report">health_proc/report/radiologytest_report_final.odt</field>
+            <field name="extension">pdf</field>
+        </record>
+        <record model="ir.action.keyword" id="report_patient_radiologytest_report_final_keyword">
+            <field name="keyword">form_print</field>
+            <field name="model">gnuhealth.imaging.test.result,-1</field>
+            <field name="action" ref="report_patient_radiologytest_report_final"/>
+        </record>
+        <record model="ir.action.report" id="report_opd_stats_detailed_final">
+            <field name="name">OPD Stats</field>
+            <field name="model"></field>
+            <field name="report_name">health.proc.opd_stats_detailed_final.report</field>
+            <field name="report">health_proc/report/opd_stats_report_detailed_final.fodt</field>
+            <field name="extension">pdf</field>
+        </record>
+
+        <!-- Add Report Template to Imaing Test-->
+        <record model="ir.ui.view" id="view_gnuhealth_imagaging_test">
+            <field name="model">gnuhealth.imaging.test</field>
+            <field name="inherit" ref="health_imaging.view_imaging_test_form" />
+            <field name="name">imaging_test_form</field>
+        </record>
+
+        <!-- Sale Summary Report PDF -->
+        <record model="ir.ui.icon" id="reports_execute_icon">
+            <field name="name">reports-execute</field>
+            <field name="path">icons/execute_icon.svg</field>
+        </record>        
+	    <menuitem name="HIMS Reports"
+            id="menu_proc_reports_parent" icon="reports-execute"/>
+
+	    <record model="ir.ui.view" id="services_summary_report_start_view_form">
+            <field name="model">akhf.services.summary.report.start</field>
+            <field name="type">form</field>
+            <field name="name">print_ipd_cash_flow_report_start_form</field>
+        </record>
+	    <record model="ir.action.wizard" id="wizard_service_summary_category_wise">
+            <field name="name">Services Summary Report</field>
+            <field name="wiz_name">akhf.services.summary.wizard</field>
+        </record>            
+
+        <record model="ir.action.report" id="report_service_summary_category_wise">
+            <field name="name">Services Summary Report</field>
+            <field name="report_name">akhf.services.summary.report</field>
+            <field name="model"></field>
+            <field name="template_extension">ods</field>
+            <field name="report">health_proc/report/services_summary_report.ods</field>
+        </record>
+
+        <menuitem parent="menu_proc_reports_parent" action="wizard_service_summary_category_wise"
+            id="menu_kkk" icon="tryton-print"/>
+
+        <!-- Include the Patient field to the Sale -->
+        <record model="ir.ui.view" id="sale_patient_view">
+            <field name="model">sale.sale</field>
+            <field name="inherit" ref="sale.sale_view_form"/>
+            <field name="name">sale_patient_view</field>
+        </record>
+
+        <!-- Include the more fields to IPD form -->
+        <record model="ir.ui.view" id="gnuhealth_inpatient_registration_form_view">
+            <field name="model">gnuhealth.inpatient.registration</field>
+            <field name="inherit" ref="health_inpatient.gnuhealth_inpatient_registration_view"/>
+            <field name="name">gnuhealth_inpatient_registration_form</field>
+        </record>            
+        
+        <!-- Lab order: new for IPD-->
+        <record model="ir.action.keyword"
+                id="act_open_patient_lab_request_keyword1_ipd">
+            <field name="keyword">form_action</field>
+            <field name="model">gnuhealth.inpatient.registration,-1</field>
+            <field name="action" ref="health_lab.patient_lab_test_request"/>
+        </record>
+
+        <!-- IMaging order: new for IPD-->
+        <record model="ir.ui.view" id="view_health_imaging_start_view_more">
+            <field name="model">gnuhealth.patient.imaging.test.request.start</field>
+            <field name="inherit" ref="health_imaging.patient_imaging_test_request_start_view_form"/>
+            <field name="name">gnuhealth_imaging_test_start</field>
+        </record>   
+        <record model="ir.ui.view" id="view_gnuhealth_imaging_test_result_fields">
+            <field name="model">gnuhealth.imaging.test.result</field>
+            <field name="inherit" ref="health_imaging.view_imaging_test_result_form"/>
+            <field name="name">gnuhealth_imaging_test_result</field>
+        </record>   
+        <record model="ir.action.keyword"
+                id="act_open_imaging_test_request_keyword1_ipd">
+            <field name="keyword">form_action</field>
+            <field name="model">gnuhealth.inpatient.registration,-1</field>
+            <field name="action" ref="health_imaging.patient_imaging_test_request"/>
+        </record>
+
+<!-- Create the Action for ER -->
+
+        <record model="ir.action.act_window" id="gnuhealth_action_inpatient_registration_er">
+            <field name="name">Emergency</field>
+            <field name="res_model">gnuhealth.inpatient.registration</field>
+
+            <field name="domain" eval="[('hospitalization_type', '=', 'ER')]" pyson="1"/>
+            <!-- <field name="context_domain" eval="[('hospitalization_type', '=', 'ER')]" pyson="1"/> -->
+            <field name="context" eval="{'ER': True}" pyson="1"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_inpatient_registration_list_view_er">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="health_inpatient.gnuhealth_inpatient_registration_tree"/>
+            <field name="act_window" ref="gnuhealth_action_inpatient_registration_er"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_inpatient_registration_form_view_er">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="health_inpatient.gnuhealth_inpatient_registration_view"/>
+            <field name="act_window" ref="gnuhealth_action_inpatient_registration_er"/>
+        </record>
+
+        <menuitem  name="Emergency" action="gnuhealth_action_inpatient_registration_er"
+            parent="health.gnuhealth_menu"
+            id="gnuhealth_inpatient_menu_er" sequence="40"
+            icon="icon-hospital-patient"/>
+
+
+        <menuitem name="Request ER Services" action="patient_sale_create"
+            parent="gnuhealth_inpatient_menu_er"
+            id="gnuhealth_inpatient_menu_er_other_services" sequence="40"
+            icon="icon-hospital-patient"/>            
+
+<!-- Domain Action Windows for ER -->
+        <record model="ir.action.act_window.domain" id="act_registration_domain_all_er">
+            <field name="name">All</field>
+            <field name="sequence" eval="60"/>
+            <!-- <field name="domain" eval="[('state', 'in', ['free', 'hospitalized','cancelled','done']),('hospitalization_type', '=', 'ER')]" pyson="1"/> -->
+            <field name="act_window" ref="gnuhealth_action_inpatient_registration_er"/>
+        </record>
+
+        <record model="ir.action.act_window.domain" id="act_registration_domain_draft_er">
+            <field name="name">Cancelled</field>
+            <field name="sequence" eval="20"/>
+            <field name="domain" eval="[('state', '=', 'cancelled'),('hospitalization_type', '=', 'ER')]" pyson="1"/>
+            <field name="act_window" ref="gnuhealth_action_inpatient_registration_er"/>
+        </record>
+
+        <record model="ir.action.act_window.domain" id="act_registration_domain_confirmed_er">
+            <field name="name">Confirmed</field>
+            <field name="sequence" eval="30"/>
+            <field name="domain" eval="[('state', '=', 'confirmed'),('hospitalization_type', '=', 'ER')]" pyson="1"/>
+            <field name="act_window" ref="gnuhealth_action_inpatient_registration_er"/>
+        </record>
+
+        <record model="ir.action.act_window.domain" id="act_registration_domain_hospitalized_er">
+            <field name="name">Retained</field>
+            <field name="sequence" eval="10"/>
+            <field name="domain" eval="[('state', '=', 'hospitalized'),('hospitalization_type', '=', 'ER')]" pyson="1"/>
+            <field name="act_window" ref="gnuhealth_action_inpatient_registration_er"/>
+        </record>
+
+        <record model="ir.action.act_window.domain" id="act_registration_domain_done_er">
+            <field name="name">To clean</field>
+            <field name="sequence" eval="50"/>
+            <field name="domain" eval="[('state', '=', 'done'),('hospitalization_type', '=', 'ER')]" pyson="1"/>
+            <field name="act_window" ref="gnuhealth_action_inpatient_registration_er"/>
+        </record>
+
+        <record model="ir.action.act_window.domain" id="act_registration_domain_finished_er">
+            <field name="name">Finished</field>
+            <field name="sequence" eval="50"/>
+            <field name="domain" eval="[('state', '=', 'finished'),('hospitalization_type', '=', 'ER')]" pyson="1"/>
+            <field name="act_window" ref="gnuhealth_action_inpatient_registration_er"/>
+        </record>
+
+        !-- Party fields -->
+        <record model="ir.ui.view" id="view_party_health_center_form">
+            <field name="model">party.party</field>
+            <field name="inherit" ref="party.party_view_form"/>
+            <field name="name">party_form_health_center</field>
+        </record>
+
+        <record model="ir.action.keyword"
+                id="act_open_patient_lab_request_action_keyword1">
+            <field name="keyword">form_action</field>
+            <field name="model">gnuhealth.patient,-1</field>
+            <field name="action" ref="health_lab.patient_lab_test_request"/>
+        </record>      
+
+        <record model="ir.action.keyword"
+                id="act_open_patient_imaging_request_action_keyword1">
+            <field name="keyword">form_action</field>
+            <field name="model">gnuhealth.patient,-1</field>
+            <field name="action" ref="health_imaging.patient_imaging_test_request"/>
+        </record>  
+
+        <!-- Group Lines-->
+        <record model="ir.ui.view" id="health_proc_product_group_line_form">
+            <field name="model">health.proc.product.group.line</field>
+            <field name="type">form</field>
+            <field name="name">health_proc_product_group_line_form</field>
+        </record>
+        <record model="ir.ui.view" id="health_proc_product_group_line_tree">
+            <field name="model">health.proc.product.group.line</field>
+            <field name="type">tree</field>
+            <field name="name">health_proc_product_group_line_tree</field>
+        </record>
+       <record model="ir.action.act_window" id="anth_proc_product_group_line_action">
+            <field name="name">Package Product</field>
+            <field name="res_model">health.proc.product.group.line</field>
+        </record>           
+
+        <!-- Groups-->
+        <record model="ir.ui.view" id="health_proc_product_group_form">
+            <field name="model">health.proc.product.group</field>
+            <field name="type">form</field>
+            <field name="name">health_proc_product_group_form</field>
+        </record>
+        
+        <record model="ir.ui.view" id="health_proc_product_group_tree">
+            <field name="model">health.proc.product.group</field>
+            <field name="type">tree</field>
+            <field name="name">health_proc_product_group_tree</field>
+        </record>
+
+       <record model="ir.action.act_window" id="anth_proc_product_groups_action">
+            <field name="name">Packages and Plans</field>
+            <field name="res_model">health.proc.product.group</field>
+        </record>        
+
+        <menuitem name="Packages and Plans" action="anth_proc_product_groups_action"
+            parent="health.gnuhealth_conf_insurances" sequence="60"
+            id="gnuhealth_conf_insurance_product_group" icon="gnuhealth-list"/>        
+
+        <!-- Panels-->
+        <record model="ir.ui.view" id="health_proc_insurance_panel_form">
+            <field name="model">health.proc.insurance.panel</field>
+            <field name="type">form</field>
+            <field name="name">health_proc_insurance_panel_form</field>
+        </record>
+        
+        <record model="ir.ui.view" id="health_proc_insurance_panel_tree">
+            <field name="model">health.proc.insurance.panel</field>
+            <field name="type">tree</field>
+            <field name="name">health_proc_insurance_panel_tree</field>
+        </record>
+
+        <record model="ir.action.act_window" id="anth_proc_insurance_panel_action">
+            <field name="name">Insurance Panel</field>
+            <field name="res_model">health.proc.insurance.panel</field>
+        </record>        
+
+        <!-- IPD Group Lines-->
+        <record model="ir.ui.view" id="health_proc_ipd_package_charge_line_view_form">
+            <field name="model">health.proc.ipd.package.charge.line</field>
+            <field name="type">form</field>
+            <field name="name">health_proc_ipd_package_charge_line_view_form</field>
+        </record>
+        <record model="ir.ui.view" id="health_proc_ipd_package_charge_line_view_tree">
+            <field name="model">health.proc.ipd.package.charge.line</field>
+            <field name="type">tree</field>
+            <field name="name">health_proc_ipd_package_charge_line_view_tree</field>
+        </record>
+       <record model="ir.action.act_window" id="health_proc_ipd_package_charge_line_action">
+            <field name="name">IPD Charged Package</field>
+            <field name="res_model">health.proc.ipd.package.charge.line</field>
+        </record>    
+
+        <!-- General Group Lines-->
+        <record model="ir.ui.view" id="health_proc_general_package_charge_line_view_form">
+            <field name="model">health.proc.general.package.charge.line</field>
+            <field name="type">form</field>
+            <field name="name">health_proc_general_package_charge_line_view_form</field>
+        </record>
+        <record model="ir.ui.view" id="health_proc_general_package_charge_line_view_tree">
+            <field name="model">health.proc.general.package.charge.line</field>
+            <field name="type">tree</field>
+            <field name="name">health_proc_general_package_charge_line_view_tree</field>
+        </record>
+       <record model="ir.action.act_window" id="health_proc_general_package_charge_line_action">
+            <field name="name">Genral Charged Package</field>
+            <field name="res_model">health.proc.general.package.charge.line</field>
+        </record>   
+
+        <!-- IPD Doctor Share -->
+        <record model="ir.ui.view" id="health_proc_ipd_doctor_share_view_form">
+            <field name="model">health.proc.ipd.doctor.share</field>
+            <field name="type">form</field>
+            <field name="name">health_proc_ipd_doctor_share_view_form</field>
+        </record>
+        <record model="ir.ui.view" id="health_proc_ipd_doctor_share_view_tree">
+            <field name="model">health.proc.ipd.doctor.share</field>
+            <field name="type">tree</field>
+            <field name="name">health_proc_ipd_doctor_share_view_tree</field>
+        </record>
+
+       <record model="ir.action.act_window" id="health_proc_ipd_doctor_share_action">
+            <field name="name">IPD Doctor Share</field>
+            <field name="res_model">health.proc.ipd.doctor.share</field>
+        </record>
+
+        
+        <record model="ir.action.act_window.view" id="act_health_proc_doctor_share_ipd_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="health_proc_ipd_doctor_share_view_tree"/>
+            <field name="act_window" ref="health_proc_ipd_doctor_share_action"/>
+        </record>   
+
+        <menuitem parent="health.gnuhealth_conf_insurances"
+            action="health_proc_ipd_doctor_share_action" id="menu_health_proc_ipd_doctor_share"
+            icon="gnuhealth-list"/>   
+
+        <!-- General Doctor Share -->
+        <record model="ir.ui.view" id="health_proc_general_doctor_share_view_form">
+            <field name="model">health.proc.general.doctor.share</field>
+            <field name="type">form</field>
+            <field name="name">health_proc_general_doctor_share_view_form</field>
+        </record>
+        <record model="ir.ui.view" id="health_proc_general_doctor_share_view_tree">
+            <field name="model">health.proc.general.doctor.share</field>
+            <field name="type">tree</field>
+            <field name="name">health_proc_general_doctor_share_view_tree</field>
+        </record>
+       <record model="ir.action.act_window" id="health_proc_general_doctor_share_action">
+            <field name="name">Genral Doctor Share</field>
+            <field name="res_model">health.proc.general.doctor.share</field>
+        </record>   
+
+        <!-- Panel Groups
+        <record model="ir.ui.view" id="health_proc_insurance_panel_group_form">
+            <field name="model">health.proc.insurance.panel.product.group</field>
+            <field name="type">form</field>
+            <field name="name">health_proc_insurance_panel_group_form</field>
+        </record>
+        -->
+        <record model="ir.ui.view" id="health_proc_insurance_panel_tgroup_ree">
+            <field name="model">health.proc.insurance.panel.product.group</field>
+            <field name="type">tree</field>
+            <field name="name">health_proc_insurance_panel_group_tree</field>
+        </record>
+
+        <record model="ir.action.act_window" id="anth_proc_insurance_panel_group_action">
+            <field name="name">Insurance Packages</field>
+            <field name="res_model">health.proc.insurance.panel.product.group</field>
+        </record>           
+
+        <menuitem name="Panels" action="anth_proc_insurance_panel_action"
+            parent="health.gnuhealth_conf_insurances" sequence="70"
+            id="gnuhealth_conf_insurance_panels" icon="gnuhealth-list"/>         
+
+        <record model="res.group" id="approve_discount_group">
+            <field name="name">Discount Approvers Group</field>
+        </record>
+    	<record model="ir.model.button" id="approve_discount_button">
+            <field name="name">approve_discount</field>
+            <field name="model" search="[('model', '=', 'anth.proc.discount.request')]"/>            
+        </record>
+	    <record model="ir.model.button" id="cancel_discount_button">
+            <field name="name">cancel_discount</field>
+            <field name="model" search="[('model', '=', 'anth.proc.discount.request')]"/>            
+        </record>
+        <record model="ir.model.button-res.group"
+            id="group_approve_discount_button">
+            <field name="button" ref="approve_discount_button"/>
+            <field name="group" ref="approve_discount_group"/>
+        </record>
+        <record model="ir.model.button-res.group"
+            id="group_cancel_discount_button">
+            <field name="button" ref="cancel_discount_button"/>
+            <field name="group" ref="approve_discount_group"/>
+        </record>
+
+        <!-- Prescription fields -->
+        <record model="ir.ui.view" id="view_prescription_lab_tests">
+            <field name="model">gnuhealth.prescription.order</field>
+            <field name="inherit" ref="health.gnuhealth_prescription_view"/>
+            <field name="name">prescription_lab_tests</field>
+        </record>   
+
+        <record model="ir.action.act_window.domain" id="act_gnuhealth_appointment_domain_checkedin_mine">
+            <field name="name">My Checked-in</field>
+            <field name="sequence" eval="5"/>
+            <field name="domain" eval="[('state', 'in', ['confirmed','checked_in']), ('healthprof.name.internal_user.id', '=', Eval('context',{}).get('_user'))]" pyson="1"/>
+            <field name="act_window" ref="health.action_gnuhealth_appointment_view"/>
+        </record>    
+
+        <!-- Share Report--> 
+	    <record model="ir.ui.view" id="doctor_share_details_report_start_view_form">
+            <field name="model">health.proc.doctor.share.details.start</field>
+            <field name="type">form</field>
+            <field name="name">doctor_share_details_report_start_view_form</field>
+        </record>
+	    <record model="ir.action.wizard" id="wizard_doctor_share_details">
+            <field name="name">Doctor Share Detailed Report</field>
+            <field name="wiz_name">health.proc.doctor.share.details.wizard</field>
+        </record>            
+                
+        <menuitem parent="menu_proc_reports_parent" action="wizard_doctor_share_details"
+            id="menu_doctor_shared_details" icon="tryton-print"/>        
+
+        <!-- Batches -->
+	    <record model="ir.action.act_window" id="act_health_proc_sample_batches_view">
+            <field name="name">Accession</field>
+            <field name="res_model">health.proc.sample.batch</field>
+        </record>
+        
+        <record model="ir.ui.view" id="health_proc_sample_batches_view_form">
+            <field name="model">health.proc.sample.batch</field>
+            <field name="type">form</field>
+            <field name="name">health_proc_sample_batch_form</field>
+        </record>
+        <record model="ir.ui.view" id="health_proc_sample_batches_view_tree">
+            <field name="model">health.proc.sample.batch</field>
+            <field name="type">tree</field>
+            <field name="name">health_proc_sample_batch_tree</field>
+        </record>
+
+	    <record model="ir.action.act_window.view" id="act_health_proc_sample_batch_tree_view">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="health_proc_sample_batches_view_tree"/>
+            <field name="act_window" ref="act_health_proc_sample_batches_view"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_health_proc_sample_batch_form_view">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="health_proc_sample_batches_view_form"/>
+            <field name="act_window" ref="act_health_proc_sample_batches_view"/>
+        </record>
+
+	    <record model="ir.action.act_window.domain" id="act_health_proc_sample_batch_view_draft">
+            <field name="name">Draft</field>
+            <field name="sequence" eval="10"/>
+            <field name="domain" eval="[('state', '=', 'draft')]" pyson="1"/>
+            <field name="act_window" ref="act_health_proc_sample_batches_view"/>
+        </record>
+	    <record model="ir.action.act_window.domain" id="act_health_proc_sample_batch_view_ready">
+            <field name="name">In-Transit</field>
+            <field name="sequence" eval="20"/>
+            <field name="domain" eval="[('state', '=', 'ordered')]" pyson="1"/>
+            <field name="act_window" ref="act_health_proc_sample_batches_view"/>
+        </record>
+	    <record model="ir.action.act_window.domain" id="act_health_proc_sample_batch_view_received">
+            <field name="name">Received</field>
+            <field name="sequence" eval="20"/>
+            <field name="domain" eval="[('state', '=', 'received')]" pyson="1"/>
+            <field name="act_window" ref="act_health_proc_sample_batches_view"/>
+        </record>
+	    <record model="ir.action.act_window.domain" id="act_health_proc_sample_batch_view_cancelled">
+            <field name="name">Cancelld</field>
+            <field name="sequence" eval="20"/>
+            <field name="domain" eval="[('state', '=', 'cancell')]" pyson="1"/>
+            <field name="act_window" ref="act_health_proc_sample_batches_view"/>
+        </record>
+	    <record model="ir.action.act_window.domain" id="act_health_proc_sample_batch_view_all">
+            <field name="name">All</field>
+            <field name="sequence" eval="20"/>
+            <field name="act_window" ref="act_health_proc_sample_batches_view"/>
+        </record>
+
+        <menuitem parent="health_lab.gnuhealth_laboratory_menu" action="act_health_proc_sample_batches_view"
+            id="menu_gnuhealth_sanple_batch" icon="gnuhealth-list" sequence="22"/>            
+
+        <!-- Samples -->
+	    <record model="ir.action.act_window" id="act_health_proc_lab_samples_view">
+            <field name="name">Samples</field>
+            <field name="res_model">health.proc.lab.sample</field>
+        </record>
+        
+        <record model="ir.ui.view" id="health_proc_lab_samples_view_form">
+            <field name="model">health.proc.lab.sample</field>
+            <field name="type">form</field>
+            <field name="name">health_proc_lab_sample_form</field>
+        </record>
+        <record model="ir.ui.view" id="health_proc_lab_samples_view_tree">
+            <field name="model">health.proc.lab.sample</field>
+            <field name="type">tree</field>
+            <field name="name">health_proc_lab_sample_tree</field>
+        </record>
+
+        <menuitem parent="health_lab.gnuhealth_laboratory_menu" action="act_health_proc_lab_samples_view"
+            id="menu_gnuhealth_lab_sanple" icon="gnuhealth-list" sequence="21"/>                        
+
+        <!-- Include new fields to birth/death certificate -->
+        <record model="ir.ui.view" id="birth_certificate_form_updates">
+            <field name="model">gnuhealth.birth_certificate</field>
+            <field name="inherit" ref="health.gnuhealth_birth_cert_form"/>
+            <field name="name">birth_certificate_form</field>
+        </record>            
+        <record model="ir.ui.view" id="death_certificate_form_updates">
+            <field name="model">gnuhealth.death_certificate</field>
+            <field name="inherit" ref="health.gnuhealth_death_cert_form"/>
+            <field name="name">death_certificate_form</field>
+        </record> 
+
+        <!-- statement line fields-->
+        <record model="ir.ui.view" id="statement_line_form_view_updates">
+            <field name="model">account.statement.line</field>
+            <field name="inherit" ref="account_statement.statement_line_view_form"/>
+            <field name="name">statement_line_form_view</field>
+        </record>
+
+        <record model="ir.ui.view" id="statement_line_tree_view_updates">
+            <field name="model">account.statement.line</field>
+            <field name="inherit" ref="account_statement.statement_line_view_tree"/>
+            <field name="name">statement_line_tree_view</field>
+        </record>
+        <record model="ir.ui.view" id="statement_line_tree_view_editable_updates">
+            <field name="model">account.statement.line</field>
+            <field name="inherit" ref="account_statement.statement_line_view_tree_editable"/>
+            <field name="name">statement_line_tree_editable_view</field>
+        </record>
+
+	    <record model="ir.ui.view" id="user_view_form_specialty">
+            <field name="model">res.user</field>
+            <field name="inherit" ref="res.user_view_form"/>
+            <field name="name">user_form_specialty</field>
+        </record>
+        <record model="ir.ui.view" id="user_view_form_preferences_specialty">
+            <field name="model">res.user</field>
+            <field name="inherit" ref="res.user_view_form_preferences"/>
+            <field name="name">user_form_preferences_specialty</field>
+        </record>
+
+
+	    <record model="ir.ui.view" id="gnuhealth_institution_form">
+            <field name="model">gnuhealth.institution</field>
+            <field name="inherit" ref="health.gnuhealth_institution_form"/>
+            <field name="name">gnuhealth_institution_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="gnuhealth_pathology_form">
+            <field name="model">gnuhealth.pathology</field>
+            <field name="inherit" ref="health.gnuhealth_pathology_view"/>
+            <field name="name">gnuhealth_pathology_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="gnuhealth_pathology_tree">
+            <field name="model">gnuhealth.pathology</field>
+            <field name="inherit" ref="health.gnuhealth_pathology_tree"/>
+            <field name="name">gnuhealth_pathology_tree</field>
+        </record>        
+
+        <!-- Share Report--> 
+	    <record model="ir.ui.view" id="doctor_share_summary_report_start_view_form">
+            <field name="model">health.proc.doctor.share.summary.start</field>
+            <field name="type">form</field>
+            <field name="name">doctor_share_summary_report_start_view_form</field>
+        </record>
+	    <record model="ir.action.wizard" id="wizard_doctor_share_summary">
+            <field name="name">Doctor Share Summary Report</field>
+            <field name="wiz_name">health.proc.doctor.share.summary.wizard</field>
+        </record>            
+                
+        <menuitem parent="menu_proc_reports_parent" action="wizard_doctor_share_summary"
+            id="menu_doctor_share_summary" icon="tryton-print"/>           
+
+        <record model="ir.ui.view" id="health_proc_phelbotomoy_samples_view_form">
+            <field name="model">health.proc.phelbotomy.sample</field>
+            <field name="type">form</field>
+            <field name="name">health_proc_phelbotomy_sample_form</field>
+        </record>
+        <record model="ir.ui.view" id="health_proc_phelbotomy_samples_view_tree">
+            <field name="model">health.proc.phelbotomy.sample</field>
+            <field name="type">tree</field>
+            <field name="name">health_proc_phelbotomy_sample_tree</field>
+        </record>              
+
+        <!-- Panel Bill-->
+        <record model="ir.ui.view" id="health_proc_insurance_panel_bill_form">
+            <field name="model">health.proc.insurance.panel.bill</field>
+            <field name="type">form</field>
+            <field name="name">health_proc_insurance_panel_bill_form</field>
+        </record>
+        
+        <record model="ir.ui.view" id="health_proc_insurance_panel_bill_tree">
+            <field name="model">health.proc.insurance.panel.bill</field>
+            <field name="type">tree</field>
+            <field name="name">health_proc_insurance_panel_bill_tree</field>
+        </record>
+
+        <record model="ir.action.act_window" id="anth_proc_insurance_panel_bill_action">
+            <field name="name">Panel Bills</field>
+            <field name="res_model">health.proc.insurance.panel.bill</field>
+        </record>     
+        
+        <menuitem name="Panel Billing" parent="health.gnuhealth_menu"
+            id="menu_panel_billing" sequence="60"
+        />
+       
+        <menuitem parent="menu_panel_billing"
+            action="anth_proc_insurance_panel_bill_action" id="menu_health_proc_insurance_panel_bill"
+            icon="gnuhealth-list"/>        
+
+	    <record model="ir.ui.view" id="panel_billing_start_view_form">
+            <field name="model">health.proc.insurance.panel.bill.start</field>
+            <field name="type">form</field>
+            <field name="name">health_proc_insurance_panel_bill_start_form</field>
+        </record>
+	    <record model="ir.action.wizard" id="wizard_prepare_panel_bill">
+            <field name="name">Prepare Panel Bill</field>
+            <field name="wiz_name">health.proc.insurance.panel.bill.wizard</field>
+        </record>            
+                
+        <menuitem parent="menu_panel_billing" action="wizard_prepare_panel_bill"
+            id="menu_prepare_panel_bill_wizard" icon="tryton-print"/>              
+
+        <!-- OPD Stats--> 
+	    <record model="ir.ui.view" id="opd_stats_report_start_view_form">
+            <field name="model">health.proc.opd.stats.report.start</field>
+            <field name="type">form</field>
+            <field name="name">opd_stats_report_start_view_form</field>
+        </record>
+	    <record model="ir.action.wizard" id="wizard_opd_stats_report">
+            <field name="name">OPD Stats Report</field>
+            <field name="wiz_name">health.proc.opd.stats.report.wizard</field>
+        </record>            
+                
+        <menuitem parent="menu_proc_reports_parent" action="wizard_opd_stats_report"
+            id="menu_opd_stats_report" icon="tryton-print"/>           
+
+	    <record model="ir.action.wizard" id="wizard_opd_stats_detailed_report">
+            <field name="name">OPD Stats Detailed Report</field>
+            <field name="wiz_name">health.proc.opd.stats.detailed.report.wizard</field>
+        </record>            
+                
+        <menuitem parent="menu_proc_reports_parent" action="wizard_opd_stats_detailed_report"
+            id="menu_opd_stats_detailed_report" icon="tryton-print"/>                   
+
+        <!-- Include the mrno field to the Sale -->
+        <record model="ir.ui.view" id="appointment_tree_updates_view">
+            <field name="model">gnuhealth.appointment</field>
+            <field name="inherit" ref="health.gnuhealth_appointment_tree"/>
+            <field name="name">gnuhealth_appointment_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="purchase_req_line_tree_updates_view">
+            <field name="model">purchase.requisition.line</field>
+            <field name="inherit" ref="purchase_requisition.purchase_requisition_line_view_list_sequence"/>
+            <field name="name">purchase_requisition_line_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="purchase_reqest_tree_updates_view">
+            <field name="model">purchase.request</field>
+            <field name="inherit" ref="purchase_request.purchase_request_view_tree"/>
+            <field name="name">purchase_request_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="purchase_line_tree_updates_view">
+            <field name="model">purchase.line</field>
+            <field name="inherit" ref="purchase.purchase_line_view_tree_sequence"/>
+            <field name="name">purchase_line_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="sale_pos_form">
+            <field name="model">sale.sale</field>
+            <field name="inherit" ref="sale_pos.sale_pos_view_form"/>
+            <field name="name">sale_pos_form</field>
+        </record>        
+
+        <record model="ir.ui.view" id="stock_inventory_report_start_view_form">
+            <field name="model">health.proc.stock.inventory.start</field>
+            <field name="type">form</field>
+            <field name="name">stock_inventory_report_start_view_form</field>
+        </record>
+        <record model="ir.action.wizard" id="wizard_stock_inventory_report">
+            <field name="name">Stock Inventory Report</field>
+            <field name="wiz_name">health.proc.stock.inventory.wizard</field>
+        </record>
+        <menuitem parent="menu_proc_reports_parent" action="wizard_stock_inventory_report"
+            id="menu_stock_inventory_report" icon="tryton-print"/>        
+
+        <!--Doctor Services Detailed Report-->
+        <record model="ir.ui.view" id="doctor_services_details_form">
+            <field name="model">health.proc.doctor.services.details.start</field>
+            <field name="type">form</field>
+            <field name="name">doctor_services_details_form</field>
+        </record>
+        <record model="ir.action.wizard" id="wizard_doctor_services_report">
+            <field name="name">Doctor Services Detailed Report</field>
+            <field name="wiz_name">health.proc.doctor.services.details.wizard</field>
+        </record>
+        <menuitem parent="menu_proc_reports_parent" action="wizard_doctor_services_report"
+            id="menu_doctor_services" icon="tryton-print"/>            
+
+        <record model="ir.ui.view" id="purchase_requisition_form_updates_view">
+            <field name="model">purchase.requisition</field>
+            <field name="inherit" ref="purchase_requisition.purchase_requisition_view_form"/>
+            <field name="name">purchase_requisition_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="purchase_requisition_tree_updates_view">
+            <field name="model">purchase.requisition</field>
+            <field name="inherit" ref="purchase_requisition.purchase_requisition_view_tree"/>
+            <field name="name">purchase_requisition_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="employee_view_form_extended">
+            <field name="model">company.employee</field>
+            <field name="inherit" ref="company.employee_view_form" />
+            <field name="name">company_employee</field>
+        </record>
+
+        <record model="ir.ui.view" id="anth_hr_department_form">
+            <field name="model">anth.hr.department</field>
+            <field name="type">form</field>
+            <field name="name">anth_hr_department_form</field>
+        </record>
+        <record model="ir.ui.view" id="anth_hr_department_tree">
+            <field name="model">anth.hr.department</field>
+            <field name="type">tree</field>
+            <field name="name">anth_hr_department_tree</field>
+        </record>
+	    <record model="ir.action.act_window" id="act_anth_hr_department_view">
+            <field name="name">Department</field>
+            <field name="res_model">anth.hr.department</field>
+        </record>
+        <menuitem parent="company.menu_company" sequence="30"
+            action="act_anth_hr_department_view"
+            id="menu_department_form_hr"/>
+
+        <record model="ir.ui.view" id="internal_shipment_view_form_extended">
+            <field name="model">stock.shipment.internal</field>
+            <field name="inherit" ref="stock.shipment_internal_view_form" />
+            <field name="name">shipment_internal_view_form</field>
+        </record>
+        <record model="ir.ui.view" id="shipment_in_view_form">
+            <field name="model">stock.shipment.in</field>
+            <field name="inherit" ref="stock.shipment_in_view_form" />
+            <field name="name">shipment_in_view_form</field>
+        </record>
+
+        <!-- Stock Near Expiry Report Wizard -->
+        <record model="ir.ui.view" id="stock_near_expiry_report_start_view_form">
+            <field name="model">health.proc.stock.near.expiry.start</field>
+            <field name="type">form</field>
+            <field name="name">stock_near_expiry_report_start_view_form</field>
+        </record>
+        <record model="ir.action.wizard" id="wizard_stock_near_expiry_report">
+            <field name="name">Stock Near Expiry Report</field>
+            <field name="wiz_name">health.proc.stock.near.expiry.wizard</field>
+        </record>
+        <menuitem parent="menu_proc_reports_parent" action="wizard_stock_near_expiry_report"
+            id="menu_stock_near_expiry_report" icon="tryton-print"/>
+
+        <!-- Stock Expired Report Wizard -->
+        <record model="ir.ui.view" id="stock_expired_report_start_view_form">
+            <field name="model">health.proc.stock.expired.start</field>
+            <field name="type">form</field>
+            <field name="name">stock_expired_report_start_view_form</field>
+        </record>
+        <record model="ir.action.wizard" id="wizard_stock_expired_report">
+            <field name="name">Stock Expired Report</field>
+            <field name="wiz_name">health.proc.stock.expired.wizard</field>
+        </record>
+        <menuitem parent="menu_proc_reports_parent" action="wizard_stock_expired_report"
+            id="menu_stock_expired_report" icon="tryton-print"/>
+
+        <record model="ir.ui.view" id="product_form_view_updated">
+            <field name="model">product.product</field>
+            <field name="inherit" ref="product.product_view_form"/>
+            <field name="name">gnuhealth_product_form</field>
+        </record>  
+        <record model="ir.ui.view" id="sale_line_form_view_updated">
+            <field name="model">sale.line</field>
+            <field name="inherit" ref="sale.sale_line_view_form"/>
+            <field name="name">sale_line_form</field>
+        </record>
+          
+        <!-- Visit Opd Patient Report Wizard -->
+        <record model="ir.ui.view" id="visit_opd_patient_report_start_view_form">
+            <field name="model">health.proc.visit.opd.patient.start</field>
+            <field name="type">form</field>
+            <field name="name">visit_opd_patient_report_start_view_form</field>
+        </record>
+        <record model="ir.action.wizard" id="wizard_visit_opd_patient_report">
+            <field name="name">Visit Opd Patient Report</field>
+            <field name="wiz_name">health.proc.visit.opd.patient.wizard</field>
+        </record>
+        <menuitem parent="menu_proc_reports_parent" action="wizard_visit_opd_patient_report"
+            id="menu_visit_opd_patient_report" icon="tryton-print"/>
+
+        <!-- Surgery Recommended To OPD Patient Report Wizard -->
+        <record model="ir.ui.view" id="opd_patient_surgery_recommended_report_start_view_form">
+            <field name="model">health.proc.surgery.recommended.opd.patient.start</field>
+            <field name="type">form</field>
+            <field name="name">opd_patient_surgery_recommended_report_start_view_form</field>
+        </record>
+        <record model="ir.action.wizard" id="wizard_surgery_recommended_opd_patient_report">
+            <field name="name">Surgery Recommended Opd Patient Report</field>
+            <field name="wiz_name">health.proc.surgery.recommended.opd.patient.wizard</field>
+        </record>
+        <menuitem parent="menu_proc_reports_parent" action="wizard_surgery_recommended_opd_patient_report"
+            id="menu_surgery_recommended_opd_patient_report" icon="tryton-print"/>                
+
+        <record model="ir.ui.view" id="health_proc_stock_move_form">
+            <field name="model">stock.move</field>
+            <field name="inherit" ref="stock.move_view_form"/>
+            <field name="name">stock_move_form</field>
+        </record>            
+
+        <record model="ir.ui.view" id="gnuhealth_directions_form_updates">
+            <field name="model">gnuhealth.directions</field>
+            <field name="inherit" ref="health.gnuhealth_directions_form"/>
+            <field name="name">gnuhealth_directions_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="gnuhealth_directions_tree_updates">
+            <field name="model">gnuhealth.directions</field>
+            <field name="inherit" ref="health.gnuhealth_directions_tree"/>
+            <field name="name">gnuhealth_directions_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="gnuhealth_surgery_form_updates">
+            <field name="model">gnuhealth.surgery</field>
+            <field name="inherit" ref="health_surgery.gnuhealth_surgery_view"/>
+            <field name="name">gnuhealth_surgery_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="health_proc_stock_move_tree">
+            <field name="model">stock.move</field>
+            <field name="inherit" ref="stock.move_view_tree"/>
+            <field name="name">stock_move_tree</field>
+        </record>   
+
+        <record model="ir.ui.view" id="health_proc_stock_move_list_shipment_in">
+            <field name="model">stock.move</field>
+            <field name="inherit" ref="stock.move_view_list_shipment_in"/>
+            <field name="name">stock_move_list_shipment_in</field>
+        </record>                   
+
+        <!-- Internal Shipment Report Wizard -->
+        <record model="ir.ui.view" id="stock_internal_shipment_view_form">
+            <field name="model">stock.internal.shipment.report.start</field>
+            <field name="type">form</field>
+            <field name="name">stock_internal_shipment_view_form</field>
+        </record>
+        <record model="ir.action.wizard" id="wizard_stock_internal_shipment_report">
+            <field name="name">Stock Issuance Report</field>
+            <field name="wiz_name">stock.internal.shipment.report.wizard</field>
+        </record>
+        <menuitem parent="menu_proc_reports_parent" action="wizard_stock_internal_shipment_report"
+            id="menu_stock_internal_shipment_report" icon="tryton-print"/>
+        
+        <!-- Critical Analytes Report Wizard --> 
+        <record model="ir.ui.view" id="critical_analytes_report_view_form"> 
+            <field name="model">critical.analytes.report.start</field> 
+            <field name="type">form</field>
+            <field name="name">critical_analytes_report_view_form</field> 
+        </record> 
+
+        <record model="ir.action.wizard" id="wizard_critical_analytes_report">
+            <field name="name">Critical Analytes Report</field> 
+            <field name="wiz_name">critical.analytes.report.wizard</field>
+        </record> 
+        <menuitem parent="menu_proc_reports_parent" action="wizard_critical_analytes_report" 
+            id="menu_critical_analytes_report" icon="tryton-print"/>      
+
+        <!-- Purchase Report Wizard --> 
+        <record model="ir.ui.view" id="purchase_report_view_form"> 
+            <field name="model">purchase.report.start</field> 
+            <field name="type">form</field> 
+            <field name="name">purchase_report_view_form</field> 
+        </record> 
+        
+        <record model="ir.action.wizard" id="wizard_purchase_report"> 
+            <field name="name">Purchase Report</field> 
+            <field name="wiz_name">purchase.report.wizard</field> 
+        </record> 
+        <menuitem parent="menu_proc_reports_parent" action="wizard_purchase_report" 
+            id="menu_purchase_report" icon="tryton-print"/>                  
+
+        <!-- OPD TurnOver Report Wizard --> 
+        <record model="ir.ui.view" id="opd_turnover_report_view_form"> 
+            <field name="model">opd.turnover.report.start</field> 
+            <field name="type">form</field>
+            <field name="name">opd_turnover_report_view_form</field> 
+        </record> 
+
+        <record model="ir.action.wizard" id="wizard_opd_turnover_report">
+            <field name="name">OPD Turnover Report</field> 
+            <field name="wiz_name">opd.turnover.report.wizard</field>
+        </record> 
+        <menuitem parent="menu_proc_reports_parent" action="wizard_opd_turnover_report" 
+            id="menu_opd_turnover_report" icon="tryton-print"/>                
+    </data>    
+</tryton>

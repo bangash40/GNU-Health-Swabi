@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<form>
+
+    <label name="patient"/>
+    <field name="patient"/>
+
+    <label name="name"/>
+    <field name="name"/>
+
+    <label name="sample_condition"/>
+    <field name="sample_condition"/>
+
+    <label name="sample_condition_remarks"/>
+    <field name="sample_condition_remarks"/>
+
+    <label name="sample_type"/>
+    <field name="sample_type"/>
+
+    <label name="sample_point"/>
+    <field name="sample_point"/>
+
+    <label name="external_reference_no"/>
+    <field name="external_reference_no"/>
+
+    <label name="test_category"/>
+    <field name="test_category"/>
+
+    <label name="received_on"/>
+    <field name="received_on"/>
+
+    <label name="received_by"/>
+    <field name="received_by"/>
+
+    <label name="batch"/>
+    <field name="batch"/>
+
+    <label name="health_center"/>
+    <field name="health_center"/>
+
+    <label name="state"/>
+    <field name="state"/>
+
+
+    <newline/>
+    <field name="lab_requests" colspan="4"/>
+   
+</form>

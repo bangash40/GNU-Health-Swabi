@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<form>
+	<field name="services_results" height="320" width="1000"/>	
+        <newline/>	
+        <group   id="dates_display_chappy">   
+              <group id="temp_kk_kkk"  colspan="3">
+
+              </group>
+              <group id="aab_kk_jj" colspan="1" yfill="1">
+                        <field name="old_dates_display"/>
+               </group>
+        </group>
+        <newline/>
+        <group  id="id_first_two">   
+                <group string="Pathologist Comments" id="grp_paht_comm"  colspan="2">
+
+                       <field name="comments" colspan="2"/>
+                </group>
+                <group string="Peripheral Smear (HEMA)" id="grp_pery_smeear"  colspan="2">
+
+                        <field name="peripheral_smear" colspan="2"/>
+                </group>
+
+        </group>
+</form>
+
+

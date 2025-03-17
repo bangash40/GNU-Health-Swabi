@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<data>
+    <xpath expr="//field[@name=&quot;appointment_date&quot;]" position="before">
+        <button name="create_prescription" help="Create Prescription and enter medicine." string="Prescription"/>
+    </xpath>
+        <xpath expr="//field[@name=&quot;state&quot;]" position="after">
+	    <field name="refunded" expand="1"/>
+    </xpath>
+</data>

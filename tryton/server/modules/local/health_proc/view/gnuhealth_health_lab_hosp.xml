@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<form>
+    		<group colspan="4"  id="group_patient_data_holder34">
+		    <label name="patient"/>
+		    <field name="patient"/>
+		    <label name="puid"/>
+                    <field name="puid"/>
+                </group>
+                
+                <newline/>
+                <group colspan="4"  id="group_admin_data_holder2">
+		    <label name="panel"/>
+                    <field name="panel"/>
+                    <label name="hospitalization_date"/>
+                    <field name="hospitalization_date"/>
+                </group>
+                <group colspan="4"  id="grpiu_attending_hy">
+                    <label name="attending_physician"/>
+                    <field name="attending_physician"/>                    
+		    <label name="admission_requesting_physician"/>
+                    <field name="admission_requesting_physician"/>
+                </group>
+
+		<group colspan="4"  id="group_admission_type_holder44">                    
+                    <label name="admission_reason"/>
+                    <field name="admission_reason"/>
+
+                    <label name="attendant"/>
+                    <field name="attendant"/>
+                     
+		</group>
+
+                <group colspan="4" string="Admission Notes" id="inpatient_registration_notes_group_wizard">
+                        <field name="info"/>
+                </group>
+		<group colspan="4" string="History" id="inpatient_registration_hisotyr_group_wizard">
+                        <field name="history"/>
+                </group>	
+			
+</form>

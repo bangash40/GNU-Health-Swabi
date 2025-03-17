@@ -1,0 +1,23 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:purchase.line,discount:"
+msgid "Discount"
+msgstr "Descuento"
+
+msgctxt "field:purchase.line,gross_unit_price:"
+msgid "Gross Price"
+msgstr "Precio bruto"
+
+msgctxt "field:purchase.line,gross_unit_price_wo_round:"
+msgid "Gross Price without rounding"
+msgstr "Precio bruto sin redondeo"
+
+msgctxt "model:ir.action,name:report_purchase"
+msgid "Purchase"
+msgstr "Compra"
+
+msgctxt "view:purchase.line:"
+msgid "%"
+msgstr "%"

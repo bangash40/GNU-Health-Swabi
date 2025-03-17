@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<tree editable="1">
+	<field name="name" expand="1" />
+    <field name="product_group" expand="1" />
+    <field name="product" expand="1" />
+    <field name="list_price" expand="1" />
+	<field name="doctor_one" expand="1"/>
+
+	<field name="doctor_one_share" expand="1"/>
+
+	<field name="doctor_two" expand="1"/>
+
+	<field name="doctor_two_share" expand="1"/>
+
+
+</tree>

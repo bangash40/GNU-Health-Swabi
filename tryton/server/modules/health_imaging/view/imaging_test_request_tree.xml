@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<!--
+SPDX-FileCopyrightText: 2008-2023 Luis Falcón <falcon@gnuhealth.org>
+SPDX-FileCopyrightText: 2011-2023 GNU Solidario <health@gnusolidario.org>
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<tree>
+    <field name="request"/>
+    <field name="patient" expand="1"/>
+    <field name="date" widget="date"/>
+    <field name="requested_test" expand="1"/>
+    <field name="context" expand="1"/>
+    <field name="doctor"/>
+    <field name="state"/>
+    <field name="urgent"/>
+</tree>

@@ -1,0 +1,41 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:sale.line,discount:"
+msgid "Discount"
+msgstr "Descompte"
+
+msgctxt "field:sale.line,gross_unit_price:"
+msgid "Gross Price"
+msgstr "Preu brut"
+
+msgctxt "field:sale.line,gross_unit_price_wo_round:"
+msgid "Gross Price without rounding"
+msgstr "Preu brut sense arrodoniment"
+
+msgctxt "field:sale.sale,sale_discount:"
+msgid "Sale Discount"
+msgstr "Descompte venda"
+
+msgctxt "help:sale.sale,sale_discount:"
+msgid "This discount will be applied in all lines after their own discount."
+msgstr ""
+"Aquest descompte s'aplicarà a totes les línies després del seu propi "
+"descompte."
+
+msgctxt "model:ir.action,name:report_sale"
+msgid "Sale"
+msgstr "Venda"
+
+msgctxt "view:account.invoice.line:"
+msgid "%"
+msgstr "%"
+
+msgctxt "view:sale.line:"
+msgid "%"
+msgstr "%"
+
+msgctxt "view:sale.sale:"
+msgid "%"
+msgstr "%"

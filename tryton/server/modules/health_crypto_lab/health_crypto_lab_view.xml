@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+
+<!--
+SPDX-FileCopyrightText: 2008-2023 Luis Falcón <falcon@gnuhealth.org>
+SPDX-FileCopyrightText: 2011-2023 GNU Solidario <health@gnusolidario.org>
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<tryton>
+    <data>
+    <!-- Add Tab with the Serialized information about the prescription -->
+
+        <record model="ir.ui.view" id="view_lab_form">
+            <field name="model">gnuhealth.lab</field>
+            <field name="inherit" ref="health_lab.gnuhealth_lab_view"/>
+            <field name="name">gnuhealth_lab_form</field>
+        </record>
+
+    <!-- Add the Lab test completion status to the tree -->
+
+        <record id="gnuhealth_lab_test_extd_tree" model="ir.ui.view">
+            <field name="model">gnuhealth.lab</field>
+            <field name="inherit" ref="health_lab.gnuhealth_lab_tree"/>
+            <field name="name">gnuhealth_lab_tree</field>
+        </record>
+
+    <!-- Register Buttons -->
+
+        <record model="ir.model.button" id="labtest_setdraft_button">
+            <field name="name">set_to_draft</field>
+            <field name="string">Draft</field>
+            <field name="model" search="[('model', '=', 'gnuhealth.lab')]"/>
+        </record>
+
+        <record model="ir.model.button" id="labtest_generate_button">
+            <field name="name">generate_document</field>
+            <field name="string">Done</field>
+            <field name="model" search="[('model', '=', 'gnuhealth.lab')]"/>
+        </record>
+
+        <record model="ir.model.button" id="labtest_sign_button">
+            <field name="name">sign_document</field>
+            <field name="string">Validate</field>
+            <field name="model" search="[('model', '=', 'gnuhealth.lab')]"/>
+        </record>
+
+    </data>
+</tryton>

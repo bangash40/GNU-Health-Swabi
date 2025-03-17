@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+SPDX-FileCopyrightText: 2008-2023 Luis Falcón <falcon@gnuhealth.org>
+SPDX-FileCopyrightText: 2011-2023 GNU Solidario <health@gnusolidario.org>
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<tryton>
+    <data>
+        <record model="gnuhealth.command" id="srv">
+            <field name="name">srv</field>
+            <field name="model">gnuhealth.health_service</field>
+            <field name="label">Health Services</field>
+            <field name="description">Patient Health Services</field>
+            <field name="internal">False</field>
+        </record>
+    </data>
+</tryton>

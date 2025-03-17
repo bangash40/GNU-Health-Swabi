@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tryton>
+    <data>
+        <record model="ir.action.report" id="report_registration_receipt_idh">
+            <field name="name">Registration Receipt</field>
+            <field name="model">gnuhealth.patient</field>
+            <field name="report_name">health_proc.idh_registration_receipt_report</field>
+            <field name="report">health_proc/report/idh_registration_receipt.odt</field>
+        </record>
+        <!-- Test Report Print -->
+	    <record model="ir.action.report" id="lims_lab_report_print">
+            <field name="name">LIMS Lab Report</field>
+            <field name="model">gnuhealth.lab</field>
+            <field name="report_name">anth.proc.lims.lab.report</field>
+            <field name="report">health_proc/report/lims_lab_report.fodt</field>
+        </record>
+        <record model="ir.action.keyword" id="report_lims_lab_report_keyword">
+                <field name="keyword">form_print</field>
+                <field name="model">gnuhealth.lab,-1</field>
+                <field name="action" ref="lims_lab_report_print"/>
+        </record>   
+
+        <record model="ir.action.report" id="report_sale_ticket_other_sale">
+            <field name="name">Sale Ticket Others</field>
+            <field name="model">sale.sale</field>
+            <field name="report_name">sale_ticket_other_sale</field>
+            <field name="report">health_proc/report/sale_pos_ticket_other_sale.fodt</field>
+        </record>       
+        <record model="ir.action.keyword" id="report_sale_ticket_other_sale_keyword">
+            <field name="keyword">form_print</field>
+            <field name="model">sale.sale,-1</field>
+            <field name="action" ref="report_sale_ticket_other_sale"/>
+        </record>
+
+        <record model="ir.action.report" id="report_sale_ticket_other_sale_duplicate">
+            <field name="name">Sale Ticket Others (Duplicate)</field>
+            <field name="model">sale.sale</field>
+            <field name="report_name">sale_ticket_other_sale</field>
+            <field name="report">health_proc/report/sale_pos_ticket_other_sale_duplicate.fodt</field>
+        </record>       
+        <record model="ir.action.keyword" id="report_sale_ticket_other_sale_keyword_duplicate">
+            <field name="keyword">form_print</field>
+            <field name="model">sale.sale,-1</field>
+            <field name="action" ref="report_sale_ticket_other_sale_duplicate"/>
+        </record>
+
+        <record model="ir.action.report" id="report_sale_ticket_native_duplicate">
+            <field name="name">Sale Ticket (Duplicate)</field>
+            <field name="model">sale.sale</field>
+            <field name="report_name">sale_ticket_native_sale</field>
+            <field name="report">health_proc/report/sale_pos_ticket_duplicate.fodt</field>
+        </record>       
+        <record model="ir.action.keyword" id="report_sale_ticket_native_keyword_duplicate">
+            <field name="keyword">form_print</field>
+            <field name="model">sale.sale,-1</field>
+            <field name="action" ref="report_sale_ticket_native_duplicate"/>
+        </record>
+
+
+
+        <!-- Patient Admission Order Report -->
+	    <record model="ir.action.report" id="patient_admission_order_report">
+            <field name="name">Admission Slip</field>
+            <field name="model">gnuhealth.inpatient.registration</field>
+            <field name="report_name">health.proc.patient.admission.order.report</field>
+            <field name="report">health_proc/report/patient_admission_order_report.fodt</field>
+        </record>
+        <record model="ir.action.keyword" id="patient_admission_order_keyword">
+            <field name="keyword">form_print</field>
+            <field name="model">gnuhealth.inpatient.registration,-1</field>
+            <field name="action" ref="patient_admission_order_report"/>
+        </record>
+
+        <!-- Patient Summary Bill Report -->
+	    <record model="ir.action.report" id="patient_summary_bill_report">
+            <field name="name">Patient Summary Bill</field>
+            <field name="model">gnuhealth.inpatient.registration</field>
+            <field name="report_name">health.proc.patient.summary.bill.report</field>
+            <field name="report">health_proc/report/patient_summary_bill.fodt</field>
+        </record>
+        <record model="ir.action.keyword" id="patient_summary_bill_report_keyword">
+            <field name="keyword">form_print</field>
+            <field name="model">gnuhealth.inpatient.registration,-1</field>
+            <field name="action" ref="patient_summary_bill_report"/>
+        </record>
+
+        <!-- Patient Discharge -->
+	    <record model="ir.action.report" id="patient_discharge_certificate_report">
+            <field name="name">Discharge Certificate</field>
+            <field name="model">gnuhealth.inpatient.registration</field>
+            <field name="report_name">health.proc.patient.discharge.certificate.report</field>
+            <field name="report">health_proc/report/patient_discharge_certificate.fodt</field>
+        </record>
+        <record model="ir.action.keyword" id="patient_discharge_certificate_report_keyword">
+            <field name="keyword">form_print</field>
+            <field name="model">gnuhealth.inpatient.registration,-1</field>
+            <field name="action" ref="patient_discharge_certificate_report"/>
+        </record>        
+
+        <!-- Prescription -->
+        <record model="ir.action.report" id="report_prescription_slip_latest">
+            <field name="name">Prescription Slip</field>
+            <field name="model">gnuhealth.prescription.order</field>
+            <field name="report_name">health.proc.prescription.slip.report</field>
+            <field name="report">health_proc/report/prescription_slip.fodt</field>
+        </record>       
+        <record model="ir.action.keyword" id="report_prescription_slip_latest_keyword">
+            <field name="keyword">form_print</field>
+            <field name="model">gnuhealth.prescription.order,-1</field>
+            <field name="action" ref="report_prescription_slip_latest"/>
+        </record>
+
+        <record model="ir.action.report" id="report_doctor_share_details_report">
+            <field name="name">Doctors Share Detailed Report</field>
+            <field name="report_name">health.proc.doctor.share.details.report</field>
+            <field name="model"></field>
+            <field name="template_extension">ods</field>
+            <field name="report">health_proc/report/doctor_share_detailed_report.ods</field>
+        </record>
+
+        <record model="ir.action.report" id="report_sale_ticket_lab_sale">
+            <field name="name">Sale Ticket Lab</field>
+            <field name="model">sale.sale</field>
+            <field name="report_name">sale_ticket_lab_sale</field>
+            <field name="report">health_proc/report/sale_pos_ticket_lab_sale.fodt</field>
+        </record>       
+        <record model="ir.action.keyword" id="report_sale_ticket_lab_sale_keyword">
+            <field name="keyword">form_print</field>
+            <field name="model">sale.sale,-1</field>
+            <field name="action" ref="report_sale_ticket_lab_sale"/>
+        </record>
+
+        <record model="ir.action.report" id="report_sale_ticket_lab_sale_duplicate">
+            <field name="name">Sale Ticket Lab (Duplicate)</field>
+            <field name="model">sale.sale</field>
+            <field name="report_name">sale_ticket_lab_sale</field>
+            <field name="report">health_proc/report/sale_pos_ticket_lab_sale_duplicate.fodt</field>
+        </record>       
+        <record model="ir.action.keyword" id="report_sale_ticket_lab_sale_keyword_duplicate">
+            <field name="keyword">form_print</field>
+            <field name="model">sale.sale,-1</field>
+            <field name="action" ref="report_sale_ticket_lab_sale_duplicate"/>
+        </record>
+
+       <record model="ir.action.report" id="report_sample_barcode39">
+            <field name="name">Print Bar-Code</field>
+            <field name="model">health.proc.lab.sample</field>
+            <field name="report_name">report_sample_barcode39</field>
+            <field name="report">health_proc/report/sample_barcode39.fodt</field>
+        </record>
+        <record model="ir.action.keyword" id="report_barcode39_sample">
+            <field name="keyword">form_print</field>
+            <field name="model">health.proc.lab.sample,-1</field>
+            <field name="action" ref="report_sample_barcode39"/>
+        </record>
+
+       <record model="ir.action.report" id="report_sample_lab_copy">
+            <field name="name">Print Lab Copy</field>
+            <field name="model">health.proc.lab.sample</field>
+            <field name="report_name">report_sample_lab_copy</field>
+            <field name="report">health_proc/report/lab_copy.fodt</field>
+            <field name="extension">pdf</field>
+        </record>
+        <record model="ir.action.keyword" id="report_lab_copy_sample">
+            <field name="keyword">form_print</field>
+            <field name="model">health.proc.lab.sample,-1</field>
+            <field name="action" ref="report_sample_lab_copy"/>
+        </record>        
+
+        <record model="ir.action.report" id="report_doctor_share_summary_report">
+            <field name="name">Doctors Share Summary Report</field>
+            <field name="report_name">health.proc.doctor.share.summary.report</field>
+            <field name="model"></field>
+            <field name="extension">pdf</field>
+            <field name="report">health_proc/report/doctor_share_summary_report.fodt</field>
+        </record>
+
+       <record model="ir.action.report" id="report_panel_bill">
+            <field name="name">Print Panel Bill</field>
+            <field name="model">health.proc.insurance.panel.bill</field>
+            <field name="report_name">health.proc.insurance.panel.bill.report</field>
+            <field name="report">health_proc/report/insurance_panel_bill.fodt</field>
+            <field name="extension">pdf</field>
+        </record>
+        <record model="ir.action.keyword" id="report_panel_bill_action">
+            <field name="keyword">form_print</field>
+            <field name="model">health.proc.insurance.panel.bill,-1</field>
+            <field name="action" ref="report_panel_bill"/>
+        </record>   
+
+        <record model="ir.action.report" id="report_opd_stats_report">
+            <field name="name">OPD Stats Report</field>
+            <field name="report_name">health.proc.opd_stats.report</field>
+            <field name="model"></field>
+            <field name="extension">pdf</field>
+            <field name="report">health_proc/report/opd_stats_report.fodt</field>
+        </record>  
+        <record model="ir.action.report" id="report_opd_stats_detailed_report">
+            <field name="name">OPD Stats Detailed Report</field>
+            <field name="report_name">health.proc.opd_stats_detailed.report</field>
+            <field name="model"></field>
+            <field name="extension">pdf</field>
+            <field name="report">health_proc/report/opd_stats_detailed_report.fodt</field>
+        </record>  
+
+        <record model="ir.action.report" id="report_phlebotomy_accession_sheet">
+            <field name="name">Phlebotomy Access Sheet</field>
+            <field name="report_name">health.proc.sample.batch.report</field>
+            <field name="model">health.proc.sample.batch</field>
+            <field name="extension">pdf</field>
+            <field name="report">health_proc/report/phlebotomy_accession_sheet.fodt</field>
+        </record>     
+        <record model="ir.action.keyword" id="report_phlebotomy_accession_sheet_action">
+            <field name="keyword">form_print</field>
+            <field name="model">health.proc.sample.batch,-1</field>
+            <field name="action" ref="report_phlebotomy_accession_sheet"/>
+        </record>         
+
+        <!-- Stock Inventory Detailed Report -->
+        <record model="ir.action.report" id="stock_inventory_detailed_report">
+            <field name="name">Stock Inventory Report</field>
+            <field name="report_name">health.proc.stock.inventory.details.report</field>
+            <field name="model"></field>
+            <field name="template_extension">ods</field>
+            <field name="report">health_proc/report/stock_inventory_detailed_report.ods</field>
+        </record>
+
+        <!--Doctor Services Detailed Report-->
+            <record model="ir.action.report" id="doctor_services_details">
+            <field name="name">Doctor Services Detailed Report</field>
+            <field name="report_name">health.proc.doctor.services.details.report</field>
+            <field name="model"></field>
+            <field name="template_extension">ods</field>
+            <field name="report">health_proc/report/doctor_services_details.ods</field>
+        </record>
+
+        <!-- Stock Near Expiry Detailed Report -->
+        <record model="ir.action.report" id="stock_near_expiry_detailed_report">
+            <field name="name">Stock Near Expiry Report</field>
+            <field name="report_name">health.proc.stock.near.expiry.details.report</field>
+            <field name="model"></field>
+            <field name="template_extension">ods</field>
+            <field name="report">health_proc/report/stock_near_expiry_report.ods</field>
+        </record>
+
+        <!-- Stock Expired Detailed Report -->
+        <record model="ir.action.report" id="stock_expired_detailed_report">
+            <field name="name">Stock Expired Report</field>
+            <field name="report_name">health.proc.stock.expired.details.report</field>
+            <field name="model"></field>
+            <field name="template_extension">ods</field>
+            <field name="report">health_proc/report/stock_expired_report.ods</field>
+        </record> 
+
+        <!-- Visit Opd Patient Detailed Report -->
+        <record model="ir.action.report" id="opd_patient_detailed_report">
+            <field name="name">Visit Opd Patient Report</field> 
+            <field name="report_name">health.proc.visit.opd.patient.details.report</field> 
+            <field name="model"></field>
+            <field name="template_extension">ods</field> 
+            <field name="report">health_proc/report/patient_visit_to_opd.ods</field> 
+        </record>        
+
+        <!-- Surgery Recommended to Opd Patient Detailed Report -->
+        <record model="ir.action.report" id="surgery_recommended_opd_patient_detailed_report">
+            <field name="name">Surgery Recommended Opd Patient Report</field> 
+            <field name="report_name">health.proc.surgery.recommended.opd.patient.details.report</field> 
+            <field name="model"></field>
+            <field name="template_extension">ods</field> 
+            <field name="report">health_proc/report/surgery_advised_to_opd_patients.ods</field> 
+        </record>        
+
+        <!-- Stock Issuence  Detailed Report -->
+        <record model="ir.action.report" id="stock_internal_shipment_detailed_report">
+            <field name="name">Stock Issuence Report</field> 
+            <field name="report_name">stock.internal.shipment.report</field> 
+            <field name="model"></field>
+            <field name="template_extension">ods</field> 
+            <field name="report">health_proc/report/stock_issuence_report.ods</field> 
+        </record>           
+
+        <!-- Critical Analytes Detailed Report --> 
+        <record model="ir.action.report" id="critical_analytes_detailed_report"> 
+                <field name="name">Critical Analytes Report</field> 
+                <field name="report_name">critical.analytes.report</field>
+                <field name="model"></field> 
+                <field name="template_extension">ods</field> 
+                <field name="report">health_proc/report/critical_analytes_report.ods</field> 
+        </record>  
+
+        <!-- Purchase Detailed Report --> 
+        <record model="ir.action.report" id="purchase_detailed_report">
+            <field name="name">Purchase Report</field> 
+            <field name="report_name">purchase.report</field> 
+            <field name="model"></field> 
+            <field name="template_extension">ods</field>
+            <field name="report">health_proc/report/purchase_report.ods</field> 
+        </record>            
+
+        <!-- OPD TurnOver Detailed Report --> 
+        <record model="ir.action.report" id="opd_turn_over_detailed_report"> 
+                <field name="name">OPD TurnOver Report</field> 
+                <field name="report_name">opd.turnover.report</field>
+                <field name="model"></field> 
+                <field name="template_extension">ods</field> 
+                <field name="report">health_proc/report/opd_turnover_report.ods</field> 
+        </record>         
+   </data>
+</tryton>

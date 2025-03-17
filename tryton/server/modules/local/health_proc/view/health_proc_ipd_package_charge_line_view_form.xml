@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<form>
+    	
+	<label name="product_group"/>
+	<field name="product_group"/>
+
+	<label name="list_price"/>
+	<field name="list_price"/>
+	
+	<label name="discount_percent"/>
+	<field name="discount_percent"/>
+	
+	<label name="discount_amount"/>
+	<field name="discount_amount"/>
+
+
+	<label name="panel_price"/>
+	<field name="panel_price"/>
+
+	<label name="discount_surplus_amount"/>
+	<field name="discount_surplus_amount"/>
+
+	<label name="net_price"/>
+	<field name="net_price"/>
+</form>

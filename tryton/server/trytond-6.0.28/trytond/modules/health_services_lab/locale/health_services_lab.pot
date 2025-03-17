@@ -1,0 +1,45 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:gnuhealth.patient.lab.test,service:"
+msgid "Service"
+msgstr ""
+
+msgctxt "field:gnuhealth.patient.lab.test.request.start,service:"
+msgid "Service"
+msgstr ""
+
+msgctxt "field:gnuhealth.patient.lab.test.request.start,ungroup_tests:"
+msgid "Ungroup"
+msgstr ""
+
+msgctxt "help:gnuhealth.patient.lab.test,service:"
+msgid "Service document associated to this Lab Request"
+msgstr ""
+
+msgctxt "help:gnuhealth.patient.lab.test.request.start,service:"
+msgid "Service document associated to this Lab Request"
+msgstr ""
+
+msgctxt "help:gnuhealth.patient.lab.test.request.start,ungroup_tests:"
+msgid ""
+"Check if you DO NOT want to include each individual lab test from this order in the lab test generation step. This is useful when some services are not provided in the same institution.\n"
+"In this case, you need to individually update the service document from each individual test"
+msgstr ""
+
+msgctxt "model:ir.model.button,string:srvlab_update_button"
+msgid "Update Services"
+msgstr ""
+
+msgctxt "view:gnuhealth.patient.lab.test:"
+msgid "Transfer lab request to services ?"
+msgstr ""
+
+msgctxt "view:gnuhealth.patient.lab.test:"
+msgid "Update Service document with this lab request ?"
+msgstr ""
+
+msgctxt "view:gnuhealth.patient.lab.test:"
+msgid "Update Services"
+msgstr ""

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<form>
+    <label name="name"/>
+    <field name="name"/>
+    <label name="hod"/>
+    <field name="hod"/>
+    <label name="store_location"/>
+    <field name="store_location"/>
+</form>

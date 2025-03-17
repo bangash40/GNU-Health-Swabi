@@ -1,0 +1,42 @@
+Version 5.5.0 - 2019-11-14
+Version 5.4.0 - 2019-11-14
+Version 5.3.0 - 2019-05-06
+* Add Tests tools: create shop
+* Add company record rule to sale.shop
+
+Version 4.0.0 - 2016-05-03
+
+Version 3.8.0 - 2015-11-11
+
+Version 3.6.0 - 2015-09-29
+
+Version 3.4.0 - 2014-11-05
+
+Version 3.2.1 - 2014-10-31
+* Use the sale's shop instead of user's shop to calculate the Price list for
+  sale
+* Remove unnecessary fields from depends and add some necessary
+* Add Currency to shop and use it to fill the currency of sale when choose the
+  shop
+* Add search value to filter current shop in Sale menu
+* Create a default shop for all users in tests
+* Update locales
+* Active sale shop
+* Allow add/remove users from shops
+
+Version 3.2.0 - 2014-05-26
+* Fix DeprecationWarning: on_change argument is deprecated, use the depends
+  decorator
+* Fix write method
+
+Version 3.0.0 - 2013-10-25
+
+Version 2.8.0 - 2013-04-26
+
+Version 2.6.0 - 2012-10-08
+* Simplify module information with python configuration
+* Active Record
+* Sale shop by company
+
+Version 2.4.0 - 2012-06-26
+* Initial release

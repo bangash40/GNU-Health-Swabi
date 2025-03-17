@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!-- This file is part of the sale_shop module for Tryton. The COPYRIGHT file
+at the top level of this repository contains the full copyright notices and
+license terms. -->
+<data>
+    <xpath expr="//field[@name=&quot;or_number&quot;]" position="after">
+	    <label name="turnaround_time_normal"/>
+	    <field name="turnaround_time_normal"/>
+
+	    <label name="turnaround_time_emergency"/>
+	    <field name="turnaround_time_emergency"/>
+
+	    <label name="main_price_list"/>
+	    <field name="main_price_list"/>	
+    </xpath>
+</data>

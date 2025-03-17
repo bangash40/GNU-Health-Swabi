@@ -1,0 +1,4 @@
+trytond_party<6.1,>=6.0
+trytond_account_invoice<6.1,>=6.0
+trytond_sale<6.1,>=6.0
+trytond<6.1,>=6.0

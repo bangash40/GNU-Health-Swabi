@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<form>
+    <label name="name"/>
+    <field name="name"/>
+    <newline/>
+    <label name="datefrom"/>
+    <field name="datefrom"/>
+    <label name="dateto"/>
+    <field name="dateto"/>
+    <label name="state"/>
+    <field name="state"/>
+    <newline/>
+    <field name="statement_lines" colspan="4"/>
+    <newline/>
+    <field name="notes" colspan="4"/>
+</form>

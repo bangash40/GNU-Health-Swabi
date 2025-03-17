@@ -1,0 +1,4 @@
+
+    [trytond.modules]
+    analytic_account = trytond.modules.analytic_account
+    

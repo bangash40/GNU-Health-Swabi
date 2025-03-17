@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<tree editable="1">
+
+
+            <field name="analysis_category_name" expand="1"/>
+            <field name="service" expand="1"/>
+
+            <field name="numeric_result" expand="1"/>
+
+
+            <field name="selected_result_option" expand="1"/>
+            <field name="text_result" expand="1"/>
+
+
+
+	    <field name="result_range" expand="1"/>
+	    <field name="hist_one" expand="1"/>
+
+
+   	    <field name="hist_two" expand="1"/>
+
+
+</tree>

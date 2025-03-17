@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+SPDX-FileCopyrightText: 2008-2023 Luis Falcón <falcon@gnuhealth.org>
+SPDX-FileCopyrightText: 2011-2023 GNU Solidario <health@gnusolidario.org>
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<tryton>
+    <data>
+        <record model="gnuhealth.command" id="lab">
+            <field name="name">lab</field>
+            <field name="model">gnuhealth.lab</field>
+            <field name="label">Lab Tests</field>
+            <field name="description">Lab Test Results</field>
+            <field name="internal">False</field>
+        </record>       
+    </data>
+</tryton>

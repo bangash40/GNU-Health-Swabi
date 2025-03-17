@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<!--
+SPDX-FileCopyrightText: 2008-2023 Luis Falcón <falcon@gnuhealth.org>
+SPDX-FileCopyrightText: 2011-2023 GNU Solidario <health@gnusolidario.org>
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<tree>
+    <field name="name"/>
+    <field name="gravida"/>
+    <field name="computed_age"/>
+    <field name="lmp" expand="1"/>
+    <field name="pdd" expand="1"/>
+    <field name="current_pregnancy" expand="1"/>
+    <field name="pregnancy_end_date" widget="date"/>
+    <field name="pregnancy_end_age" expand="1"/>
+    <field name="pregnancy_end_result" expand="1"/>
+    <field name="iugr" expand="1"/>
+    <field name="fetuses" expand="1"/>
+    <field name="bba" expand="1"/>
+    <field name="home_birth" expand="1"/>
+    <field name="warning" icon="warning_icon" expand="1"/>
+</tree>

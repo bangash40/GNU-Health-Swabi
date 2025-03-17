@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<!--
+SPDX-FileCopyrightText: 2008-2023 Luis Falcón <falcon@gnuhealth.org>
+SPDX-FileCopyrightText: 2011-2023 GNU Solidario <health@gnusolidario.org>
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<tree>
+    <field name="code"/>
+    <field name="event_type" expand="1"/>
+    <field name="urgency" expand="1"/>
+    <field name="state" expand="1"/>
+    <field name="patient"/>
+    <field name="requestor"/>
+    <field name="healthcenter"/>
+    <field name="operational_sector"/>
+</tree>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<!--
+SPDX-FileCopyrightText: 2008-2023 Luis Falcón <falcon@gnuhealth.org>
+SPDX-FileCopyrightText: 2011-2023 GNU Solidario <health@gnusolidario.org>
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<form>
+    <separator string="Do you want to generate the Invoice(s) ?"
+        colspan="4" id="test_ask"/>
+    <newline/>
+    <separator string="Create Invoices" colspan="6"
+        id="service_invoice_ask_create"/>
+</form>

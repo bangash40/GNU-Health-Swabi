@@ -1,0 +1,84 @@
+Metadata-Version: 1.2
+Name: trytond-purchase-requisition
+Version: 6.0.0
+Summary: Allows users to enter requests for product supply (requisition). This will create a "Purchase request" by line which will be treated by the purchasing department.
+Home-page: http://www.tryton.org
+Author: Tryton
+Author-email: bugs@tryton.org
+License: GPL-3
+Download-URL: http://downloads.tryton.org/6.0/
+Project-URL: Bug Tracker, https://bugs.tryton.org/
+Project-URL: Documentation, https://docs.tryton.org/
+Project-URL: Forum, https://www.tryton.org/forum
+Project-URL: Source Code, https://hg.tryton.org/modules/purchase_requisition
+Description: Purchase Requisition Module
+        ###########################
+        
+        The Purchase Requisition module allows users to create their purchase
+        requisitions.
+        Those requisitions will be approved or rejected by the Approval group.
+        On approval, purchase requests will be created.
+        
+        Requisition
+        ***********
+        
+        - Employee: The requester.
+        - Description: The description of the purchase requisition.
+        - Supply Date: The expected date to supply.
+        - Currency: define the currency to use for this requisition. All product prices
+          will be computed accordingly.
+        - Warehouse: Define the warehouse where the shipment will be made.
+        - Purchase Requisition Lines:
+        
+          - Supplier: The supplier.
+          - Product: An optional reference to the product to request.
+          - Description: The description of the product to request.
+          - Quantity: The quantity to request.
+          - Unit: The unit of measure in which is expressed the quantity.
+          - Unit Price: The unit price of the product expressed in the currency of the
+            purchase requisition.
+          - Amount: The amount of the current line (Unit Price multiplied by Quantity).
+        
+        - Total: The total amount.
+        - State: The state of the purchase requisition. May take one of the following
+          values: Draft, Waiting, Rejected, Processing, Done, Cancelled.
+        - Company: The company which issue the purchase requisition.
+        
+Keywords: tryton purchase requisition
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Plugins
+Classifier: Framework :: Tryton
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Intended Audience :: Legal Industry
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Natural Language :: Bulgarian
+Classifier: Natural Language :: Catalan
+Classifier: Natural Language :: Czech
+Classifier: Natural Language :: Dutch
+Classifier: Natural Language :: English
+Classifier: Natural Language :: Finnish
+Classifier: Natural Language :: French
+Classifier: Natural Language :: German
+Classifier: Natural Language :: Hungarian
+Classifier: Natural Language :: Indonesian
+Classifier: Natural Language :: Italian
+Classifier: Natural Language :: Persian
+Classifier: Natural Language :: Polish
+Classifier: Natural Language :: Portuguese (Brazilian)
+Classifier: Natural Language :: Romanian
+Classifier: Natural Language :: Russian
+Classifier: Natural Language :: Slovenian
+Classifier: Natural Language :: Spanish
+Classifier: Natural Language :: Turkish
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Office/Business
+Requires-Python: >=3.6

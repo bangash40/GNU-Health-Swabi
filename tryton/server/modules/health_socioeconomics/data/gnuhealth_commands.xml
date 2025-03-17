@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+SPDX-FileCopyrightText: 2008-2023 Luis Falcón <falcon@gnuhealth.org>
+SPDX-FileCopyrightText: 2011-2023 GNU Solidario <health@gnusolidario.org>
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<tryton>
+    <data>
+        <record model="gnuhealth.command" id="ses">
+            <field name="name">ses</field>
+            <field name="model">gnuhealth.ses.assessment</field>
+            <field name="label">Socioeconomic Assesment</field>
+            <field name="description">SES - Socioeconomic and Family Functionality Assessment</field>
+            <field name="internal">False</field>
+        </record>
+    </data>
+</tryton>

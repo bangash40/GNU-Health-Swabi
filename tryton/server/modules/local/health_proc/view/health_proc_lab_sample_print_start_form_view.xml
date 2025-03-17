@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<form>
+    <label name="patient"/>
+    <field name="patient"/>
+    <newline/>
+    <field name="created_samples" colspan="4"/>
+</form>

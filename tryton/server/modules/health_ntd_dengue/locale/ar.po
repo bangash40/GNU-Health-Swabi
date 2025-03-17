@@ -1,0 +1,266 @@
+# Nab3a <asn09@aub.edu.lb>, 2016.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-02-06 07:37+0000\n"
+"Last-Translator: MHD Tareq Shaheen <shaheen.mhd.tareq@gmail.com>\n"
+"Language-Team: Arabic <https://hosted.weblate.org/projects/gnu-health/"
+"health_ntd_dengue/ar/>\n"
+"Language: ar\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Weblate 4.16-dev\n"
+"X-POOTLE-MTIME: 1452255985.0\n"
+
+msgctxt "field:gnuhealth.dengue_du_survey,aedes_larva:"
+msgid "Larvae"
+msgstr "اليرقات"
+
+msgctxt "field:gnuhealth.dengue_du_survey,animal_water_container:"
+msgid "Animal Water containers"
+msgstr "احواض الحيوانات"
+
+msgctxt "field:gnuhealth.dengue_du_survey,create_date:"
+msgid "Create Date"
+msgstr "أنشئ معلومات"
+
+msgctxt "field:gnuhealth.dengue_du_survey,create_uid:"
+msgid "Create User"
+msgstr "إنشاء مستخدم"
+
+msgctxt "field:gnuhealth.dengue_du_survey,du:"
+msgid "DU"
+msgstr "إدخال سائل"
+
+msgctxt "field:gnuhealth.dengue_du_survey,du_fumigation:"
+msgid "Fumigation"
+msgstr "تبخير"
+
+msgctxt "field:gnuhealth.dengue_du_survey,du_status:"
+msgid "Status"
+msgstr "الحالة"
+
+msgctxt "field:gnuhealth.dengue_du_survey,flower_vase:"
+msgid "Flower vase"
+msgstr "مزهرية"
+
+msgctxt "field:gnuhealth.dengue_du_survey,fumigation_date:"
+msgid "Fumigation Date"
+msgstr "تاريخ التبخير"
+
+msgctxt "field:gnuhealth.dengue_du_survey,id:"
+msgid "ID"
+msgstr "المُعرّف"
+
+msgctxt "field:gnuhealth.dengue_du_survey,larva_in_house:"
+msgid "Domiciliary"
+msgstr "المسكن"
+
+msgctxt "field:gnuhealth.dengue_du_survey,larva_peri:"
+msgid "Peri-Domiciliary"
+msgstr "شبه منزل"
+
+msgctxt "field:gnuhealth.dengue_du_survey,name:"
+msgid "Survey Code"
+msgstr "رمز الاستبيان"
+
+msgctxt "field:gnuhealth.dengue_du_survey,next_survey_date:"
+msgid "Next survey"
+msgstr "الاستبيان التالي"
+
+msgctxt "field:gnuhealth.dengue_du_survey,observations:"
+msgid "Observations"
+msgstr "ملاحظات"
+
+msgctxt "field:gnuhealth.dengue_du_survey,old_tyres:"
+msgid "Tyres"
+msgstr "الاطارات"
+
+msgctxt "field:gnuhealth.dengue_du_survey,ovitraps:"
+msgid "Ovitraps"
+msgstr "(Ovitraps)"
+
+msgctxt "field:gnuhealth.dengue_du_survey,potted_plant:"
+msgid "Potted Plants"
+msgstr "نبات في أصيص"
+
+msgctxt "field:gnuhealth.dengue_du_survey,rec_name:"
+msgid "Name"
+msgstr "الاسم"
+
+msgctxt "field:gnuhealth.dengue_du_survey,rock_holes:"
+msgid "Rock holes"
+msgstr "ثقوب صخرية"
+
+msgctxt "field:gnuhealth.dengue_du_survey,survey_date:"
+msgid "Date"
+msgstr "تاريخ"
+
+msgctxt "field:gnuhealth.dengue_du_survey,tree_holes:"
+msgid "Tree holes"
+msgstr "ثقوب اشجار"
+
+msgctxt "field:gnuhealth.dengue_du_survey,write_date:"
+msgid "Write Date"
+msgstr "كتابة معلومات"
+
+msgctxt "field:gnuhealth.dengue_du_survey,write_uid:"
+msgid "Write User"
+msgstr "كتابة مستخدم"
+
+msgctxt "field:gnuhealth.sequences,dengue_du_survey_sequence:"
+msgid "Dengue Survey Sequence"
+msgstr "تسلسل مسح حمى الضنك"
+
+msgctxt "help:gnuhealth.dengue_du_survey,aedes_larva:"
+msgid "Check this box if Aedes aegypti larvae were found"
+msgstr "ضع علامة في هذا المربع إذا تم العثور على يرقات الزاعجة المصرية"
+
+msgctxt "help:gnuhealth.dengue_du_survey,animal_water_container:"
+msgid "Animal water containers not scrubbed or clean"
+msgstr "أوعية مياه الحيوانات غير مغسولة أو نظيفة"
+
+msgctxt "help:gnuhealth.dengue_du_survey,du:"
+msgid "Domiciliary Unit"
+msgstr "وحدة الرعاية المنزلية"
+
+msgctxt "help:gnuhealth.dengue_du_survey,du_fumigation:"
+msgid "The DU has been fumigated"
+msgstr "تم تبخير اليورانيوم المنضب"
+
+msgctxt "help:gnuhealth.dengue_du_survey,du_status:"
+msgid "DU status compared to last visit"
+msgstr "حالة DU مقارنة بآخر زيارة"
+
+msgctxt "help:gnuhealth.dengue_du_survey,flower_vase:"
+msgid "Flower vases without scrubbing or cleaning"
+msgstr "مزهريات الورد بدون حك أو تنظيف"
+
+msgctxt "help:gnuhealth.dengue_du_survey,fumigation_date:"
+msgid "Last Fumigation Date"
+msgstr "تاريخ آخر تبخير"
+
+msgctxt "help:gnuhealth.dengue_du_survey,larva_in_house:"
+msgid "Check this box if larvae were found inside the house"
+msgstr "ضع علامة في هذا المربع إذا تم العثور على يرقات داخل المنزل"
+
+msgctxt "help:gnuhealth.dengue_du_survey,larva_peri:"
+msgid "Check this box if larva were found in the peridomiciliary area"
+msgstr "حدد هذا المربع إذا تم العثور على يرقة في منطقة حول الذرة"
+
+msgctxt "help:gnuhealth.dengue_du_survey,old_tyres:"
+msgid "Old vehicle tyres found"
+msgstr "تم العثور على إطارات سيارات قديمة"
+
+msgctxt "help:gnuhealth.dengue_du_survey,ovitraps:"
+msgid "Check if ovitraps are in place"
+msgstr "تحقق مما إذا كانت الأوفيترابس في مكانها الصحيح"
+
+msgctxt "help:gnuhealth.dengue_du_survey,potted_plant:"
+msgid "Potted Plants with saucers"
+msgstr "النباتات المحفوظة بوعاء مع الصحون"
+
+msgctxt "help:gnuhealth.dengue_du_survey,rock_holes:"
+msgid "unfilled rock holes"
+msgstr "ثقوب صخرية شاغرة"
+
+msgctxt "help:gnuhealth.dengue_du_survey,tree_holes:"
+msgid "unfilled tree holes"
+msgstr "ثقوب اشجار فارغة"
+
+msgctxt "model:gnuhealth.dengue_du_survey,name:"
+msgid "Dengue DU Survey"
+msgstr "مسح حمى الضنك DU"
+
+msgctxt ""
+"model:gnuhealth.lab.test.critearea,name:gnuhealth_test_critearea_elisa_elisa_igg"
+msgid "Dengue ELISA Ig-M"
+msgstr "حمى الضنك ELISA Ig-M"
+
+msgctxt ""
+"model:gnuhealth.lab.test.critearea,name:gnuhealth_test_critearea_elisa_igg"
+msgid "Dengue Ig-G"
+msgstr "حمى الضنك Ig-G"
+
+msgctxt ""
+"model:gnuhealth.lab.test.critearea,name:gnuhealth_test_critearea_qualitative_pcr"
+msgid "Dengue PCR"
+msgstr "مسحة حمى الضنك"
+
+msgctxt ""
+"model:gnuhealth.lab.test.critearea,name:gnuhealth_test_critearea_qualitative_prnt"
+msgid "Dengue PRNT"
+msgstr "حمى الضنك PRNT"
+
+msgctxt ""
+"model:gnuhealth.lab.test_type,name:gnuhealth_test_dengue_elisa_igg_analysis0"
+msgid "DENGUE IgG"
+msgstr "حمى الضنك IgG"
+
+msgctxt ""
+"model:gnuhealth.lab.test_type,name:gnuhealth_test_dengue_elisa_igm_analysis0"
+msgid "DENGUE ELISA"
+msgstr "حمى الضنك ELISA"
+
+msgctxt ""
+"model:gnuhealth.lab.test_type,name:gnuhealth_test_dengue_pcr_analysis0"
+msgid "DENGUE PCR"
+msgstr "مسحة حمى الضنك"
+
+msgctxt ""
+"model:gnuhealth.lab.test_type,name:gnuhealth_test_dengue_prnt_analysis0"
+msgid "DENGUE PRNT"
+msgstr "حمى الضنك PRNT"
+
+msgctxt "model:ir.action,name:act_dengue_du_survey_form"
+msgid "Dengue DU Survey"
+msgstr "مسح حمى الضنك DU"
+
+msgctxt "model:ir.sequence,name:seq_gnuhealth_du_survey"
+msgid "Dengue DU Survey"
+msgstr "مسح حمى الضنك DU"
+
+msgctxt "model:ir.sequence.type,name:seq_type_gnuhealth_du_survey"
+msgid "Dengue DU Survey"
+msgstr "مسح حمى الضنك DU"
+
+msgctxt ""
+"model:product.template,name:product_template_dengue_elisa_igg_analysischarges0"
+msgid "Dengue IgG Charges"
+msgstr "تكلفة حمى الضنك IgG"
+
+msgctxt ""
+"model:product.template,name:product_template_dengue_elisa_igm_analysischarges0"
+msgid "Dengue ELISA MAC Ig-M Charges"
+msgstr "تكلفة حمى الضنك ELISA MAC Ig-M"
+
+msgctxt ""
+"model:product.template,name:product_template_dengue_pcr_analysischarges0"
+msgid "Dengue PCR Charges"
+msgstr "تكلفة مسحة حمى الضنك"
+
+msgctxt ""
+"model:product.template,name:product_template_dengue_prnt_analysischarges0"
+msgid "Dengue PRNT Charges"
+msgstr "تكلفة حمى الضنك PRNT"
+
+msgctxt "selection:gnuhealth.dengue_du_survey,du_status:"
+msgid ""
+msgstr "-"
+
+msgctxt "selection:gnuhealth.dengue_du_survey,du_status:"
+msgid "Improved"
+msgstr "متطور"
+
+msgctxt "selection:gnuhealth.dengue_du_survey,du_status:"
+msgid "Initial"
+msgstr "البداية"
+
+msgctxt "selection:gnuhealth.dengue_du_survey,du_status:"
+msgid "Unchanged"
+msgstr "لم يتغير"
+
+msgctxt "selection:gnuhealth.dengue_du_survey,du_status:"
+msgid "Worsen"
+msgstr "أسوأ"

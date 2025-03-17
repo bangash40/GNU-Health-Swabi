@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<tree editable="1">
+    <field name="product_group" expand="1" />
+    <field name="list_price" expand="1" />
+	<field name="discount_percent" expand="1"/>
+
+	<field name="discount_amount" expand="1"/>
+
+	<field name="panel_price" expand="1"/>
+
+	<field name="net_price" expand="1"/>
+
+	<field name="discount_surplus_amount" expand="1"/>
+
+</tree>

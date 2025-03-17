@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<data>
+
+    <xpath expr="//field[@name=&quot;pathology&quot;]" position="after">
+        <label name="sample"/>
+        <field name="sample"/>        
+        <label name="department"/>
+        <field name="department"/>             
+    </xpath>
+
+    
+<!--
+    <xpath expr="/form/notebook/page[@id=&quot;lab_main_info&quot;]" position="after">
+        <page string="LIMS Results" id="page_lims_results">
+               <field name="services_results" colspan="4"/>
+                <group  colspan="4" id="dates_display_chap">
+                        <group id="empty_group" colspan="3">
+                        </group>
+                        <group id="old_dates_dis_group" colspan="1" yfill="1">
+                        <field name="old_dates_display"/>
+                        </group>
+                </group>
+                <group  colspan="4" id="id_first_two_lims">   
+                        <group string="Pathologist Comments (General)" id="grp_paht_comm_lims"  colspan="2">
+
+                               <field name="diagnosis" colspan="2"/>
+                        </group>
+                        <group string="Peripheral Smear (HEMA)" id="grp_pery_smeear_lims"  colspan="2">
+
+                                <field name="clinical_details" colspan="2"/>
+                        </group>
+
+                </group>
+                <button name="save_results" colspan="2" help="Cancel this Test" string="Save Results" icon="icon-home"/>    
+                <button name="submit_results" colspan="2" help="Cancel this Test" string="Submit Results" icon="icon-home" confirm="Are you sure you want to Submit Results to Pathologis?"/>
+ <button name="edit_results" colspan="2" help="Cancel this Test" string="Edit Results" icon="icon-home" confirm="Do you want to change these Results?"/>
+                <button name="verify_results" colspan="2" help="Cancel this Test" string="Verify Results" icon="icon-home" confirm="Are you sure you want to Verify the Results? The Report can be published and shared with Patient!"/>
+                <button name="preview_report" colspan="2" help="Cancel this Test" string="Preview Report" icon="icon-home"/>
+                <button name="publish_results" colspan="2" help="Cancel this Test" string="Publish Report" icon="icon-home" confirm="Are you sure you want to Publish the PDF Report?"/>
+<button name="reopen_results" colspan="2" help="Cancel this Test" string="Re-Open Result" icon="icon-home" confirm="Are you sure you want to Re-Open results for editing?"/>
+<button name="receive_sample" colspan="2" help="Receive the Sample for this Test" string="Receive Sample" icon="icon-home" confirm="Are you sure you want to mark the sample Received?"/>
+               
+
+        </page>
+        <page string="Historical Results" id="page_last_results">
+                <field name="historical_results" colspan="4"/>
+        </page>
+    </xpath>
+    -->
+</data>

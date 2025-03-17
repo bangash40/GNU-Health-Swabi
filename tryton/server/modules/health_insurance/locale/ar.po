@@ -1,0 +1,95 @@
+#
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-02-06 07:37+0000\n"
+"Last-Translator: MHD Tareq Shaheen <shaheen.mhd.tareq@gmail.com>\n"
+"Language-Team: Arabic <https://hosted.weblate.org/projects/gnu-health/"
+"health_insurance/ar/>\n"
+"Language: ar\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Weblate 4.16-dev\n"
+
+msgctxt "error:gnuhealth.insurance.plan.product.policy:"
+msgid "Percentage out of range [0-100]"
+msgstr "نسبة مئوية"
+
+msgctxt "error:gnuhealth.insurance.plan.product.policy:"
+msgid "You need a product or category"
+msgstr "تحتاج الى منتج او تصنيف"
+
+msgctxt "field:gnuhealth.health_service,insurance_holder:"
+msgid "Insurance Holder"
+msgstr "مكان التأمين"
+
+msgctxt "field:gnuhealth.health_service,insurance_plan:"
+msgid "Plan"
+msgstr "خطة"
+
+msgctxt "field:gnuhealth.insurance.plan,product_policy:"
+msgid "Policy"
+msgstr "سياسة"
+
+msgctxt "field:gnuhealth.insurance.plan.product.policy,create_date:"
+msgid "Create Date"
+msgstr "تاريخ الإنشاء"
+
+msgctxt "field:gnuhealth.insurance.plan.product.policy,create_uid:"
+msgid "Create User"
+msgstr "انشاء مستخدم"
+
+msgctxt "field:gnuhealth.insurance.plan.product.policy,discount:"
+msgid "Discount"
+msgstr "خصم"
+
+msgctxt "field:gnuhealth.insurance.plan.product.policy,id:"
+msgid "ID"
+msgstr "الرقم"
+
+msgctxt "field:gnuhealth.insurance.plan.product.policy,plan:"
+msgid "Plan"
+msgstr "خطة"
+
+msgctxt "field:gnuhealth.insurance.plan.product.policy,product:"
+msgid "Product"
+msgstr "منتج"
+
+msgctxt "field:gnuhealth.insurance.plan.product.policy,product_category:"
+msgid "Category"
+msgstr "الفئة"
+
+msgctxt "field:gnuhealth.insurance.plan.product.policy,rec_name:"
+msgid "Name"
+msgstr "اسم"
+
+msgctxt "field:gnuhealth.insurance.plan.product.policy,write_date:"
+msgid "Write Date"
+msgstr "تاريخ التحديث"
+
+msgctxt "field:gnuhealth.insurance.plan.product.policy,write_uid:"
+msgid "Write User"
+msgstr "المستخدم المكتوب"
+
+msgctxt "help:gnuhealth.health_service,insurance_holder:"
+msgid "Insurance Policy Holder"
+msgstr "سياسة التأمين"
+
+msgctxt "help:gnuhealth.insurance.plan.product.policy,discount:"
+msgid "Discount in Percentage"
+msgstr "الخصم بالنسبة المئوية"
+
+msgctxt "model:gnuhealth.insurance.plan.product.policy,name:"
+msgid "Policy associated to the product on the insurance plan"
+msgstr "السياسة المرتبطة بالمنتج في خطة التأمين"
+
+msgctxt ""
+"model:ir.action,name:action_gnuhealth_insurance_plan_product_policy_view"
+msgid "Plan Product Policies"
+msgstr "خطة سياسة التأمين"
+
+msgctxt ""
+"model:ir.ui.menu,name:menu_gnuhealth_insurance_plan_product_policy_list"
+msgid "Plan Product Policies"
+msgstr "خطة سياسة التأمين"

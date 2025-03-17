@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!--
+SPDX-FileCopyrightText: 2020-2021 National University of Entre Rios (UNER)
+SPDX-FileCopyrightText: 2020 Mario Puntin <mario@silix.com.ar>
+SPDX-FileCopyrightText: 2020-2023 Luis Falcón <falcon@gnuhealth.org>
+SPDX-FileCopyrightText: 2020-2023 GNU Solidario <health@gnusolidario.org>
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<form>
+    <label name="tooth"/>
+    <field name="tooth"/>
+    <label name="procedure"/>
+    <field name="procedure"/>
+    <group id="dental_surfaces" col="12" colspan="4">
+        <label name="root"/>
+        <field name="root"/>
+        <label name="occlusal"/>
+        <field name="occlusal"/>
+        <label name="vestibular"/>
+        <field name="vestibular"/>
+        <label name="lingual"/>
+        <field name="lingual"/>
+        <label name="mesial"/>
+        <field name="mesial"/>
+        <label name="distal"/>
+        <field name="distal"/>
+    </group>
+</form>

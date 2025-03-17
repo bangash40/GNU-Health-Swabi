@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<data>
+	
+    <xpath expr="/form/group/button[@name=&quot;wizard_sale_payment&quot;]" position="replace">
+        <button name="wizard_sale_payment" string="Old Pay (dont use)"  confirm="You shuold use 'Pay Now' button. Click 'No' to continue ..."></button>
+    </xpath>
+	
+    <xpath expr="/form/group/button[@name='wizard_sale_payment']" position="before">
+        <button name="custom_sale_payment_wizard" help="New Payment Screen" string="Pay Now" icon="tryton-forward"/>
+    </xpath>
+</data>

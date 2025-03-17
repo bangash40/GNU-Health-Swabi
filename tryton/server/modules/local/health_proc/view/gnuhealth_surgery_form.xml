@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<data>
+    <xpath expr="//field[@name=&quot;preop_sterility&quot;]" position="after">
+        <label name="anesthesia_evaluation_sale"/>
+        <field name="anesthesia_evaluation_sale"/>
+        <label name="ipd_record"/>
+        <field name="ipd_record"/>
+
+    </xpath>
+</data>

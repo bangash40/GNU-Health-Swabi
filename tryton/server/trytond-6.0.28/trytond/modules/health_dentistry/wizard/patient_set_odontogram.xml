@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+SPDX-FileCopyrightText: 2020-2021 National University of Entre Rios (UNER)
+SPDX-FileCopyrightText: 2020 Mario Puntin <mario@silix.com.ar>
+SPDX-FileCopyrightText: 2020-2023 Luis Falcón <falcon@gnuhealth.org>
+SPDX-FileCopyrightText: 2020-2023 GNU Solidario <health@gnusolidario.org>
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<tryton>
+    <data>
+
+        <!-- Set Odontogram wizard -->
+        <record model="ir.action.wizard" id="wizard_set_odontogram">
+            <field name="name">Set Odontogram</field>
+            <field name="wiz_name">gnuhealth.dentistry.set.odontogram</field>
+            <field name="model">gnuhealth.patient</field>
+        </record>
+
+        <record model="ir.ui.view" id="set_odontogram_start_view_form">
+            <field name="model">gnuhealth.dentistry.set.odontogram.start</field>
+            <field name="type">form</field>
+            <field name="name">set_odontogram_start_form</field>
+        </record>
+
+    </data>
+</tryton>

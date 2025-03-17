@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!-- This file is part of Tryton.  The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+<form>
+
+    <separator colspan="4" id="sep_del_sale_line"  string="Are you sure you want to delte this service?"/>
+
+    <label name="sale_line"/>
+    <field name="sale_line"/>
+
+
+    
+</form>

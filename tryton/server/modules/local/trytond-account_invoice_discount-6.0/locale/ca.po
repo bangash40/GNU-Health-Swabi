@@ -1,0 +1,27 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:account.invoice.line,discount:"
+msgid "Discount"
+msgstr "Descompte"
+
+msgctxt "field:account.invoice.line,gross_unit_price:"
+msgid "Gross Price"
+msgstr "Preu brut"
+
+msgctxt "field:account.invoice.line,gross_unit_price_wo_round:"
+msgid "Gross Price without rounding"
+msgstr "Preu brut sense arrodoniment"
+
+msgctxt "model:ir.action,name:report_invoice"
+msgid "Invoice"
+msgstr "Factura"
+
+msgctxt "report:account.invoice:"
+msgid "Discount"
+msgstr "Descompte"
+
+msgctxt "view:account.invoice.line:"
+msgid "%"
+msgstr "%"

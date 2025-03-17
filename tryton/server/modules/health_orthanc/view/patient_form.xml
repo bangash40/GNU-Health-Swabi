@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+
+<!--
+SPDX-FileCopyrightText: 2008-2023 Luis Falcón <falcon@gnuhealth.org>
+SPDX-FileCopyrightText: 2011-2023 GNU Solidario <health@gnusolidario.org>
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<form>
+    <notebook>
+        <page string="General" id="orthanc_patient_page">
+            <label name="patient"/>
+            <field name="patient"/>
+            <label name="name"/>
+            <field name="name"/>
+            <label name="bd"/>
+            <field name="bd"/>
+            <label name="ident"/>
+            <field name="ident"/>
+            <label name="uuid"/>
+            <field name="uuid"/>
+            <label name="link"/>
+            <field name="link" widget="url"/>
+            <label name="server"/>
+            <field name="server"/>
+        </page>
+        <page string="Studies" id="orthanc_patient_studies_page">
+            <field name="studies" mode="tree,form"/>
+        </page>
+    </notebook>
+</form>

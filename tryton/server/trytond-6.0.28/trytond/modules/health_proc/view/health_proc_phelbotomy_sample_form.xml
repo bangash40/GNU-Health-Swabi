@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<form>
+
+    <label name="test_category"/>
+    <field name="test_category"/>
+
+    <label name="sample_type"/>
+    <field name="sample_type"/>
+
+        <label name="container_color"/>
+    <field name="container_color"/>
+
+    <label name="name"/>
+    <field name="name"/>
+
+
+    <newline/>
+    <field name="lab_requests" colspan="4"/>
+   
+</form>
+

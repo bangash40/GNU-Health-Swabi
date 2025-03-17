@@ -1,0 +1,2 @@
+trytond_product<6.1,>=6.0
+trytond<6.1,>=6.0

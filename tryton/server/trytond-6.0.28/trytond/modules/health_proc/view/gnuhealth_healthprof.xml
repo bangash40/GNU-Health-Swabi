@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<data>
+    <xpath expr="//field[@name=&quot;code&quot;]" position="after">
+        <label name="healthprof_type"/>		 
+        <field name="healthprof_type"/>
+
+                <label name="eligible_for_doctor_share"/>		 
+        <field name="eligible_for_doctor_share"/>
+        
+    </xpath>
+        <xpath expr="//field[@name=&quot;specialties&quot;]" position="after">
+        <field colspan="4" name="services"/>
+        <newline/>
+    </xpath>
+</data>

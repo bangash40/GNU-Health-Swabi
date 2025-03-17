@@ -1,0 +1,6 @@
+[console_scripts]
+trytond_import_countries = trytond.modules.country.scripts.import_countries:run [data]
+trytond_import_postal_codes = trytond.modules.country.scripts.import_postal_codes:run [GeoNames]
+
+[trytond.modules]
+country = trytond.modules.country

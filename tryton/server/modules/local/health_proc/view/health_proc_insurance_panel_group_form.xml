@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<form>
+    <label name="product_group"/>
+    <field name="product_group"/>
+    <label name="list_price"/>
+    <field name="list_price"/>    
+    <label name="discount"/>
+    <field name="discount"/>
+    <label name="price"/>
+    <field name="price"/>    
+</form>

@@ -1,0 +1,97 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:gnuhealth.health_service,insurance_holder:"
+msgid "Insurance Holder"
+msgstr ""
+
+msgctxt "field:gnuhealth.health_service,insurance_plan:"
+msgid "Plan"
+msgstr ""
+
+msgctxt "field:gnuhealth.insurance.plan,product_policy:"
+msgid "Policy"
+msgstr ""
+
+msgctxt "field:gnuhealth.insurance.plan.product.policy,discount:"
+msgid "Discount"
+msgstr ""
+
+msgctxt "field:gnuhealth.insurance.plan.product.policy,plan:"
+msgid "Plan"
+msgstr ""
+
+msgctxt "field:gnuhealth.insurance.plan.product.policy,price:"
+msgid "Price"
+msgstr ""
+
+msgctxt "field:gnuhealth.insurance.plan.product.policy,product:"
+msgid "Product"
+msgstr ""
+
+msgctxt "field:gnuhealth.insurance.plan.product.policy,product_category:"
+msgid "Category"
+msgstr ""
+
+msgctxt "help:gnuhealth.health_service,insurance_holder:"
+msgid "Insurance Policy Holder"
+msgstr ""
+
+msgctxt "help:gnuhealth.insurance.plan.product.policy,discount:"
+msgid ""
+"Discount in Percentage. It has higher precedence than the fixed price when "
+"both values coexist"
+msgstr ""
+
+msgctxt "help:gnuhealth.insurance.plan.product.policy,price:"
+msgid "Apply a fixed price for this product or category"
+msgstr ""
+
+msgctxt "model:gnuhealth.insurance.plan.product.policy,name:"
+msgid "Policy associated to the product on the insurance plan"
+msgstr ""
+
+msgctxt ""
+"model:ir.action,name:action_gnuhealth_insurance_plan_product_policy_view"
+msgid "Plan Product Policies"
+msgstr ""
+
+msgctxt "model:ir.message,text:msg_discount_without_element"
+msgid ""
+"SM-INSURANCE-0002: You need to associate a product or category to the "
+"discount"
+msgstr ""
+
+msgctxt "model:ir.message,text:msg_need_a_policy"
+msgid ""
+"SM-INSURANCE-0006: You need to specify either a percentage or a fixed price "
+"for this policy line. If both are present, the percentage will be applied"
+msgstr ""
+
+msgctxt "model:ir.message,text:msg_no_account_receivable"
+msgid ""
+"SM-INSURANCE-0007: No Account Receivable defined in party or in default "
+"configuration"
+msgstr ""
+
+msgctxt "model:ir.message,text:msg_no_invoice_address"
+msgid "SM-INSURANCE-0004: No address associated to the invoice"
+msgstr ""
+
+msgctxt "model:ir.message,text:msg_no_payment_term"
+msgid "SM-INSURANCE-0005: No payment term"
+msgstr ""
+
+msgctxt "model:ir.message,text:msg_pct_out_of_range"
+msgid "SM-INSURANCE-0001: Percentage out of range [0-100]"
+msgstr ""
+
+msgctxt "model:ir.message,text:msg_service_invoiced"
+msgid "SM-INSURANCE-0003: The service has been invoiced"
+msgstr ""
+
+msgctxt ""
+"model:ir.ui.menu,name:menu_gnuhealth_insurance_plan_product_policy_list"
+msgid "Plan Product Policies"
+msgstr ""

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tryton>
+    <data noupdate="0">
+        <!--
+        <record id="seq_type_anth_proc_blood_bag_code" model="ir.sequence.type">
+            <field name="name">Patient-MR-Number</field>
+            <field name="code">party.party</field>
+        </record>
+        <record id="seq_patient_mr_no" model="ir.sequence">
+            <field name="name">Patient MR-Number</field>
+            <field name="code">party.party</field>
+            <field name="prefix">AKHRI-</field>
+            <field name="padding">6</field>
+            <field name="suffix">${year}</field>
+        </record>
+        -->
+
+        <record id="seq_type_gnuhealth_patient_mrno" model="ir.sequence.type">
+            <field name="name">Patient-MR-Number</field>
+        </record>
+        <record id="seq_gnuhealth_patient" model="ir.sequence">
+            <field name="name">Patient-MR-Number</field>
+            <field name="sequence_type" ref="seq_type_gnuhealth_patient_mrno"></field>
+            <field name="prefix">AFSH-</field>
+            <field name="padding">6</field>
+            <field name="suffix">${year}</field>
+        </record>
+
+        <!-- Sequences for lab test Samples Batch -->
+        <record id="seq_type_health_proc_sample_batch" model="ir.sequence.type">
+            <field name="name">Sample Batch</field>
+        </record>
+        <record id="seq_health_proc_sample_batch" model="ir.sequence">
+            <field name="name">Sample Batch</field>
+            <field name="sequence_type" ref="seq_type_health_proc_sample_batch"></field>
+            <field name="prefix">BATCH-</field>
+            <field name="padding">4</field>
+        </record>
+
+         <!-- Sequences for lab samples -->
+        <record id="seq_type_health_proc_lab_sample" model="ir.sequence.type">
+            <field name="name">Lab Sample</field>
+        </record>
+        <record id="seq_health_proc_lab_sample" model="ir.sequence">
+            <field name="name">Lab Sample</field>
+            <field name="sequence_type" ref="seq_type_health_proc_lab_sample"></field>
+            <field name="prefix"></field>
+            <field name="padding">4</field>
+        </record>
+    </data>
+</tryton>

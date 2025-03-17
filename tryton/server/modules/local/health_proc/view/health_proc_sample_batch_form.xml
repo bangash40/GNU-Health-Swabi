@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<form>
+
+    <label name="name"/>
+    <field name="name"/>
+
+    <label name="health_center"/>
+    <field name="health_center"/>
+
+    <label name="shipped_by"/>
+    <field name="shipped_by"/>
+
+    <label name="batch_created_by"/>
+    <field name="batch_created_by"/>
+    <label name="shipment_sent_on"/>
+    <field name="shipment_sent_on"/>    
+
+    <label name="shipment_received_by"/>
+    <field name="shipment_received_by"/>   
+    <label name="shipment_recieved_on"/>
+    <field name="shipment_recieved_on"/>
+
+    <label name="cancelled_by"/>
+    <field name="cancelled_by"/>
+    <label name="cancelled_on"/>
+    <field name="cancelled_on"/>   
+
+    <label name="state"/>
+    <field name="state"/>  
+
+    <group id="grp_samples_list" colspan="4" string=""> 
+        <field name="samples_in_batch" height="250"/>
+    </group>
+
+<button name="cancelbatch" colspan="2" help="Cancel this batch" string="Cancel Batch" icon="icon-home" confirm="Are you sure you want to cancel this batch?"/>
+<button name="orderbatch" colspan="2" help="Send this batch" string="Send Batch" icon="icon-home" confirm="Are you sure you have added all samples to this batch and want to send it now?"/>
+<button name="receivebatch" colspan="2" help="Receive all sample in this batch" string="Receive Batch" icon="icon-home" confirm="Are you sure you want to receive all the samples in this batch?"/>
+
+</form>

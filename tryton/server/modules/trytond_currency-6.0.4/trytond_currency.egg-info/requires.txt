@@ -1,0 +1,7 @@
+python-sql>=0.9
+python-dateutil
+trytond<6.1,>=6.0
+
+[data]
+pycountry
+proteus<6.1,>=6.0

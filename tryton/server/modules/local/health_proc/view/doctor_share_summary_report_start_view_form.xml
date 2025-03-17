@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!-- This file is part of Tryton.  The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+<form>
+
+
+    <label name="datefrom"/>
+    <field name="datefrom"/>
+
+    <label name="dateto"/>
+    <field name="dateto"/>
+
+	<group colspan="4" string="Doctor(s)" id="group_doctor_agents">
+        <field name="doctors" height="200"/>
+    </group>
+
+    
+    <label name="company"/>
+    <field name="company"/>
+    
+
+</form>

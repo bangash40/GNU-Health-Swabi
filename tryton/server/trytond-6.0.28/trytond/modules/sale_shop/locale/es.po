@@ -1,0 +1,191 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:res.user,shop:"
+msgid "Shop"
+msgstr "Tienda"
+
+msgctxt "field:res.user,shops:"
+msgid "Shops"
+msgstr "Tiendas"
+
+msgctxt "field:sale.sale,shop:"
+msgid "Shop"
+msgstr "Tienda"
+
+msgctxt "field:sale.sale,shop_address:"
+msgid "Shop Address"
+msgstr "Dirección tienda"
+
+msgctxt "field:sale.shop,active:"
+msgid "Active"
+msgstr "Activo"
+
+msgctxt "field:sale.shop,address:"
+msgid "Address"
+msgstr "Dirección"
+
+msgctxt "field:sale.shop,company:"
+msgid "Company"
+msgstr "Empresa"
+
+msgctxt "field:sale.shop,company_party:"
+msgid "Company Party"
+msgstr "Tercero de la empresa"
+
+msgctxt "field:sale.shop,create_date:"
+msgid "Create Date"
+msgstr "Fecha creación"
+
+msgctxt "field:sale.shop,create_uid:"
+msgid "Create User"
+msgstr "Usuario creación"
+
+msgctxt "field:sale.shop,currency:"
+msgid "Currency"
+msgstr "Moneda"
+
+msgctxt "field:sale.shop,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:sale.shop,name:"
+msgid "Shop Name"
+msgstr "Nombre tienda"
+
+msgctxt "field:sale.shop,payment_term:"
+msgid "Payment Term"
+msgstr "Plazo de pago"
+
+msgctxt "field:sale.shop,price_list:"
+msgid "Price List"
+msgstr "Tarifa de venta"
+
+msgctxt "field:sale.shop,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:sale.shop,sale_invoice_method:"
+msgid "Sale Invoice Method"
+msgstr "Política de facturación"
+
+msgctxt "field:sale.shop,sale_sequence:"
+msgid "Sale Sequence"
+msgstr "Secuencia venta"
+
+msgctxt "field:sale.shop,sale_shipment_method:"
+msgid "Sale Shipment Method"
+msgstr "Política de envío"
+
+msgctxt "field:sale.shop,users:"
+msgid "Users"
+msgstr "Usuarios"
+
+msgctxt "field:sale.shop,warehouse:"
+msgid "Warehouse"
+msgstr "Almacén"
+
+msgctxt "field:sale.shop,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:sale.shop,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:sale.shop-res.user,create_date:"
+msgid "Create Date"
+msgstr "Fecha creación"
+
+msgctxt "field:sale.shop-res.user,create_uid:"
+msgid "Create User"
+msgstr "Usuario creación"
+
+msgctxt "field:sale.shop-res.user,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:sale.shop-res.user,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:sale.shop-res.user,shop:"
+msgid "Shop"
+msgstr "Tienda"
+
+msgctxt "field:sale.shop-res.user,user:"
+msgid "User"
+msgstr "Usuario"
+
+msgctxt "field:sale.shop-res.user,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:sale.shop-res.user,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:stock.shipment.out,shop_addresses:"
+msgid "Shop Addresses"
+msgstr "Direcciones de la tienda"
+
+msgctxt "field:stock.shipment.out.return,shop_addresses:"
+msgid "Shop Addresses"
+msgstr "Direcciones de la tienda"
+
+msgctxt "model:ir.action,name:act_sale_shop_form"
+msgid "Shops"
+msgstr "Tiendas"
+
+msgctxt "model:ir.ui.menu,name:menu_sale_shop"
+msgid "Shops"
+msgstr "Tiendas"
+
+msgctxt "model:sale.shop,name:"
+msgid "Sale Shop"
+msgstr "Tienda"
+
+msgctxt "model:sale.shop-res.user,name:"
+msgid "Sale Shop - Res User"
+msgstr "Tienda - Usuario"
+
+msgctxt "selection:sale.shop,sale_invoice_method:"
+msgid "Manual"
+msgstr "Manual"
+
+msgctxt "selection:sale.shop,sale_invoice_method:"
+msgid "On Order Processed"
+msgstr "Al procesar el pedido"
+
+msgctxt "selection:sale.shop,sale_invoice_method:"
+msgid "On Shipment Sent"
+msgstr "Al enviar"
+
+msgctxt "selection:sale.shop,sale_shipment_method:"
+msgid "Manual"
+msgstr "Manual"
+
+msgctxt "selection:sale.shop,sale_shipment_method:"
+msgid "On Invoice Paid"
+msgstr "Al pagar factura"
+
+msgctxt "selection:sale.shop,sale_shipment_method:"
+msgid "On Order Processed"
+msgstr "Al procesar el pedido"
+
+msgctxt "view:res.user:"
+msgid "Shops"
+msgstr "Tiendas"
+
+msgctxt "view:sale.shop:"
+msgid "General"
+msgstr "General"
+
+msgctxt "view:sale.shop:"
+msgid "Shops"
+msgstr "Tiendas"
+
+msgctxt "view:sale.shop:"
+msgid "Users"
+msgstr "Usuarios"

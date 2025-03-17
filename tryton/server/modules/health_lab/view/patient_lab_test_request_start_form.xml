@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<!--
+SPDX-FileCopyrightText: 2008-2023 Luis Falcón <falcon@gnuhealth.org>
+SPDX-FileCopyrightText: 2011-2023 GNU Solidario <health@gnusolidario.org>
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<form>
+    <label name="date"/>
+    <field name="date"/>
+    <label name="urgent"/>
+    <field name="urgent"/>
+    <newline/>
+    <label name="patient"/>
+    <field name="patient"/>
+    <newline/>
+    <label name="context"/>
+    <field name="context"/>
+    <label name="doctor"/>
+    <field name="doctor" widget="selection"/>
+    <newline/>
+    <field name="tests" colspan="4"/>
+</form>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<data>
+    <xpath expr="//field[@name=&quot;amount&quot;]" position="after">
+		<label name="line_type"/>		 
+		<field name="line_type"/>
+		<label name="final_sale_type"/>		 
+		<field name="final_sale_type"/>
+
+    
+    </xpath>
+</data>

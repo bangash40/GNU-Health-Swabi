@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<tree>
+    	<field name="sale"/>
+	<field name="patient"/>	
+	<field name="total_amount"/>
+	<field name="new_discount_amount"/>
+	<field name="net_amount"/>
+	<field name="approval_date" widget="date"/>
+	<field name="approval_reason"/>
+
+	<field name="rejection_reason"/>
+
+	<field name="referred_by"/>	
+	<field name="requested_by"/>	
+	<field name="approved_by"/>	
+</tree>

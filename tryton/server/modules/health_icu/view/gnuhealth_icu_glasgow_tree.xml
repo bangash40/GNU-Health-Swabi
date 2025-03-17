@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<!--
+SPDX-FileCopyrightText: 2008-2023 Luis Falcón <falcon@gnuhealth.org>
+SPDX-FileCopyrightText: 2011-2023 GNU Solidario <health@gnusolidario.org>
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<tree>
+    <field name="name" expand="1"/>
+    <field name="evaluation_date" widget="date" expand="1"/>
+    <field name="evaluation_date" string="Time" widget="time" expand="1"/>
+    <field name="glasgow_eyes" expand="1"/>
+    <field name="glasgow_verbal" expand="1"/>
+    <field name="glasgow_motor" expand="1"/>
+    <field name="glasgow" expand="1"/>
+</tree>

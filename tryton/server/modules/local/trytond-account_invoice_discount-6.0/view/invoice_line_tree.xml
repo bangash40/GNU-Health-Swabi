@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!-- This file is part of the account_invoice_discount module for Tryton.
+The COPYRIGHT file at the top level of this repository contains the full
+copyright notices and license terms. -->
+<data>
+    <xpath expr="/tree/field[@name='unit_price']" position="before">
+        <field name="gross_unit_price"/>
+        <field name="discount" factor="100">
+            <suffix name="discount" string="%"/>
+        </field>
+    </xpath>
+</data>

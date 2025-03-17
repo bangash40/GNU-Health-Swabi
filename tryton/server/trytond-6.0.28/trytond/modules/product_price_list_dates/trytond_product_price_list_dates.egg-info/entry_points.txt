@@ -1,0 +1,2 @@
+[trytond.modules]
+product_price_list_dates = trytond.modules.product_price_list_dates

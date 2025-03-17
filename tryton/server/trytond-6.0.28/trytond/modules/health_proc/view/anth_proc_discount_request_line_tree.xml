@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<tree>
+    <field name="product" expand="1"/>
+    <field name="qty" expand="1"/>
+    <field name="list_price" expand="1"/>
+    <field name="total_price" expand="1"/>
+    <field name="new_discount" expand="1"/>
+    <field name="discount_value" expand="1"/>
+    <field name="final_amount" expand="1"/>
+</tree>
+

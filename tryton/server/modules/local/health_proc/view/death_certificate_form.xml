@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<data>
+    <xpath expr="//field[@name=&quot;age&quot;]" position="after">
+		<label name="brought_in_dead"/>		 
+		<field name="brought_in_dead"/>
+
+		<label name="ipd"/>		 
+		<field name="ipd"/>
+
+    </xpath>
+</data>

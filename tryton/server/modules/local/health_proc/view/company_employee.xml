@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<data>
+    <xpath expr="//field[@name=&quot;company&quot;]" position="after">
+	<label name="department"/>		 
+	<field name="department"/>
+    </xpath>
+</data>

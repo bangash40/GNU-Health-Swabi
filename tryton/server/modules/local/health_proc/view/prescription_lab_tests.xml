@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<data>
+    <!-- <xpath expr="//field[@id=&quot;sep_assessmet_presc_start&quot;]" position="after"> -->
+    <!-- <xpath expr="/form/notebook/page[@id=&quot;page_assessmet_prescription&quot;]/field[@id=&quot;sep_assessmet_presc_start&quot;]" position="after"> -->
+   <!-- <xpath expr="/form/notebook/page[@id='page_assessmet_prescription']/field[@id='group_assessment_start']" position="after"> -->
+        <xpath expr="/form/notebook/page[@id=&quot;page_medicine_prescription&quot;]" position="after">
+        <page string="Vitals" id="page_vitals_prescription">
+            <group colspan="4" col="6" string="Vital Signs" id="group_patient_evaluation_vital_signs_new">
+                <label name="temperature"/>
+                <field name="temperature"/>
+                <label name="systolic"/>
+                <field name="systolic"/>
+                <label name="diastolic"/>
+                <field name="diastolic"/>
+                <label name="bpm"/>
+                <field name="bpm"/>
+                <label name="respiratory_rate"/>
+                <field name="respiratory_rate"/>
+                <label name="osat"/>
+                <field name="osat"/>
+            </group>
+            <newline/>
+            <group colspan="4" col="6" string="Anthropometry" id="group_patient_evaluation_anthropometry_new">
+                <label name="weight"/>
+                <field name="weight"/>
+                <label name="height"/>
+                <field name="height"/>
+                <label name="bmi"/>
+                <field name="bmi"/>
+                <label name="abdominal_circ"/>
+                <field name="abdominal_circ"/>
+                <label name="hip"/>
+                <field name="hip"/>
+                <label name="whr"/>
+                <field name="whr"/>
+                <label name="head_circumference"/>
+                <field name="head_circumference"/>
+            </group>
+            <newline/>
+            <group colspan="4" string="Nutrition" id="group_patient_evaluation_nutrition_new">
+                <label name="malnutrition"/>
+                <field name="malnutrition"/>
+                <label name="dehydration"/>
+                <field name="dehydration"/>
+            </group>
+        </page>
+        <page string="Assessment" id="page_assessmet_prescription">
+             <separator string="Chief Complaint" colspan="4" id="seperator_chief_complaint_new"/>
+            <field name="chief_complaint" colspan="4" />
+
+             <separator string="Present Illness" colspan="4" id="separator_present_illness_new"/>
+            <field name="present_illness" colspan="4"/>
+            <newline/>
+            <separator string="Clinical and Physical exam" colspan="4" id="separator_clinical_physical_new"/>
+            <field name="evaluation_summary" colspan="4"/>
+            <newline/>
+            <label name="appointment"/>
+            <field name="appointment"/>
+        </page>
+
+        <page string="Tests" id="tesedas_aldfasdlfj">
+            <field name="tests" colspan="2" height="100"/>
+            <field name="imaging_tests" colspan="2" height="100"/>
+        </page>	
+        
+        <page string="Conditions" id="prescription_conditions_page">
+            <field name="conditions" colspan="2" height="100"/>
+        </page>	
+
+        <page string="Surgeries" id="prescription_surgeries_page">
+            <field name="procedures" colspan="4" height="100"/>
+            <label name="surgery_date"/>
+            <field name="surgery_date"/>
+            <label name="surgery"/>
+            <field name="surgery"/>      
+		    <button colspan="2" name="confirm_surgery" help="Charge anesthesia evaluation and generate OT Booking request" string="Confirm Surgery" confirm="It will initiate the hospital protocols for surgeries, Are you sure?"/>
+		    <button colspan="2" name="cancel_surgery" help="cancel the planned surgery" string="Cancel Surgery" confirm="It will mark the surgery as Cancelled, Are you sure to cancel the surgery?"/>
+
+        </page>	
+
+    </xpath>   
+</data>

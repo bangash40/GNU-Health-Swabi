@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<data>
+
+    <xpath expr="//field[@name=&quot;order&quot;]" position="after">
+        <label name="state"/>
+	    <field name="state"/>
+        <button name="end_imaging_test"  help="Sign and Close Report" string="Sign and Publish" confirm="Are you sure to close and publish the report? Final Report would be available to Doctors and can't be edited!"/>        
+	</xpath>
+
+</data>

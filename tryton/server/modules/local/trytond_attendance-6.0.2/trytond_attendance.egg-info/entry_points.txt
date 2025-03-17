@@ -1,0 +1,2 @@
+[trytond.modules]
+attendance = trytond.modules.attendance

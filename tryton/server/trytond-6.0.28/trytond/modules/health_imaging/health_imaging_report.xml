@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+SPDX-FileCopyrightText: 2008-2023 Luis Falcón <falcon@gnuhealth.org>
+SPDX-FileCopyrightText: 2011-2023 GNU Solidario <health@gnusolidario.org>
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<tryton>
+    <data>
+        <record model="ir.action.report" id="imaging_result_report">
+            <field name="name">Medical Imaging Study</field>
+            <field name="model">gnuhealth.imaging.test.result</field>
+            <field name="report_name">patient.imaging_report_results</field>
+            <field name="report">health_imaging/report/imaging_study_report.fodt</field>
+            <field name="extension">pdf</field>
+        </record>
+        <record model="ir.action.keyword" id="report_imaging_results">
+            <field name="keyword">form_print</field>
+            <field name="model">gnuhealth.imaging.test.result,-1</field>
+            <field name="action" ref="imaging_result_report"/>
+        </record>
+
+    </data>
+</tryton>

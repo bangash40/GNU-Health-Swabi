@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<!--
+SPDX-FileCopyrightText: 2008-2023 Luis Falcón <falcon@gnuhealth.org>
+SPDX-FileCopyrightText: 2011-2023 GNU Solidario <health@gnusolidario.org>
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<data>
+    <xpath expr="//group[@id=&quot;product_specs&quot;]" position="replace">
+        <group col="12" colspan="4" id="product_specs">
+            <label name="is_medicament"/>
+            <field name="is_medicament"/>
+            <label name="is_medical_supply"/>
+            <field name="is_medical_supply"/>
+            <label name="is_prothesis"/>
+            <field name="is_prothesis"/>
+            <label name="is_vaccine"/>
+            <field name="is_vaccine"/>
+            <label name="is_bed"/>
+            <field name="is_bed"/>
+            <label name="is_insurance_plan"/>
+            <field name="is_insurance_plan"/>
+        </group>
+    </xpath>
+</data>

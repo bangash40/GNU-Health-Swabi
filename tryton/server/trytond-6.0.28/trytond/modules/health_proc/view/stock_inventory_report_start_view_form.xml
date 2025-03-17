@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<form>
+   <label name="warehouse"/>
+   <field name="warehouse"/>
+   
+   <label name="sub_store"/>
+   <field name="sub_store"/>
+
+   <label name="category"/>
+   <field name="category"/>
+   
+   <label name="form"/>
+   <field name="form"/>
+   
+   <label name="datefrom"/>
+   <field name="datefrom"/>
+   
+   <label name="dateto"/>
+   <field name="dateto"/>
+</form>

@@ -1,0 +1,4 @@
+
+    [trytond.modules]
+    account_rule = trytond.modules.account_rule
+    

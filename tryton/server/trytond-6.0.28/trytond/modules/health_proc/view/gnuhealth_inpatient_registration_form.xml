@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+<data>
+    <!-- Include inpatient registration form -->
+
+    <xpath expr="//field[@name=&quot;admission_reason&quot;]" position="after">
+		<newline/>
+		<group colspan="4" col="6" id="group_payment_mode_group">
+			<label name="payment_mode"/>
+			<field name="payment_mode"/>
+			<label name="panel"/>
+			<field name="panel"/>
+			<label name="tentative_package"/>
+			<field name="tentative_package"/>
+		</group>
+		<newline/>
+
+		<label name="advance_amount"/>
+		<field name="advance_amount"/>
+		
+
+	</xpath>
+
+    <xpath expr="//field[@name=&quot;state&quot;]" position="before">
+        <field name="hospitalization_type" xexpand="1"/>
+	</xpath>
+    <xpath expr="/form/notebook/page[@id=&quot;page_care_plan&quot;]" position="after">
+		<page string="Bill" id="page_bill_data">
+				<group colspan="4" id="group_bill_master_holder1">
+					<group colspan="4" col="6" id="group_bill_master_data">
+						<label name="name"/>
+						<field name="name"/>
+						<label name="puid"/>
+						<field name="puid"/>
+						<label name="patient"/>
+						<field name="patient"/>
+					</group>
+			<newline/>
+			
+			<group colspan="4" col="6" id="sale_group_id">
+						<label name="sale_id"/>
+				<field name="sale_id"/>
+				<label name="payment_status"/>
+				<field name="payment_status"/>
+
+				<label name="final_invoice_id"/>
+				<field name="final_invoice_id"/>		                    
+					</group>
+			<newline/>
+
+			<group colspan="4" id="sale_lins_grup_id">
+				<field name="lines" height="250"/>
+				</group>
+			<newline/>
+
+
+			<group colspan="4" id="advance_lines_grup">
+				<field name="advance_lines" height="180"/>
+			</group>
+			<newline/>
+
+
+
+			<group colspan="4" id="advances_gryp_id">
+						<button name="getadvance" help="Get advance in cash from patient." string="Take Advance in Cash" icon="icon-home"/>
+						<button name="getbedcharges" help="Add charges against other servcices to the bill of the patient." string="Bill Other Services" icon="icon-home"/>
+
+			</group>
+			
+
+			<newline/>
+
+					<group colspan="4" col="6" id="group_bill_summary_data">
+				<label name="total_bill"/>
+				<field name="total_bill"/>
+				<label name="payment"/>
+				<field name="payment"/>
+				<label name="change"/>
+				<field name="change"/>
+				</group>
+
+				<newline/>			
+				<group colspan="4" id="group_more_finane_buttons">
+					<button name="getfinalinvoice" help="Prepare Final Invoice" string="1. Prepare Final Invoice"  confirm="Are you sure? If Welfare Discount is required, please get it approved first. You will not be able to charge any service after it!" icon="icon-home"/>
+	                <button name="payfinalinvoice" help="Pay Final Invoice" string="2. Pay Final Invoice"  confirm="Have you taken final amount from patient? You will not be able to undo this transaction!" icon="icon-home"/>
+					<button name="dischargefinancial" help="Discharge Financial" string="3. Give Financial Clearance"  confirm="Have you finalized patient bill and doctor shares? You will not be able to charge any service or make changes to doctor shares!" icon="icon-home"/>					
+				</group>
+
+			<newline/>
+						<group colspan="4" id="package_lines_grup">
+				<field name="package_lines" height="180"/>
+			</group>
+			<newline/>
+					<group colspan="4" id="group_package_discount_surplus">
+						<label name="package_discount_surplus"/>
+						<field name="package_discount_surplus"/>
+						<button name="chargepackage" help="Charge a Package" string="Charge Package" icon="icon-home"/>
+
+				</group>
+
+			<newline/>
+						<group colspan="4" id="doctor_share_lines_grup">
+				<field name="doctor_share_lines" height="180"/>
+			</group>
+			<newline/>
+					<group colspan="4" id="group_doctor_share">
+						<label name="total_doctor_share"/>
+						<field name="total_doctor_share"/>
+						<button name="calculatedoctorshare" help="Calculate Doctor Share" string="Calculate Doctor Share" icon="icon-home"/>
+
+				</group>
+
+		<newline/>
+
+			<group colspan="4" string="Financial Notes" id="group_financial_notes">
+							<field name="financial_notes" height="200"/>
+					</group>
+			</group>
+		</page>
+	<page string="Discharge" id="page_discharge_summary">
+            <group colspan="4" id="group_roundings_master_discharge_sumg">
+                <group colspan="2" col="6" id="grouP_pateitn_id_5">
+                    <label name="name"/>
+                    <field name="name"/>
+		    <label name="patient"/>
+                    <field name="patient"/>
+                    <label name="puid"/>
+                    <field name="puid"/>
+                </group>
+		<group colspan="4" id="groip_ifnal_diagnosis">
+			<label name="final_diagnosis"/>
+                        <field name="final_diagnosis"/>
+                </group>
+		<group colspan="4" id="group_history_id">
+	                <separator colspan="4" id="separator_history" string="History"/>
+                        <field name="history" height="100"/>
+                </group>
+		<group colspan="4" id="group_finding_history_id">
+	                <separator colspan="4" id="separator_examination" string="Examination/Findings"/>
+                        <field name="findings" height="100"/>
+                </group>
+		<group colspan="4" id="group_investigations_id">
+	                <separator colspan="4" id="separator_investigations" string="Investigations"/>
+                        <field name="investigations" height="100"/>
+                </group>
+                <group colspan="4" id="groiup_dischage_summary">
+	                <separator colspan="4" id="separator_discharge_summary" string="Brief Hospital Treatment Summary"/>
+                        <field name="discharge_summary" height="100"/>
+                </group>
+		<newline/>
+		<group colspan="4" id="groiup_discharge_mgmg_Plna">
+	                <separator colspan="4" id="separator_discharge_mgmt_plan" string="Discharge Management Plan"/>
+                        <field name="discharge_mgmt_plan" height="100"/>
+                </group>
+		<group colspan="4" id="group_follow_Up_plan">
+	                <separator colspan="4" id="separator_followup" string="Follow-up Plan"/>
+                        <field name="follow_up_plan" height="100"/>
+                </group>
+                
+<group colspan="4" col="6" string="Discharge Info" id="group_hospitalization_discharge">
+		<label name="admission_reason"/>
+                    <field name="admission_reason"/>
+                <label name="discharge_reason"/>
+                <field name="discharge_reason"/>
+                <label name="discharge_dx"/>
+                <field name="discharge_dx"/>
+		<newline/>
+		<label name="discharged_by"/>
+                <field name="discharged_by"/>
+		<label name="actual_discharge_date"/>
+                <field name="actual_discharge_date"/>
+            </group>
+		<button name="discharge" help="Discharge Patient" string="Discharge" icon="icon-home" confirm="You are about to discharge the patient from the health institution."/>
+            </group>
+        </page>
+
+    </xpath>
+
+
+
+
+
+</data>

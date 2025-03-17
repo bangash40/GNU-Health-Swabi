@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tryton>
+    <data>
+        <record model="ir.action.wizard" id="act_request_lab_test_fast">
+            <field name="name">Register Patient</field>
+            <field name="wiz_name">gnuhealth.request.lab_test.fast.wizard</field>
+        </record>
+
+        <menuitem parent="health.gnuhealth_menu" action="act_request_lab_test_fast"
+            id="menu_patient_lab_test_request_fast" sequence="20"
+            icon="gnuhealth-execute"/>
+
+
+	    <record model="ir.ui.view" id="request_lab_test_fast_form_view">
+            <field name="model">gnuhealth.request.lab_test.fast</field>
+            <field name="type">form</field>
+            <field name="name">request_lab_test_fast</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_my_pos_sale">
+            <field name="name">Sales</field>
+            <field name="res_model">sale.sale</field>
+        </record>
+
+	    <record model="ir.action.act_window.view" id="act_my_pos_sale_form_action">
+            <field name="view" ref="sale_pos.sale_pos_view_form"/>
+            <field name="sequence" eval="10"/>
+            <field name="act_window" ref="act_my_pos_sale"/>
+        </record>    
+
+       	<record model="ir.ui.view" id="anth_proc_lims_results_entry_form_view">
+            <field name="model">anth.proc.lims.results.entry.start</field>
+            <field name="type">form</field>
+            <field name="name">anth_proc_lims_results_entry_form</field>
+        </record>      
+
+	    <!-- Wizard to enter Test Results for all LIMS Test -->
+        <record model="ir.action.wizard" id="act_lims_test_results_entry">
+            <field name="name">LIMS Results Entry</field>
+            <field name="wiz_name">anth.proc.lims.results.entry.wizard</field>
+        </record>
+
+	    <record model="ir.ui.view" id="patient_sale_create_start_view_form">
+            <field name="model">gnuhealth.patient.sale.create.start</field>
+            <field name="type">form</field>
+            <field name="name">gnuhealth_health_lab_sale</field>
+        </record>
+	    <record model="ir.action.wizard" id="patient_sale_create">
+            <field name="name">Request Other Services</field>
+            <field name="wiz_name">gnuhealth.patient.sale.create</field>
+        </record>
+        <record model="ir.action.keyword"
+                id="act_bill_other_services_opd_wizard_keyword1">
+            <field name="keyword">form_action</field>
+            <field name="model">gnuhealth.patient,-1</field>
+            <field name="action" ref="patient_sale_create"/>
+        </record>
+
+
+	    <!-- services sale line -->
+	    <record model="ir.ui.view" id="gnuhealth_health_lab_sale_line_view">
+            <field name="model">anth.proc.general.sale.line</field>
+            <field name="type">form</field>
+            <field name="name">gnuhealth_health_lab_sale_line</field>
+        </record>
+
+        <record model="ir.ui.view" id="gnuhealth_health_lab_sale_line_tree">
+            <field name="model">anth.proc.general.sale.line</field>
+            <field name="type">tree</field>
+            <field name="name">gnuhealth_health_lab_sale_line_tree</field>
+        </record>        
+    	<record model="ir.action.wizard" id="patient_advance_get">
+            <field name="name">Request Advance Payment</field>
+            <field name="wiz_name">gnuhealth.patient.advance.get</field>
+        </record>
+
+        <!-- Panel Charging -->
+        <record model="ir.ui.view" id="health_proc_charge_package_start_view_form">
+            <field name="model">health.proc.charge.package.start</field>
+                <field name="type">form</field>
+                <field name="name">health_proc_charge_package_start_view_form</field>
+            </record>
+        <record model="ir.action.wizard" id="wizard_charge_package">
+            <field name="name">Charge Packages</field>
+            <field name="wiz_name">health.proc.charge.package</field>
+        </record>
+
+        <!-- Docror Share -->
+        <record model="ir.ui.view" id="health_proc_calculate_doctor_share_start_view_form">
+            <field name="model">health.proc.calculate.doctor.share.start</field>
+                <field name="type">form</field>
+                <field name="name">health_proc_calculate_doctor_share_start_view_form</field>
+            </record>
+        <record model="ir.action.wizard" id="wizard_calculate_doctor_share">
+            <field name="name">Calculate Doctor Share</field>
+            <field name="wiz_name">health.proc.calculate.doctor.share</field>
+        </record>        
+
+        <!-- Delete Service -->
+        <record model="ir.ui.view" id="patient_sale_line_delete_start_view_form">
+            <field name="model">health.proc.patient.sale.line.delete.start</field>
+            <field name="type">form</field>
+            <field name="name">health_proc_patient_sale_line_delte_start_view_form</field>
+        </record>
+        <record model="ir.action.wizard" id="wizard_health_proc_patient_sale_line_delete">
+            <field name="name">Remove Service</field>
+            <field name="wiz_name">health.proc.patient.sale.line.delete</field>
+        </record>            
+        <record model="ir.action.keyword"  id="act_health_proc_patient_sale_line_delete_keyword1">
+            <field name="keyword">form_action</field>
+            <field name="model">sale.line,-1</field>
+            <field name="action" ref="wizard_health_proc_patient_sale_line_delete"/>
+        </record>  
+
+        	<!-- Wizard to create Prescriton from Patietn Evaluation -->
+        <record model="ir.action.wizard" id="act_create_evaluation_prescription">
+            <field name="name">Create Prescription</field>
+            <field name="wiz_name">wizard.gnuhealth.evaluation.prescription</field>
+        </record>
+
+        <record model="ir.action.keyword" id="act_create_appointment_prescription_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">gnuhealth.appointment,-1</field>
+            <field name="action" ref="act_create_evaluation_prescription"/>
+        </record>
+
+        <record model="ir.action.act_window" id="act_evaluation_prescription">
+            <field name="name">Patient Prescription from Appointment</field>
+            <field name="res_model">gnuhealth.prescription.order</field>
+        </record>
+
+	    <record model="ir.action.act_window.view" id="act_evaluation_prescription_form">
+            <field name="view" ref="health.gnuhealth_prescription_view"/>
+            <field name="sequence" eval="10"/>
+            <field name="act_window" ref="act_evaluation_prescription"/>
+        </record>
+
+        <!-- Sampling wizard-->
+        <record model="ir.action.wizard" id="act_take_new_sample">
+            <field name="name">Phlebotomy </field>
+            <field name="wiz_name">health.proc.lab.sample.wizard</field>
+        </record>
+
+	    <record model="ir.ui.view" id="health_proc_lab_sample_start_form_view">
+            <field name="model">health.proc.lab.sample.start</field>
+            <field name="type">form</field>
+            <field name="name">health_proc_lab_sample_start_form_view</field>
+        </record>
+
+	    <record model="ir.ui.view" id="health_proc_lab_sample_print_start_form_view">
+            <field name="model">health.proc.lab.sample.print.start</field>
+            <field name="type">form</field>
+            <field name="name">health_proc_lab_sample_print_start_form_view</field>
+        </record>
+
+        <record model="ir.action.keyword" id="take_new_sample_patient_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">gnuhealth.patient,-1</field>
+            <field name="action" ref="act_take_new_sample"/>
+        </record>
+
+        <record model="ir.action.keyword" id="take_new_sample_lab_request_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">gnuhealth.patient.lab.test,-1</field>
+            <field name="action" ref="act_take_new_sample"/>
+        </record>
+
+        <menuitem parent="health_lab.gnuhealth_laboratory_menu" action="act_take_new_sample"
+            id="menu_patient_lab_take_new_sample" sequence="20"
+            icon="gnuhealth-execute"/>
+
+        <record model="ir.action.act_window" id="act_sys_config">
+            <field name="name">System Config</field>
+            <field name="res_model">anth.proc.system.config</field>
+        </record>
+
+        <menuitem  parent="health.gnuhealth_conf_menu" action="act_sys_config"
+            id="menu_sys_config" icon="gnuhealth-execute"/>            
+
+	    <record model="ir.ui.view" id="health_proc_confirm_pos_payment_start_form_view">
+            <field name="model">health.proc.confirm.pos.payment.start</field>
+            <field name="type">form</field>
+            <field name="name">health_proc_confirm_pos_payment_start_form_view</field>
+        </record>
+
+        <record model="ir.action.wizard" id="act_custom_sale_payment_wizard">
+            <field name="name">Pay Now (AKHF)</field>
+            <field name="wiz_name">health.proc.sale.payment.wizard</field>
+        </record>
+
+        <record model="ir.action.keyword" id="act_custom_sale_payment_wizard_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">sale.sale,-1</field>
+            <field name="action" ref="act_custom_sale_payment_wizard"/>
+        </record>
+
+        <record model="ir.action.wizard" id="act_create_shipment_wizard">
+            <field name="name">Create Shipment</field>
+            <field name="wiz_name">health.proc.shipment.create.wizard</field>
+        </record>
+
+        <record model="ir.action.keyword" id="act_create_shipment_wizard_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">purchase.purchase,-1</field>
+            <field name="action" ref="act_create_shipment_wizard"/>
+        </record>        
+
+        <record model="ir.action.act_window" id="act_shipment_form_action">
+            <field name="name">Shipment Form</field>
+            <field name="res_model">stock.shipment.in</field>
+        </record>
+
+	    <record model="ir.action.act_window.view" id="act_create_new_shipment_for_purchase">
+            <field name="view" ref="stock.shipment_in_view_form"/>
+            <field name="sequence" eval="10"/>
+            <field name="act_window" ref="act_shipment_form_action"/>
+        </record>    
+   </data>
+</tryton>

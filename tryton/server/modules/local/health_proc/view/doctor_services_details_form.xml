@@ -1,0 +1,13 @@
+<form>
+    <label name="doctor"/>
+    <field name="doctor"/>
+
+    <label name="datefrom"/>
+    <field name="datefrom"/>
+
+    <label name="dateto"/>
+    <field name="dateto"/>
+
+    <label name="company"/>
+    <field name="company"/>
+</form>

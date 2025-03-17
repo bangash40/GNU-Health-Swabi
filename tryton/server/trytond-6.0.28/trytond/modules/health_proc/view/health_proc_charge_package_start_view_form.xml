@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<form>
+    	
+	<label name="patient"/>
+	<field name="patient"/>
+
+	<label name="inpatient_registration_code"/>
+	<field name="inpatient_registration_code"/>
+
+	<label name="payment_mode"/>
+	<field name="payment_mode"/>
+
+	<label name="insurance_company"/>
+	<field name="insurance_company"/>
+
+	<newline/>
+	<field name="charged_packages" height="50" width="200" colspan="4"/>
+
+
+</form>

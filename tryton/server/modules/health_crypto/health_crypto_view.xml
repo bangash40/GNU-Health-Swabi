@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+
+<!--
+SPDX-FileCopyrightText: 2008-2023 Luis Falcón <falcon@gnuhealth.org>
+SPDX-FileCopyrightText: 2011-2023 GNU Solidario <health@gnusolidario.org>
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<tryton>
+    <data>
+    <!-- Add Tab with the Serialized information about the prescription -->
+
+        <record model="ir.ui.view" id="view_prescription_form">
+            <field name="model">gnuhealth.prescription.order</field>
+            <field name="inherit" ref="health.gnuhealth_prescription_view"/>
+            <field name="name">prescription_form</field>
+        </record>
+
+    <!-- Serialized information about the death certificate -->
+
+        <record model="ir.ui.view" id="gnuhealth_death_cert_form_signed">
+            <field name="model">gnuhealth.death_certificate</field>
+            <field name="inherit" ref="health.gnuhealth_death_cert_form"/>
+            <field name="name">gnuhealth_death_certificate_form</field>
+        </record>
+
+    <!-- Serialized information about the birth certificate -->
+
+        <record model="ir.ui.view" id="gnuhealth_birth_cert_form_signed">
+            <field name="model">gnuhealth.birth_certificate</field>
+            <field name="inherit" ref="health.gnuhealth_birth_cert_form"/>
+            <field name="name">gnuhealth_birth_certificate_form</field>
+        </record>
+
+    <!-- Serialized information about the Patient Evaluation -->
+
+        <record model="ir.ui.view" id="gnuhealth_patient_evaluation_signed">
+            <field name="model">gnuhealth.patient.evaluation</field>
+            <field name="inherit" ref="health.gnuhealth_patient_evaluation_view"/>
+            <field name="name">gnuhealth_patient_evaluation_form</field>
+        </record>
+
+    <!-- Register Buttons -->
+
+        <!-- Birth Cert -->
+        <record model="ir.model.button" id="birthcert_generate_button">
+            <field name="name">generate_birth_certificate</field>
+            <field name="string">Generate</field>
+            <field name="model" search="[('model', '=', 'gnuhealth.birth_certificate')]"/>
+        </record>
+
+        <!-- Death Cert -->
+        <record model="ir.model.button" id="deathcert_generate_button">
+            <field name="name">generate_death_certificate</field>
+            <field name="string">Generate</field>
+            <field name="model" search="[('model', '=', 'gnuhealth.death_certificate')]"/>
+        </record>
+
+        <!-- Prescription -->
+        <record model="ir.model.button" id="prescription_generate_button">
+            <field name="name">generate_prescription</field>
+            <field name="string">Generate</field>
+            <field name="model" search="[('model', '=', 'gnuhealth.prescription.order')]"/>
+        </record>
+
+        <!-- Patient Evaluation -->
+        <record model="ir.model.button" id="evaluation_sign_button">
+            <field name="name">sign_evaluation</field>
+            <field name="string">Close</field>
+            <field name="model" search="[('model', '=', 'gnuhealth.patient.evaluation')]"/>
+        </record>
+
+
+    </data>
+</tryton>

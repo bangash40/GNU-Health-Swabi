@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<!--
+SPDX-FileCopyrightText: 2008-2023 Luis Falcón <falcon@gnuhealth.org>
+SPDX-FileCopyrightText: 2011-2023 GNU Solidario <health@gnusolidario.org>
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<tree>
+    <field name="evaluation_date" widget="date"/>
+    <field name="gestational_weeks" expand="1"/>
+    <field name="fundal_height" expand="1"/>
+    <field name="fetus_heart_rate" expand="1"/>
+    <field name="efw" expand="1"/>
+    <field name="iugr" expand="1"/>
+    <field name="hypertension" expand="1"/>
+    <field name="preeclampsia" expand="1"/>
+    <field name="overweight" expand="1"/>
+    <field name="diabetes" expand="1"/>
+    <field name="invasive_placentation" expand="1"/>
+    <field name="placenta_previa" expand="1"/>
+    <field name="vasa_previa" expand="1"/>
+    <field name="oligohydramnios" expand="1"/>
+    <field name="polihydramnios" expand="1"/>
+    <field name="healthprof" expand="1"/>
+    <field name="institution" expand="1"/>
+</tree>

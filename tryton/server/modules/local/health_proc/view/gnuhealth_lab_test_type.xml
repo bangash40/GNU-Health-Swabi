@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<data>
+
+    <xpath expr="//field[@name=&quot;product_id&quot;]" position="after">
+        <label name="lims_analysis_profile_id"/>
+	    <field name="lims_analysis_profile_id"/>
+	    <label name="lims_spec_id"/>
+	    <field name="lims_spec_id"/>
+		<label name="outsourced"/>
+	    <field name="outsourced"/>
+		<label name="outsourced_to_party"/>
+	    <field name="outsourced_to_party"/>
+
+	    <label name="turnaround_time_normal"/>
+	    <field name="turnaround_time_normal"/>
+
+	    <label name="turnaround_time_emergency"/>
+	    <field name="turnaround_time_emergency"/>
+
+ 		<label name="category"/>
+	    <field name="category"/>
+	   
+ 		<label name="sample_type"/>
+	    <field name="sample_type"/>
+	   
+	    <newline/>
+    </xpath>
+
+    <xpath expr="/form/notebook/page[@id=&quot;test_type_extra_info&quot;]" position="before">
+        <page string="Analysis Services" id="tests_analysis_srvices">
+        	<field name="services" colspan="4"/>
+        </page>
+
+	    <page string="Test Components" id="test_compoents_page">
+
+                    <label name="is_profile"/>
+                    <field name="is_profile"/>
+                <newline/>
+        	<field name="test_components" colspan="4"/>
+        </page>
+    </xpath>
+
+    
+</data>

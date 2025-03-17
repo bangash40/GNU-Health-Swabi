@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<form>
+   <label name="date_from"/>
+   <field name="date_from"/>
+   
+   <label name="date_to"/>
+   <field name="date_to"/>
+
+   <label name="doctor"/>
+   <field name="doctor"/>
+   
+   <label name="service"/>
+   <field name="service"/>
+
+   <label name="department"/>
+   <field name="department"/>
+   
+</form>

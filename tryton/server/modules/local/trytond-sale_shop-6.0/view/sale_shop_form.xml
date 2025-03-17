@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!-- This file is part sale_shop module for Tryton.
+The COPYRIGHT file at the top level of this repository contains the full copyright notices and license terms. -->
+<form col="4">
+    <label name="name"/>
+    <field name="name"/>
+    <label name="active"/>
+    <field name="active"/>
+    <label name="company"/>
+    <field name="company"/>
+    <label name="address"/>
+    <field name="address"/>
+    <label name="warehouse"/>
+    <field name="warehouse"/>
+    <notebook colspan="4">
+        <page string="General" id="general">
+            <label name="sale_sequence"/>
+            <field name="sale_sequence"/>
+            <newline />
+            <label name="sale_invoice_method" />
+            <field name="sale_invoice_method" />
+            <label name="sale_shipment_method" />
+            <field name="sale_shipment_method" />
+            <label name="currency"/>
+            <field name="currency"/>
+            <label name="price_list"/>
+            <field name="price_list"/>
+            <label name="payment_term"/>
+            <field name="payment_term"/>
+        </page>
+        <page string="Users" id="users">
+            <field name="users"/>
+        </page>
+    </notebook>
+</form>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<form>
+    <label name="name"/>
+    <field name="name"/>
+    <label name="group_type"/>
+    <field name="group_type"/>
+    <label name="list_price"/>
+    <field name="list_price"/>
+    
+    <field name="lines" colspan="4"/>
+    <separator colspan="4" id="package_notes_id"  string="Description/Details/Notes about this package"/>
+    <field name="notes" colspan="4"/>
+</form>

@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<form>
+	<group colspan="4" id="group_admin_data_holder1">   
+                <group colspan="4" id="group_admin_data_holder2" string="Discount Request Details">	
+			<label name="sale"/>
+			<field name="sale"/>
+			<label name="patient"/>
+			<field name="patient"/>	
+<label name="employee"/>
+			<field name="employee"/>	
+		
+		</group>
+		<group colspan="4" id="group_sale_lines6">	
+			<field name="sale_lines"  height="150"/>	
+		</group>
+
+
+	    <group colspan="4" id="group_manual_overall_discount" string="Manual Overall Discount Details">	
+
+			<label name="discount_value"/>
+			<field name="discount_value"/>
+							
+			<label name="new_discount"/>
+			<field name="new_discount"/>
+
+		</group>
+
+        <group colspan="4" id="group_admin_data_holder233" string="Approved Discount Details">	
+				
+			<label name="discount_type_selected"/>
+			<field name="discount_type_selected"/>
+
+			<label name="welfare_fund_account"/>
+			<field name="welfare_fund_account"/>
+			<label name="approval_reason"/>
+			<field name="approval_reason"/>
+			<label name="approval_details"/>
+			<field name="approval_details"/>
+			<label name="rejection_reason"/>
+			<field name="rejection_reason"/>	
+	
+		</group>
+                <group colspan="4" id="group_admin_data_holder23366">	
+			
+
+
+
+			<label name="referred_by"/>
+			<field name="referred_by"/>
+
+			<newline/>
+
+			<label name="requested_by"/>
+			<field name="requested_by"/>
+			<label name="request_date"/>
+			<field name="request_date"/>	
+
+			<label name="approved_by"/>
+			<field name="approved_by"/>	
+			<label name="approval_date"/>
+			<field name="approval_date"/>
+
+			<label name="rejected_by"/>
+			<field name="rejected_by"/>	
+			<label name="rejection_date"/>
+			<field name="rejection_date"/>
+		</group>
+                
+		<newline/>
+		<group colspan="4" id="group_amounts">
+			<label name="total_amount"/>
+			<field name="total_amount"/>
+			<label name="new_discount_amount"/>
+			<field name="new_discount_amount"/>
+
+			<label name="net_amount"/>
+			<field name="net_amount"/>	
+		</group>
+		
+		<group colspan="4" id="group_buttons">
+		<label name="state"/>
+		<field name="state"/>
+
+                <button name="approve_discount" help="Approve Discount Request" string="Approve Discount" icon="icon-ok" confirm="Are you sure you want to Approve this discount request? It will instantly update the Sale document with the discount!"/>
+                <button name="cancel_discount" help="Cancel Discount Request" string="Reject Discount" icon="icon-cancel" confirm="Cancel the Discount Request? To give discount, new Discount Request will be required!"/>
+		</group>
+	
+	
+	</group>
+	
+</form>
